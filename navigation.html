@@ -1,62 +1,86 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Green Lamp</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="/images/favicons/site.webmanifest" />
-  </head>
-  <body>
-    <header>
-      <table bgcolor="#254733" width="100%" height="50">
-        <td width="5%" align="right">
-          <img src="images/Logo.png" height="60">
-        </td>
-        <td width="15%" align="left">
-          <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
-        </td>        
-        <td width="30%" align="center">
-          <select id="category" name="category">
-            <option value="one">Herbs</option>
-            <option value="two">Shrubs</option>
-            <option value="three">Creepers</option>
-            <option value="four">Climbers</option>
-          </select>
-          <input type="text" />
-          <input type="submit" value="Search"/>
-          
-        </td>       
-        <td width="5%">
-           <a href="login.html"><font color="white">Login</font></a>
-        </td>
-        <td width="5%">
-          <a href="signup.html"><font color="white">Signup</font></a>
-        </td>
-        <td width="5%">
-          <a href="cart.html"><font color="white">Cart</font></a>
-        </td>
-      </table>
-    </header>
 
-    <section>      
-        <table bgcolor="#254733" width="13%" height="530px">
-          <nav>
-            <tr>
-              <td align="center"><a href="/faq.html"><font color="white">FAQ</font></a></td>
-            </tr>
-            <tr>
-              <td align="center"><a href="/system.html"><font color="white">System / Preferences</font></a></td>
-            </tr>
-            <tr>
-              <td align="center"><a href="/about.html"><font color="white">About Us</font></a></td>
-            </tr>
-        </nav>
-      </table>
-    </section>
-      <div style="width:40%;height:40%;position:relative;"><iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via GIPHY</a></p>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Green Lamp</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/images/favicons/site.webmanifest" />
+</head>
+
+<body>
+  <header>
+    <table bgcolor="#254733" width="100%" height="50">
+      <td width="5%" align="right">
+        <img src="./assets/images/Logo.png" height="60">
+      </td>
+      <td width="15%" align="left">
+        <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
+      </td>
+      <td width="30%" align="center">
+        <select id="category" name="category">
+          <option value="one" align="center">Herbs</option>
+          <option value="two" align="center">Shrubs</option>
+          <option value="three" align="center">Creepers</option>
+          <option value="four" align="center">Climbers</option>
+        </select>
+        <input type="text" />
+        <a href="./src/search.html"><input type="submit" value="Search"/></a>
+
+      </td>
+      <td width="5%">
+        <a href="./src/login.html">
+          <font color="white">Login</font>
+        </a>
+      </td>
+      <td width="5%">
+        <a href="./src/signup.html">
+          <font color="white">Signup</font>
+        </a>
+      </td>
+      <td width="5%">
+        <a href="./src/cart.html">
+          <font color="white">Cart</font>
+        </a>
+      </td>
+    </table>
+  </header>
+
+  <section>
+    <table bgcolor="#254733" width="13%" height="90%">
+      <nav>
+        <tr>
+          <td align="center"><a href="/src/faq.html">
+              <font color="white">FAQ</font>
+            </a></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="/src/userAccount.html">
+              <font color="white">System / Preferences</font>
+            </a></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="/src/about.html">
+              <font color="white">About Us</font>
+            </a></td>
+        </tr>
+      </nav>
+    </table>
+  </section>
+  <div border="5">
+    <p>Advertisements 
+      <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via GIPHY
+      </a>
+    </p>
+    <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" width="30%" height="30%" frameBorder="3"
+      class="giphy-embed" allowFullScreen>
+    </iframe>
+    
+  </div>
+  </div>
+</body>
+
 </html>
