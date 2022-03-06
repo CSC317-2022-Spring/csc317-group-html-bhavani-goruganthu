@@ -1,0 +1,226 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Green Lamp</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/images/favicons/site.webmanifest" />
+</head>
+
+<body bgcolor="#FDFADF">
+  <header>
+    <table bgcolor="#254733" width="100%" height="50">
+      <td width="5%" align="right">
+        <a href="../navigation.html"><img src="../assets/images/Logo.png" height="60"></a>
+      </td>
+      <td width="15%" align="left">
+        <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
+      </td>
+      <td width="30%" align="center">
+        <select id="category" name="category">
+          <option value="one" align="center">Herbs</option>
+          <option value="two" align="center">Shrubs</option>
+          <option value="three" align="center">Creepers</option>
+          <option value="four" align="center">Climbers</option>
+        </select>
+        <input type="text" />
+        <a href="./src/search.html"><input type="submit" value="Search" /></a>
+
+      </td>
+      <td width="5%">
+        <a href="./src/login.html">
+          <font color="white">Login</font>
+        </a>
+      </td>
+      <td width="5%">
+        <a href="./src/signup.html">
+          <font color="white">Signup</font>
+        </a>
+      </td>
+      <td width="5%">
+        <a href="./src/cart.html">
+          <font color="white">Cart</font>
+        </a>
+      </td>
+    </table>
+  </header>
+  <table border="white"></table>
+  <section>
+    <table bgcolor="#254733" height="10%" width="100%">
+      <tr>
+        <td width="10%"></td>
+        <td align="center"><a href="/src/faq.html">
+            <font color="white">FAQ</font>
+          </a></td>
+        <td width="10%"></td>
+        <td align="center"><a href="/src/userAccount.html">
+            <font color="white">System / Preferences</font>
+          </a></td>
+        <td width="10%"></td>
+        <td align="center"><a href="/src/about.html">
+            <font color="white">About Us</font>
+          </a></td>
+    </table>
+  </section>
+
+  <table align="center">
+    <tr>
+      <td>
+        <fieldset>
+          <legend>Personal Information</legend>
+        <form>
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fName" name="firstName" maxlength="27" autofocus>
+        </form>
+  
+        <form>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lName" name="lastName" maxlength="27" >
+        </form>
+  
+        <form>
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" required>
+        </fieldset>
+        </form>
+      
+      </td>
+    
+  
+      <td>
+        <fieldset>
+          <legend>Location</legend>
+        <form>
+          <label for="Street Address">Street Address:</label><br>
+          <input type="text" id="Street Address" name="Street Address" required>
+        </form>
+  
+        <form>
+          <label for="City">City:</label><br>
+          <input type="text" id="City" name="City" required>
+        </form>
+  
+        <form>
+          <label for="State">State:</label><br>
+          <select id="State" name="States" required>
+            <option value=""> Select a State</option>
+            <option value="AL"> Alabama</option>
+            <option value="AK"> Alaska</option>
+            <option value="AZ"> Arizona</option>
+            <option value="AR"> Arkansas</option>
+            <option value="CA"> California</option>
+            <option value="CO"> Colorado</option>
+            <option value="CT"> Connecticut</option>
+            <option value="DE"> Delaware</option>
+            <option value="FL"> Florida</option>
+            <option value="GA"> Georgia</option>
+            <option value="HI"> Hawaii</option>
+            <option value="ID"> Idaho</option>
+            <option value="IL"> Illinois</option>
+            <option value="IN"> Indiana</option>
+            <option value="IA"> Iowa</option>
+            <option value="KS"> Kansas</option>
+            <option value="KY"> Kentucky</option>
+            <option value="LA"> Louisiana</option>
+            <option value="ME"> Maine</option>
+            <option value="MD"> Maryland</option>
+            <option value="MA"> Massachusetts</option>
+            <option value="MI"> Michigan</option>
+            <option value="MN"> Minnesota</option>
+            <option value="MS"> Mississippi</option>
+            <option value="MO"> Missouri</option>
+            <option value="MT"> Montana</option>
+            <option value="NE"> Nebraska</option>
+            <option value="NV"> Nevada</option>
+            <option value="NH"> New Hampshire</option>
+            <option value="NJ"> New Jersey</option>
+            <option value="NM"> New Mexico</option>
+            <option value="NY"> New York</option>
+            <option value="NC"> North Carolina</option>
+            <option value="ND"> North Dakota</option>
+            <option value="OH"> Ohio</option>
+            <option value="OK"> Oklahoma</option>
+            <option value="OR"> Oregon</option>
+            <option value="PA"> Pennsylvania</option>
+            <option value="RI"> Rhode Island</option>
+            <option value="SC"> South Carolina</option>
+            <option value="SD"> South Dakota</option>
+            <option value="TN"> Tennessee</option>
+            <option value="TX"> Texas</option>
+            <option value="UT"> Utah</option>
+            <option value="VT"> Vermont</option>
+            <option value="VA"> Virginia</option>
+            <option value="WA"> Washington</option>
+            <option value="WV"> West Virginia</option>
+            <option value="WI"> Wisconsin</option>
+            <option value="WY"> Wyoming</option>
+          </select>
+        </form>
+  
+        <form>
+          <label for="ZipCode">ZipCode:</label><br>
+          <input type="text" id="ZipCode" name="ZipCode" maxlength="5" size="5" pattern="[0-9]{5}" required>
+        </form>
+      </fieldset>
+  
+      </td>
+    </tr>
+  
+    <tr>
+      <td>
+        <fieldset>
+          <legend>Confidential Information</legend>
+        <form>
+          <label for="Password">Password:</label><br>
+          <input type="password" id="Password" name="Password" minlength="8" required>
+        </form>
+  
+        <form>
+          <label for="UserName">UserName:</label><br>
+          <input type="text" id="UserName" name="UserName" minlength="4" maxlength="12" required>
+        </form>
+  
+        <form>
+          <label for="pin">PIN:</label><br>
+          <input type="text" id="pin" name="pin" maxlength="4" size="4" pattern="[0-9]{4}" required>
+        </form>
+        </fieldset>
+      </td>
+    
+      <td>
+        <fieldset>
+          <legend>Extra Information</legend>
+        <form>
+          <label for="bday">Birthday:</label>
+          <input type="date" id="bday" name="bday">
+        </form>
+  
+        <form>
+          <label for="Fcolor">Select your favorite color:</label>
+          <input type="color" id="Fcolor" name="Fcolor">
+        </form>
+  
+        <form>
+          <label for="pNumber">Phone number:</label>
+          <input type="tel" id="pNumber" name="pNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </form>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
+
+  <table align="center">
+    <tr>
+        <td>
+          <button>Submit</button>
+        </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
