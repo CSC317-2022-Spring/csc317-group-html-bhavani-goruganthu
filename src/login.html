@@ -72,26 +72,37 @@
       <td>
         <fieldset>
           <legend>Sign In</legend>
+
           <form>
-            <label for="UserName">UserName:</label><br>
-            <input type="text" id="UserName" name="UserName" minlength="4" maxlength="12" required>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" placeholder="Enter Email" name="email" required>
           </form>
+
         <form>
           <label for="Password">Password:</label><br>
-          <input type="password" id="Password" name="Password" minlength="8" required>
+          <input type="password" id="Password" name="Password" placeholder="Enter Password" minlength="8" required>
         </form>
-      </td>
-    </tr>
-  </table>
-  
-  <table align="center">
-      <tr>
+        
+        <tr align="center">
           <td>
+            <button type="button" class="cancelbtn">Cancel</button>
             <button>Submit</button>
           </td>
-        
-      </tr>
-    
+       </tr>
+
+       <tr align="center">
+         <td>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+          <a href="#">Forgot password?</a>
+          <br><a href="signup.html">Create an Account</a>
+        </label>
+         </td>
+       </tr>
+
+
+      </td>
+    </tr>
   </table>
   
 </body>
