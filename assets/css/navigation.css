@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}  
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.all-links-text-decoration {
+    text-decoration: none;
+}
+
+.header-nav {
+    background-color: #254733;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#org-name {
+    display: inline;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.all-nav-btns {
+    height: 37px;
+    background-color: #FDFADF;
+    border-radius: 6px;
+}
+
+ /* Search div */
+.search-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.nav-icons {
+    color: #254733;
+    font-weight: 700;
+}
+.category-dropdown {
+    width: 100px;
+    height: 35px;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+.search-input {
+    width: 260px;
+    height: 35px;
+    font-size: 13px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+ /* Nav links */
+.nav-link-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-links {
+    margin: 18px;
+    text-align: center;
+}
+#nav-link-name {
+    display: inline;
+    text-align: center;
+    color: white;
+}
