@@ -40,6 +40,7 @@ body {
     height: 37px;
     background-color: #FDFADF;
     border-radius: 6px;
+    cursor: pointer;
 }
 
  /* Search div */
