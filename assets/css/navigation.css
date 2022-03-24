@@ -17,14 +17,17 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
 }
 
-.logo-div {
+/* sub-divs of the navbar */
+.logo-div, .nav-link-div, .search-div {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #org-name {
@@ -44,11 +47,6 @@ body {
 }
 
  /* Search div */
-.search-div {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 .nav-icons {
     color: #254733;
     font-weight: 700;
@@ -72,11 +70,6 @@ body {
 }
 
  /* Nav links */
-.nav-link-div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 .nav-links {
     margin: 18px;
     text-align: center;
