@@ -63,9 +63,9 @@ body {
   font-weight: 700;
 }
 .category-dropdown {
-  width: 100px;
+  width: 110px;
   height: 35px;
-  font-size: 13px;
+  font-size: 14px;
   display: inline-block;
   line-height: 1.5;
   color: #495057;
@@ -75,7 +75,7 @@ body {
 .search-input {
   width: 260px;
   height: 35px;
-  font-size: 13px;
+  font-size: 14px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
