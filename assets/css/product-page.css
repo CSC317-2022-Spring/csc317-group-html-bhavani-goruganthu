@@ -1,0 +1,51 @@
+@import 'navigation.css'; /* Use any of the css classes declared in this file by just importing it. */
+
+.review-ratings-div {
+  text-align: center;
+}
+.ratings-div {
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.star-icon-fill {
+  background-color: grey;
+  color: yellow;
+}
+.star-icon-nofill {
+  background-color: grey;
+  color: #fff;
+}
+
+/* Ratings Card */
+.card {
+  box-shadow: 0px 5px 10px 0px #254733;
+  border-radius: 10px;
+  transition: 0.3s;
+  max-width: 300px;
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgb(251, 251, 251);
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  transform: translateY(-10px);
+  transition: ease-in 0.3s;
+  box-shadow: 0px 5px 10px 4px #254733;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-name {
+  color: #254733;
+}
+.card-body {
+  margin-top: 8px;
+}
