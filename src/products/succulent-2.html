@@ -9,6 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png" />
   <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+  <link rel="stylesheet" href="/assets/css/product-page.css">
+
 </head>
 
 <body bgcolor="#FDFADF">
@@ -55,27 +57,31 @@
   </header>
 
   <!-- Product Info -->
-  <div>
-    <h2>Succulent 2</h2>
-    <img height="300" width="300" src="../../assets/images/product-images/sclnt-2.jpg"> 
-    <p>Description: </p>
-    <div>
-      <div>
-        price: $0.50 
+  <div id="product-info-container">
+    <div id="product-info" >
+      <h2>Succulent 2</h2>
+      <div id="product-info-description-container">
+        <img height="300" width="300" src="../../assets/images/product-images/sclnt-1.jpg"> 
+        <div id="product-info-description-background">
+          <div id="product-info-background-button-container">
+            <p id="product-info-description">Description of this Succulent 2</p>
+            <div id="product-info-price">Price: $2.99</div>
+          </div>
+          <button id="product-info-button">add to cart</button>
+        </div>
       </div>
-      <button>add to cart</button>
     </div>
   </div>
 
-  <div>
-    <p>Advertisements
-      <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via GIPHY
+  <!-- <div>
+    <p>
+      <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">
       </a>
     </p>
     <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" width="30%" height="30%" frameBorder="3"
       class="giphy-embed" allowFullScreen>
     </iframe>
-  </div>
+  </div> -->
 </body>
 
 </html>

@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Green Lamp</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/navigation.css">
+  <link rel="stylesheet" href="/assets/css/login-signup.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png" />
@@ -12,85 +16,95 @@
 </head>
 
 <body bgcolor="#FDFADF">
-  <header>
-    <table bgcolor="#254733" width="100%" height="50">
-      <td width="5%" align="right">
-        <a href="/"><img src="/assets/images/site-images/Logo.png" height="60"></a>
-      </td>
-      <td width="15%" align="left">
-        <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
-      </td>
-      <td width="30%" align="center">
-        <select id="category" name="category">
-          <option value="one" align="center">Succulents</option>
-          <option value="two" align="center">Indoor Plants</option>
-          <option value="three" align="center">Herbs</option>
-          <option value="four" align="center">Shrubs</option>
-        </select>
-        <input type="text" />
-        <a href="/src/search.html"><input type="submit" value="Search" /></a>
+  <div class="header-nav">
+    <div class="logo-div">
+      <a href="/"><img src="/assets/images/site-images/Logo.png" height="60"></a>
+      <h1 id="org-name">The Green Lamp</h1>
+    </div>
+    <div class="search-div">
+      <select id="category" name="category" class="category-dropdown">
+        <option value="zero" align="center">All Products</option>
+        <option value="one" align="center">Succulents</option>
+        <option value="two" align="center">Indoor Plants</option>
+        <option value="three" align="center">Herbs</option>
+        <option value="four" align="center">Shrubs</option>
+      </select>
+      <input type="text" class="search-input" placeholder="Search..." />
+      <a href="/src/search.html"><button class="all-nav-btns"><span class="material-icons nav-icons">
+            search
+          </span></button></a>
+    </div>
+    <div class="nav-link-div">
+      <div class="nav-links">
+        <a href="/src/login.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons">
+              login
+            </span>
+          </button>
+          <br />
+          <h5 id="nav-link-name"> Login/Signup</h5>
+        </a>
+      </div>      
 
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/login.html">
-          <font color="white">Login/Signup</font>
+      <div class="nav-links">
+        <a href="/src/about.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons-outlined">
+              info
+              </span>        
+          </button>
+          <br />
+          <h5 id="nav-link-name"> About</h5>
         </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/faq.html">
-          <font color="white">FAQ</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/about.html">
-          <font color="white">About</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/cart.html">
-          <font color="white">Cart</font>
-        </a>
-      </td>
-    </table>
-  </header>
-  
-  <table align="center">
-    <tr>
-      <td>
-        <fieldset>
-          <legend>Log In</legend>
+      </div>
 
-          <form>
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" placeholder="Enter Email" name="email" required>
-          </form>
+      <div class="nav-links">
+        <a href="/src/faq.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons">
+              help_outline
+              </span>
+          </button>
+          <br />
+          <h5 id="nav-link-name"> FAQ</h5>
+        </a>
+      </div>
 
-        <form>
-          <label for="Password">Password:</label><br>
-          <input type="password" id="Password" name="Password" placeholder="Enter Password" minlength="8" required>
-        </form>
+      <div class="nav-links">
+        <a href="/src/cart.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons">
+              shopping_cart
+              </span>
+          </button>
+          <br />
+          <h5 id="nav-link-name"> Cart</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="flex-container">
+
+    <div class="flex-content">
+      <h1 style="color: #254733;">Log in</h1>
+
+        <label>Email Address:</label><br>
+        <input class="login-input" type="email" id="email" placeholder="e.g. john@gmail.com" name="email" required>
         
-        <tr align="center">
-          <td>
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button>Submit</button>
-          </td>
-       </tr>
+        <label>Password:</label><br>
+        <input class="login-input" type="password" id="Password" name="Password" placeholder="Must have at least 8 characters" minlength="8" required>
+        
+        <button type="button" class="login-signup-buttons">Sign in</button>
+        <a class="login-signup-buttons" href="/src/signup.html">Create Account</a>
+        
+        <a class="foot-links" href="/src/login.html">Forgot your password?</a>
 
-       <tr align="center">
-         <td>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-          <br /><br /><a href="#">Forgot password?</a>
-          <br /><br /><a href="./signup.html">Create an Account</a>
-        </label>
-         </td>
-       </tr>
+    </div>
+  </div>
 
-
-      </td>
-    </tr>
-  </table>
   
 </body>
 
