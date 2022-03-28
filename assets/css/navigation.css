@@ -55,6 +55,11 @@ body {
   cursor: pointer;
 }
 
+.all-nav-btns:hover {
+  box-shadow: 0 3px 8px 0 white;
+  background-color: #fbf5b8;
+}
+
 /* Search div */
 .nav-icons {
   color: #254733;
@@ -74,8 +79,15 @@ body {
   width: 260px;
   height: 35px;
   font-size: 14px;
-  border: 1px solid #ced4da;
+  border: 1px solid #fbf5b8;
   border-radius: 0.25rem;
+}
+/* focus color */
+.search-input:focus, .category-dropdown:focus{
+  border: 2px solid #fff47f;
+  box-shadow: inset 0 1px 1px #fff47f,
+    0 0 8px #fff47f;
+    outline: none; /* To remove black border on focus for input fields*/
 }
 
 /* Nav links */
