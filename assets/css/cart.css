@@ -74,10 +74,19 @@ td.price {
 .checktable {
     background-color: white;
     box-sizing: border-box;
-    width: 75%;
+    width: 74%;
+    display: inline-block;
 }
 
 .cartimg {
     height: 100%;
     width: 100%;
+}
+
+.suggestions {
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    float: right; 
+    width: 25%;
 }
