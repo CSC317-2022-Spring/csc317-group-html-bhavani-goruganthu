@@ -1,9 +1,11 @@
+@import "navigation.css";
+
 input:valid {
     border: 2px solid black;
 }
 
 
-h1 {
+h2 {
     font-weight: bold;
     text-align: center;
     line-height: 1.5em;
@@ -30,7 +32,8 @@ p {
     border-radius: 20px;
     justify-content: center;
     align-content: center;
-    padding: 6%;
+    padding-left: 6%;
+    padding-right: 6%;
     margin: auto;
 }
   
@@ -65,7 +68,7 @@ p {
     padding: 6px;
     margin-bottom: 1.2em ;
     margin-top: 0.3em;
-    width: 40%;
+    width: auto;
     resize: vertical;
     font-size: 90%;
     box-sizing: border-box;
