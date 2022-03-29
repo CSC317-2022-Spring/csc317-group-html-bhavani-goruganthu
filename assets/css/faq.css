@@ -1,0 +1,44 @@
+@import 'navigation.css'; /* Use any of the css classes declared in this file by just importing it. */
+
+.faq-div {
+  text-align: center;
+}
+
+.faq-section {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  background-color: lightgoldenrodyellow;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  text-align: left;
+}
+
+.faq-section:hover {
+    box-shadow: inset 0 1px 1px var(--primary-color), 0 0 8px var(--primary-color);
+}
+
+.faq-question {
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-answer {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.chevron-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: xx-large;
+  cursor: pointer;
+}
