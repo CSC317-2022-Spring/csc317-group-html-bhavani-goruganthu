@@ -1,3 +1,45 @@
 @import "navigation.css";  /* Use any of the css classes declared in this file by just importing it. */
 @import "index.css";  /* Use any of the css classes declared in this file by just importing it. */
 
+*{font-family:Verdana, Geneva, Tahoma, sans-serif}
+
+#checkout {
+    width: 75%;
+    background-color: white;
+}
+
+.tableheading3 {
+    color: black;
+    font-size: 2.25em;
+}
+
+.tableheading1 {
+    color: black;
+    font-size: 1.25em;
+}
+
+.tableheading0 {
+    color: black;
+    font-size: 1.25em;
+}
+
+.tableitem {
+    color:black;
+    font-size: 1em;
+}
+
+.tablesubitem {
+    color:black;
+    size: 0.12em;
+}
+
+
+.button {
+    color: black;
+    font-size: 1.25em;
+    background-color: yellow;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
