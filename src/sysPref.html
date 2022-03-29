@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/navigation.css">
+  <link rel="stylesheet" href="/assets/css/login-signup.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/navigation.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png" />
@@ -84,46 +88,37 @@
     </div>
   </div>
 
-<br>
-  <table align="center">
-    <tr>
-      <td><h3>Edit Account or System Preferences</h3></td>
-    </tr>
-    <tr>
-      <td>
-        <fieldset>
-          <legend>Personal Information</legend>
-        <form>
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fName" name="firstName" placeholder="Enter First Name" maxlength="27" autofocus>
-        </form>
-  
-        <form>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lName" name="lastName" placeholder="Enter Last Name" maxlength="27" >
-        </form>
-        <form>
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" placeholder="Enter Email" name="email" required>
-        </form>
-        
-        </fieldset>
+  <br>
+  <div class="flex-container">
 
-        <fieldset>
-          <legend>Location</legend>
-        <form>
-          <label for="Street Address">Street Address:</label><br>
-          <input type="text" id="Street Address" placeholder="123 Apple st" name="Street Address" required>
-        </form>
+    <div class="flex-content">
+      <h1 style="color: #254733;">Edit Account or System Preferences</h1>
+      
+        
+        <h3 style="color: black;">Personal Information</h3>
+          <form>
+            <label>First Name:</label><br>
+            <input class="sysPref-input" type="text" placeholder="e.g. John" maxlength="27" autofocus>
   
-        <form>
-          <label for="City">City:</label><br>
-          <input type="text" id="City" name="City" placeholder="San Francisco" required>
-        </form>
-  
-        <form>
-          <label for="State">State:</label><br>
-          <select id="State" name="States" required>
+
+            <br><label>Last Name:</label><br>
+            <input class="sysPref-input" type="text" placeholder="e.g. Doe" maxlength="27">
+
+            <br><label>Email Address:</label><br>
+            <input class="sysPref-input" type="email" id="email" placeholder="e.g. john@gmail.com" name="email">
+          
+          </form>
+          
+        <h3 style="color: black;">Location</h3>
+          <form>
+            <label>Street Address:</label><br>
+            <input class="sysPref-input" type="text" placeholder="123 Apple st" name="Street Address">
+            
+            <br><label>City:</label><br>
+            <input class="sysPref-input" type="text" placeholder="San Francisco">
+            
+            <br><label>State:</label><br>
+            <select class="sysPref-input">
             <option value=""> Select a State</option>
             <option value="AL"> Alabama</option>
             <option value="AK"> Alaska</option>
@@ -175,43 +170,28 @@
             <option value="WV"> West Virginia</option>
             <option value="WI"> Wisconsin</option>
             <option value="WY"> Wyoming</option>
-          </select>
-        </form>
-  
-        <form>
-          <label for="ZipCode">ZipCode:</label><br>
-          <input type="text" id="ZipCode" placeholder="94122" name="ZipCode" maxlength="5" size="5" pattern="[0-9]{5}" required>
-        </form>
+            </select>
 
-      </fieldset>
+            <br><label>ZipCode:</label><br>
+            <input class="sysPref-input" type="text" id="ZipCode" placeholder="12345" name="ZipCode" maxlength="5" size="5" pattern="[0-9]{5}">
+          </form>
+          
 
-      <fieldset>
-        <legend>Confidential Information</legend>
-        <form>
-            <label for="Password">Change Password:</label><br>
-            <input type="password" id="Password" name="Password" placeholder="Enter Password" minlength="8" required>
-        </form>
+        <h3 style="color: black;">Confidential Information</h3>
+          <form>
+            <label>Change Password:</label><br>
+            <input class="sysPref-input" type="password" id="Password" name="Password" placeholder="Must have at least 8 characters" minlength="8">
+        
+            <br><label>Phone number:</label><br>
+            <input class="sysPref-input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789" size="10" maxlength="12">
+            
+          </form>
+          
+      <br>
+      <button class="sysPref-button" href="#">Change Settings</button>
 
-      <form>
-        <label for="pNumber">Phone number:</label>
-        <input type="tel1" name="tel" pattern="[0-9]{3}" placeholder="###" title="3-digit area code" size="2" maxlength="3" required>
-        <input type="tel2" name="tel" pattern="[0-9]{3}" placeholder="###" title="3-digit prefix" size="2" maxlength="3" required>
-        <input type="tel3" name="tel" pattern="[0-9]{4}" placeholder="####" title="4-digit number" size="3" maxlength="4" required>
-      </form>
-
-      </fieldset>
-      
-      </td>
-    </tr>
-  </table>
-
-  <table align="center">
-    <tr>
-        <td>
-          <button>Submit</button>
-        </td>
-    </tr>
-  </table>
+    </div>
+  </div>
 
 </body>
 
