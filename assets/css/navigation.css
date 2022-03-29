@@ -39,6 +39,10 @@ body {
   justify-content: center;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 #org-name {
   display: inline;
   text-align: center;
