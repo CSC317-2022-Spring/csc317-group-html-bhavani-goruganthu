@@ -1,7 +1,8 @@
 @import "navigation.css";  /* Use any of the css classes declared in this file by just importing it. */
 @import "index.css";  /* Use any of the css classes declared in this file by just importing it. */
+@import "login-signup.css";
 
-*{font-family:Verdana, Geneva, Tahoma, sans-serif}
+*{font-family: Arial, Helvetica, sans-serif;}
 
 #checkout {
     background-color: white;
@@ -11,6 +12,7 @@
 .tableheading3 {
     color: black;
     font-size: 2.50em;
+    text-align: left;
 }
 
 .tableheading1 {
@@ -37,10 +39,12 @@ td.tablesubitem {
 
 td.price {
     text-align: right;
+    color:black;
+    font-size: 1.25em;
 }
 
 
-.login-signup-buttons{
+.buttons{
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -62,7 +66,7 @@ td.price {
     position: relative;
 }
 
-.login-signup-buttons:hover{
+.buttons:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
@@ -74,6 +78,6 @@ td.price {
 }
 
 .cartimg {
-    height: 180;
-    width: 180;
+    height: 100%;
+    width: 100%;
 }

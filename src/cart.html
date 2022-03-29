@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -5,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The Green Lamp</title>
+  <title>The Green Lamp Cart</title>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
@@ -21,103 +23,139 @@
 </head>
 
 <body bgcolor="#FDFADF">
-  <header>
-    <table bgcolor="#254733" width="100%" height="50">
-      <td width="5%" align="right">
-        <a href="/"><img src="../assets/images/site-images/Logo.png" height="60"></a>
-      </td>
-      <td width="15%" align="left">
-        <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
-      </td>
-      <td width="30%" align="center">
-        <select id="category" name="category">
-          <option value="one" align="center">Succulents</option>
-          <option value="two" align="center">Indoor Plants</option>
-          <option value="three" align="center">Herbs</option>
-          <option value="four" align="center">Shrubs</option>
-        </select>
-        <input type="text" />
-        <a href="/src/search.html"><input type="submit" value="Search" /></a>
+  <div class="header-nav">
+    <div class="logo-div">
+      <a href="/"><img src="/assets/images/site-images/Logo.png" height="60"></a>
+      <h1 id="org-name">The Green Lamp</h1>
+    </div>
+    <div class="search-div">
+      <select id="category" name="category" class="category-dropdown">
+        <option value="zero" align="center">All Products</option>
+        <option value="one" align="center">Succulents</option>
+        <option value="two" align="center">Indoor Plants</option>
+        <option value="three" align="center">Herbs</option>
+        <option value="four" align="center">Shrubs</option>
+      </select>
+      <input type="text" class="search-input" placeholder="Search..." />
+      <a href="/src/search.html"><button class="all-nav-btns"><span class="material-icons nav-icons">
+            search
+          </span></button></a>
+    </div>
+    <div class="nav-link-div">
+      <div class="nav-links">
+        <a href="/src/login.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons">
+              login
+            </span>
+          </button>
+          <br />
+          <h5 id="nav-link-name"> Login/Signup</h5>
+        </a>
+      </div>      
 
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/login.html">
-          <font color="white">Login/Signup</font>
+      <div class="nav-links">
+        <a href="/src/about.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons-outlined">
+              info
+              </span>        
+          </button>
+          <br />
+          <h5 id="nav-link-name"> About</h5>
         </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/faq.html">
-          <font color="white">FAQ</font>
+      </div>
+
+      <div class="nav-links">
+        <a href="/src/faq.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons">
+              help_outline
+              </span>
+          </button>
+          <br />
+          <h5 id="nav-link-name"> FAQ</h5>
         </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/about.html">
-          <font color="white">About</font>
+      </div>
+
+      <div class="nav-links">
+        <a href="/src/cart.html" class="all-links-text-decoration">
+          <button class="all-nav-btns">
+            <span class="material-icons">
+              shopping_cart
+              </span>
+          </button>
+          <br />
+          <h5 id="nav-link-name"> Cart</h5>
         </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/cart.html">
-          <font color="white">Cart</font>
-        </a>
-      </td>
-    </table>
-  </header>
+      </div>
+    </div>
+  </div>
   
 
     <br>
 
     <div class="checktable">
+      <p class="tableheading3">Shopping Cart</p>
+      
+      <table id="checkout">
+        
+        <tr>
+          <td width="25%"></td>
+          <td></td>
+          <td></td>
+          <td align="right" class="tableheading1">Subtotal</td>
+        
+        </tr>
+        
+        <tr>
+          <!-- Image Height 180x-->
+          <td><a href="products/herb-2.html"><img class="cartimg" src="../assets/images/product-images/herb-2.jpg"></a></td>
+          <td class="tableitem">Herb 2</td>
+          <td class="tablesubitem">Quantity: 2</td>
+          <td class="price">$ 1.00</td>
+        </tr>
+        
+        
+        <tr>
+          
+          <td><a href="products/shrub-2.html"><img class="cartimg" src="../assets/images/product-images/shrub-2.webp"></a></td>
+          <td class="tableitem">Shrub 2</td>
+        
+          <td class="tablesubitem">Quantity: 1</td>
 
-    <p class="tableheading3">Shopping Cart</p>
+          <td class="price">$ 0.50</td>
+        </tr>
 
-    <table id="checkout">
 
-    <tr>
-        <td width="200px"></td>
-        <td></td>
-        <td></td>
-        <td align="right" class="tableheading1">Subtotal</font></td>
-    </tr>
-    <tr>
-        <!-- Image Height 180x-->
-        <td><a href="products/herb-2.html"><img height="180" width="180" src="../assets/images/product-images/herb-2.jpg"></a></td>
-        <td class="tableitem">Herb 2</td>
-        <td class="tablesubitem">Quantity: 2</td>
-        <td align="right">$ 1.00</td>
-    </tr>
-    <tr>
-      <td><a href="products/shrub-2.html"><img class="cartimg" src="../assets/images/product-images/shrub-2.webp"></a></td>
+        <tr>
+      
+          <td><a href="products/succulent-4.html"><img class="cartimg" src="../assets/images/product-images/sclnt-4.jpg"></a></td>
+          <td class="tableitem">Haworthia</td>
+          <td class="tablesubitem">Quantity: 1</td>
+          <td class="price">$ 0.50</td>
+        </tr>
 
-        <td class="tableitem">Shrub 2</td>
-        <td class="tablesubitem">Quantity: 1</td>
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2" align="right" class="tableheading1">Subtotal (4 items): $2.00</font></td>
+        </tr>
 
-      <td align="right"><font color="black" face="Verdana, Geneva, sans-serif">$ 0.50</font></td>
-    </tr>
-    <tr>
-      <td><a href="products/succulent-4.html"><img height="180" width="180" src="../assets/images/product-images/sclnt-4.jpg"></a></td>
-      <td class="tableitem">Succulent 4</td>
-      <td class="tablesubitem">Quantity: 1</td>
-      <td class="price">$ 0.50</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td colspan="2" align="right" class="tableheading1">Subtotal (4 items): $2.00</font></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td colspan="2" align="right">
-        <br>
-        <a href="checkout.html">
-          <button class="login-signup-buttons">Proceed to Checkout</button>
-        </a>
-      </td>
-</tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td colspan="2" align="right">
+            <br>
+            <a href="checkout.html">
+              <button class="buttons">Proceed to Checkout</button>
+            </a>
+          </td>
+        </tr>
 
-  </table>
+      </table>
 
-</div>
+    </div>
 
 
   
