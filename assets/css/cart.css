@@ -1,3 +1,79 @@
 @import "navigation.css";  /* Use any of the css classes declared in this file by just importing it. */
 @import "index.css";  /* Use any of the css classes declared in this file by just importing it. */
 
+*{font-family:Verdana, Geneva, Tahoma, sans-serif}
+
+#checkout {
+    background-color: white;
+    width: 100%;
+}
+
+.tableheading3 {
+    color: black;
+    font-size: 2.50em;
+}
+
+.tableheading1 {
+    color: black;
+    font-size: 1.25em;
+}
+
+.tableheading0 {
+    color: black;
+    font-size: 1em;
+}
+
+td.tableitem {
+    color:black;
+    font-size: 1.25em;
+    width: 45%;
+}
+
+td.tablesubitem {
+    color:black;
+    font-size: 0.75em;
+    text-align: right;
+}
+
+td.price {
+    text-align: right;
+}
+
+
+.login-signup-buttons{
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 100%;
+    color: white;
+    background-color: #254733;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 24px;
+    margin-top: .7em;
+    margin-bottom: .7em;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+    transform: translateY(-4px);
+    position: relative;
+}
+
+.login-signup-buttons:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.checktable {
+    background-color: white;
+    box-sizing: border-box;
+    width: 75%;
+}
+
+.cartimg {
+    height: 180;
+    width: 180;
+}
