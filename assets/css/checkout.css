@@ -1,14 +1,19 @@
 @import "navigation.css";  /* Use any of the css classes declared in this file by just importing it. */
 @import "index.css";  /* Use any of the css classes declared in this file by just importing it. */
 
-*{font-family:Verdana, Geneva, Tahoma, sans-serif}
+*{font-family:Arial, Helvetica, sans-serif}
 
 .tableheading3 {
     color: black;
     font-size: 2.25em;
 }
 
-.login-signup-buttons{
+.tableheading2 {
+    color: black;
+    font-size: 2em;
+}
+
+.buttons{
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -30,15 +35,11 @@
     position: relative;
 }
 
-.login-signup-buttons:hover{
+.buttons:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
 
-.tableheading3 {
-    color: black;
-    font-size: 2.50em;
-}
 
 .tableheading1 {
     color: black;
@@ -73,6 +74,43 @@ td.price {
 }
 
 .cartimg {
-    height: 180;
-    width: 180;
+    height: 180px;
+    width: 180px;
+}
+
+#checkout {
+    background-color: white;
+    width: 100%;
+}
+
+input{
+    border: 2px solid #254733;
+    color: #31925a;
+    height: auto;
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 1.2em ;
+    margin-top: 0.3em;
+    width: 20%;
+    resize: vertical;
+    font-size: 90%;
+    box-sizing: border-box;
+}
+
+.address {
+    width: 40%;
+}
+
+input[type=number] {
+    width: 10%;
+}
+
+a {
+    color: #70c5d4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
