@@ -1,9 +1,11 @@
+@import "navigation.css";
+
 input:valid {
     border: 2px solid black;
 }
 
 
-h1 {
+h2 {
     font-weight: bold;
     text-align: center;
     line-height: 1.5em;
@@ -30,7 +32,8 @@ p {
     border-radius: 20px;
     justify-content: center;
     align-content: center;
-    padding: 6%;
+    padding-left: 6%;
+    padding-right: 6%;
     margin: auto;
 }
   
@@ -50,7 +53,22 @@ p {
     padding: 6px;
     margin-bottom: 1.2em ;
     margin-top: 0.3em;
-    width: 100%;
+    width: auto;
+    resize: vertical;
+    font-size: 90%;
+    box-sizing: border-box;
+}
+
+.sign-up-input{
+    border: 2px solid #254733;
+    color: #31925a;
+    height: auto;
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 1.2em ;
+    margin-top: 0.3em;
+    width: 77%;
     resize: vertical;
     font-size: 90%;
     box-sizing: border-box;
@@ -65,15 +83,30 @@ p {
     padding: 6px;
     margin-bottom: 1.2em ;
     margin-top: 0.3em;
-    width: 40%;
+    width: auto;
     resize: vertical;
     font-size: 90%;
     box-sizing: border-box;
 }
 
+.sign-up-input:focus{
+    border-color: #fff47f;
+    box-shadow: inset 0 1px 1px #fff47f,
+    0 0 8px black;
+    outline: none;
+}
+
+
+.sysPref-input:focus{
+    border-color: #fff47f;
+    box-shadow: inset 0 1px 1px #fff47f,
+    0 0 8px black;
+    outline: none;
+}
+
 .login-input:focus{
-    border-color: yellow;
-    box-shadow: inset 0 1px 1px yellow,
+    border-color: #fff47f;
+    box-shadow: inset 0 1px 1px #fff47f,
     0 0 8px black;
     outline: none;
 }
@@ -138,8 +171,10 @@ p {
 
 .foot-links{
     margin-top: 17px;
+    margin-bottom: 17px;
     text-align: center;
     color: #007bff;
     text-decoration: none;
+
 }
 
