@@ -4,6 +4,9 @@ input:valid {
     border: 2px solid black;
 }
 
+input:invalid {
+    border: 2px dotted red;
+}
 
 h2 {
     font-weight: bold;
