@@ -141,8 +141,10 @@ p {
 
 .foot-links{
     margin-top: 17px;
+    margin-bottom: 17px;
     text-align: center;
     color: #007bff;
     text-decoration: none;
+
 }
 
