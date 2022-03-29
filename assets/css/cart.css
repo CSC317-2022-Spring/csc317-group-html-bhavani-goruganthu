@@ -20,17 +20,21 @@
 
 .tableheading0 {
     color: black;
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
-.tableitem {
+td.tableitem {
     color:black;
     font-size: 1em;
 }
 
-.tablesubitem {
+td.tablesubitem {
     color:black;
     size: 0.12em;
+}
+
+td.price {
+    text-align: right;
 }
 
 /*
