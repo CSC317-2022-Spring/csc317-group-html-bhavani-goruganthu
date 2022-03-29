@@ -1,0 +1,40 @@
+@import 'navigation.css'; /* Use any of the css classes declared in this file by just importing it. */
+
+.about-div {
+  text-align: center;
+  margin: 2%;
+}
+
+.about-div h2,
+h3,
+h4 {
+  color: var(--primary-color);
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  margin: 1rem;
+  /* background-color: lightgoldenrodyellow; */
+  background-color: var(--primary-color-opac);
+  color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.about-content a {
+  /* text-decoration: none; */
+  color: white;
+}
+
+.about-img {
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+}

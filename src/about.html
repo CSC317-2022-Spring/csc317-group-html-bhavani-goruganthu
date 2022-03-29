@@ -5,95 +5,174 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Green Lamp</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/about.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x1 6" href="../assets/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
 </head>
 
-<body bgcolor="#FDFADF">
-  <header>
-    <table bgcolor="#254733" width="100%" height="50">
-      <td width="5%" align="right">
-        <a href="/"><img src="/assets/images/site-images/Logo.png" height="60"></a>
-      </td>
-      <td width="15%" align="left">
-        <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
-      </td>
-      <td width="30%" align="center">
-        <select id="category" name="category">
-          <option value="one" align="center">Succulents</option>
-          <option value="two" align="center">Indoor Plants</option>
-          <option value="three" align="center">Herbs</option>
-          <option value="four" align="center">Shrubs</option>
+<body>
+  <!-- Main Container -->
+  <div class="main-container">
+    <!--  Nav Bar -->
+    <div class="header-nav">
+      <div class="logo-div">
+        <a href="../index.html"><img src="../assets/images/site-images/Logo.png" height="60"></a>
+        <a href="../index.html" class="logo-link">
+          <p id="org-name">The Green Lamp</p>
+        </a>
+      </div>
+      <div class="search-div">
+        <select id="category" name="category" class="category-dropdown">
+          <option value="zero">All Products</option>
+          <option value="one">Succulents</option>
+          <option value="two">Indoor Plants</option>
+          <option value="three">Herbs</option>
+          <option value="four">Shrubs</option>
         </select>
-        <input type="text" />
-        <a href="/src/search.html"><input type="submit" value="Search" /></a>
+        <input type="text" class="search-input" placeholder="Search..." />
+        <a href="../src/search.html"><button class="all-nav-btns"><span class="material-icons nav-icons">
+              search
+            </span></button></a>
+      </div>
+      <div class="nav-link-div">
+        <div class="nav-links">
+          <a href="../src/login.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                login
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> Login/Signup</h5>
+          </a>
+        </div>
 
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/login.html">
-          <font color="white">Login/Signup</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/faq.html">
-          <font color="white">FAQ</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/about.html">
-          <font color="white">About</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/cart.html">
-          <font color="white">Cart</font>
-        </a>
-      </td>
-    </table>
-  </header>
+        <div class="nav-links">
+          <a href="../src/about.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons-outlined">
+                info
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> About</h5>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="../src/faq.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                help_outline
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> FAQ</h5>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="../src/cart.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> Cart</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--  End of Nav Bar -->
+
+    <div class="about-div">
+      <h2>
+        About Team LAMP
+      </h2>
+      <h3>
+        <q>To plant a Garden is to believe in tomorrow</q>
+      </h3>
+      <h4><cite>-- Audrey Hepburn</cite></h4>
+      <div class="about-section">
+        <div>
+          <p>Advertisements
+            <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via
+              GIPHY
+            </a>
+          </p>
+          <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" frameBorder="3" class="giphy-embed" allowFullScreen>
+          </iframe>
+        </div>
+        <div class="about-content">
+          <p>We here @ <a href="../index.html">
+              The Green Lamp
+            </a> thrive for quality and are dedicated to offer you the best greenery works.</p>
+          <br />
+          <p>Check our categories <a href="./search.html">here</a> and order some herbage for your sweet home
+          </p>
+        </div>
+        <div>
+          <img width=200 class="about-img"
+            src="https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80">
+        </div>
+        <div>
+          <p>Advertisements
+            <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via
+              GIPHY
+            </a>
+          </p>
+          <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" frameBorder="3" class="giphy-embed" allowFullScreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
 
     <div align="center">
-        <h2>
-            <font color="#254733">About Team LAMP</font>
-        </h2>
-        <h3>
-            <font color="#254733"><q>To plant a Garden is to believe in tomorrow</q></font>
-        </h3>
-        <h4><cite>-- Audrey Hepburn</cite></h4>
-        <table>
-            <tr>
-                <td width="20%">
 
-                </td>
-                <td width="60%">
-                    <p>We here @ <a href="../index.html">
-                            <font color="#254733">The Green Lamp</font>
-                        </a> thrive for quality and are dedicated to offer you the best greenery works.</p>
-                    <br />
-                    <p>Check our categories <a href="./search.html">here</a> and order some herbage for your sweet home
-                    </p>
-                </td>
-                <td width="20%">
-                    <img width="100%"
-                        src="https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80">
-                </td>
-                <td width="40%" align="center">
-                    <div>
-                        <p>Advertisements
-                            <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via
-                                GIPHY
-                            </a>
-                        </p>
-                        <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" frameBorder="3" class="giphy-embed"
-                            allowFullScreen>
-                        </iframe>
-                    </div>
-                </td>
-            </tr>
-        </table>
+      <table>
+        <tr>
+          <td width="10%">
+
+          </td>
+          <td width="60%">
+
+          </td>
+          <td width="20%">
+
+          </td>
+          <td width="10%" align="center">
+
+          </td>
+        </tr>
+      </table>
     </div>
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>
+        <!-- &copy; -->
+        <span class="material-icons">
+          copyright
+        </span>
+        &nbspAll rights reserved by Team LAMP - 2022
+      </p>
+      <!-- <a href='https://www.freepik.com/vectors/twitter-icon'>Twitter icon vector created by Creative_hat - www.freepik.com</a> -->
+      <p>Follows us on
+        <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/site-images/socials/Facebook.png"
+            width="20"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img
+            src="../assets/images/site-images/socials/Instagram.png" width="20"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="../assets/images/site-images/socials/Twitter.png"
+            width="20"></a>
+      </p>
+    </div>
+    <!-- End of Footer Section -->
+  </div>
+  <!-- End of Main Container -->
 </body>
 
 </html>
