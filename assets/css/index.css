@@ -1,7 +1,25 @@
 @import "navigation.css";  /* Use any of the css classes declared in this file by just importing it. */
 
+#home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 .plant-category {
-    margin-left: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-bottom: 2%;
+    /* border-bottom: 5px solid rgb(0, 48, 14, .3); */
+    /* line-height: px; */
 }
 
 .product-container {
@@ -11,6 +29,7 @@
 .category-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .product-img {
