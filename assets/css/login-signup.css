@@ -1,16 +1,18 @@
-
-
 input:valid {
     border: 2px solid black;
 }
 
 
 h1 {
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     line-height: 1.5em;
-    margin-bottom: 1.2em;
-    margin-top: 0.2em;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.5em;
 }
 
 p {
@@ -54,6 +56,21 @@ p {
     box-sizing: border-box;
 }
 
+.sysPref-input{
+    border: 2px solid #254733;
+    color: #31925a;
+    height: auto;
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 1.2em ;
+    margin-top: 0.3em;
+    width: 40%;
+    resize: vertical;
+    font-size: 90%;
+    box-sizing: border-box;
+}
+
 .login-input:focus{
     border-color: yellow;
     box-shadow: inset 0 1px 1px yellow,
@@ -64,16 +81,16 @@ p {
 .login-signup-buttons{
     font-weight: bold;
     text-decoration: none;
-    margin: auto;
+    margin: 20;
     display: inline-block;
     text-align: center;
-    font-size: 90%;
+    font-size: 100%;
     color: white;
     background-color: #254733;
     width: 84%;
     border: none;
     border-radius: 40px;
-    padding: 10px 2px;
+    padding: 10px 24px;
     margin-top: .7em;
     margin-bottom: .7em;
     text-transform: uppercase;
@@ -90,9 +107,39 @@ p {
     cursor: pointer;
 }
 
+.sysPref-button{
+    font-weight: bold;
+    text-decoration: none;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    font-size: 100%;
+    color: white;
+    background-color: #254733;
+    width: auto;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 30px;
+    margin-top: .7em;
+    margin-bottom: .7em;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+    transform: translateY(-4px);
+    position: relative;
+}
+
+.sysPref-button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
 .foot-links{
     margin-top: 17px;
     text-align: center;
     color: #007bff;
     text-decoration: none;
 }
+
