@@ -1,124 +1,179 @@
-<!DOCTYPE html>
-
 <html lang="en">
-  
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <title>The Green Lamp Checkout</title>
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
-  
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  
-    <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/navigation.css">
-    <link rel="stylesheet" href="../assets/css/checkout.css">
-  </head>
-  
-  <body bgcolor="#FDFADF">
-    <header>
-      <table bgcolor="#254733" width="100%" height="50">
-        <td width="5%" align="right">
-          <a href="/"><img src="../assets/images/site-images/Logo.png" height="60"></a>
-        </td>
-        <td width="20%" align="left">
-          <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
-        </td>
-        <td align="center">
-            <font color="white" size="+3" face="Verdana, Geneva, sans-serif">Checkout(<a href="cart.html">4 items</a>) </font>
-        </td>
-      </table>
-    </header>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Green Lamp</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/checkout.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x1 6" href="../assets/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
+</head>
+
+<body>
+  <!-- Main Container -->
+  <div class="main-container">
+    <!--  Nav Bar -->
+    <div class="header-nav">
+      <div class="logo-div">
+        <a href="../index.html"><img src="../assets/images/site-images/Logo.png" height="60"></a>
+        <a href="../index.html" class="logo-link">
+          <p id="org-name">The Green Lamp</p>
+        </a>
+      </div>
+      <div class="search-div">
+        <select id="category" name="category" class="category-dropdown">
+          <option value="zero">All Products</option>
+          <option value="one">Succulents</option>
+          <option value="two">Indoor Plants</option>
+          <option value="three">Herbs</option>
+          <option value="four">Shrubs</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Search..." />
+        <a href="../src/search.html"><button class="all-nav-btns"><span class="material-icons nav-icons">
+              search
+            </span></button></a>
+      </div>
+      <div class="nav-link-div">
+        <div class="nav-links">
+          <a href="../src/login.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                login
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> Login/Signup</h5>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="../src/about.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons-outlined">
+                info
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> About</h5>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="../src/faq.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                help_outline
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> FAQ</h5>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="../src/cart.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> Cart</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--  End of Nav Bar -->
 
     <br>
-    
+
     <form action="../index.html">
       <p class="tableheading3">Shipping Address</p>
-      
+
       <label for="fname">First name:</label>
       <input type="text" id="fname" name="fname" placeholder="John" required><br>
-      
+
       <label for="lname">Last name:</label>
       <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
 
       <label for="phone">Phone number:</label>
-      <input type="tel" id="phone" name="phone" size="15" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
-      
+      <input type="tel" id="phone" name="phone" size="15" placeholder="123-456-7890"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
 
       <label for="address">Street Address:</label><br>
 
       <input type="text" class="address" size="50" name="first_line" placeholder="12 Mango Street" required><br>
       <input type="text" class="address" placeholder="Opt: Apt, Suite #" size="50" name="second_line"><br>
-      
+
       <br>
 
       <label for="city">City:</label>
-      <input type="text" id="city" name="city" size="17" placeholder="Chicago" required> 
+      <input type="text" id="city" name="city" size="17" placeholder="Chicago" required>
 
       <label for="state">State:</label>
       <select>
-          <option value="AL">Alabama</option>
-          <option value="AK">Alaska</option>
-          <option value="AZ">Arizona</option>
-          <option value="AR">Arkansas</option>
-          <option value="CA">California</option>
-          <option value="CO">Colorado</option>
-          <option value="CT">Connecticut</option>
-          <option value="DE">Delaware</option>
-          <option value="DC">District Of Columbia</option>
-          <option value="FL">Florida</option>
-          <option value="GA">Georgia</option>
-          <option value="HI">Hawaii</option>
-          <option value="ID">Idaho</option>
-          <option value="IL">Illinois</option>
-          <option value="IN">Indiana</option>
-          <option value="IA">Iowa</option>
-          <option value="KS">Kansas</option>
-          <option value="KY">Kentucky</option>
-          <option value="LA">Louisiana</option>
-          <option value="ME">Maine</option>
-          <option value="MD">Maryland</option>
-          <option value="MA">Massachusetts</option>
-          <option value="MI">Michigan</option>
-          <option value="MN">Minnesota</option>
-          <option value="MS">Mississippi</option>
-          <option value="MO">Missouri</option>
-          <option value="MT">Montana</option>
-          <option value="NE">Nebraska</option>
-          <option value="NV">Nevada</option>
-          <option value="NH">New Hampshire</option>
-          <option value="NJ">New Jersey</option>
-          <option value="NM">New Mexico</option>
-          <option value="NY">New York</option>
-          <option value="NC">North Carolina</option>
-          <option value="ND">North Dakota</option>
-          <option value="OH">Ohio</option>
-          <option value="OK">Oklahoma</option>
-          <option value="OR">Oregon</option>
-          <option value="PA">Pennsylvania</option>
-          <option value="RI">Rhode Island</option>
-          <option value="SC">South Carolina</option>
-          <option value="SD">South Dakota</option>
-          <option value="TN">Tennessee</option>
-          <option value="TX">Texas</option>
-          <option value="UT">Utah</option>
-          <option value="VT">Vermont</option>
-          <option value="VA">Virginia</option>
-          <option value="WA">Washington</option>
-          <option value="WV">West Virginia</option>
-          <option value="WI">Wisconsin</option>
-          <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
       </select>
 
-      <label for="zipcode">Zipcode:</label> 
-      <input type="number" pattern="[0-9]{5}" id="zipcode" name="zipcode" maxlength="5" size="5" placeholder="11111" required/>
+      <label for="zipcode">Zipcode:</label>
+      <input type="number" pattern="[0-9]{5}" id="zipcode" name="zipcode" maxlength="5" size="5" placeholder="11111"
+        required />
 
       <p class="tableheading3">Payment</p>
 
@@ -127,7 +182,7 @@
       <label for="ccnum">Credit card number</label>
       <input type="text" id="ccnum" pattern="[0-9\s]{13,19}" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
       <label for="expmonth">Exp Month</label>
-      <input type="number" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04"> 
+      <input type="number" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04">
       <label for="expyear">Exp Year</label>
       <input type="number" id="expyear" name="expyear" maxlength="4" size="5" placeholder="20XX"><br>
       <label for="cvv">CVV</label>
@@ -145,24 +200,28 @@
             <td width="200px"></td>
             <td></td>
             <td></td>
-            <td align="right" class="tableheading1">Subtotal</font></td>
+            <td align="right" class="tableheading1">Subtotal</font>
+            </td>
           </tr>
           <tr>
             <!-- Image Height 180x-->
-            <td><a href="products/herb-2.html"><img class="cartimg" src="../assets/images/product-images/herb-2.jpg"></a></td>
+            <td><a href="products/herb-2.html"><img class="cartimg"
+                  src="../assets/images/product-images/herb-2.jpg"></a></td>
             <td class="tableitem">Herb 2</td>
             <td class="tablesubitem">Quantity: 2</td>
             <td class="price">$ 1.00</td>
           </tr>
           <tr>
-            <td><a href="products/shrub-2.html"><img class="cartimg" src="../assets/images/product-images/shrub-2.webp"></a></td>
-      
+            <td><a href="products/shrub-2.html"><img class="cartimg"
+                  src="../assets/images/product-images/shrub-2.webp"></a></td>
+
             <td class="tableitem">Shrub 2</td>
             <td class="tablesubitem">Quantity: 1</td>
             <td class="price">$ 0.50</td>
           </tr>
           <tr>
-            <td><a href="products/succulent-4.html"><img class="cartimg" src="../assets/images/product-images/sclnt-4.jpg"></a></td>
+            <td><a href="products/succulent-4.html"><img class="cartimg"
+                  src="../assets/images/product-images/sclnt-4.jpg"></a></td>
             <td class="tableitem">Hawortia</td>
             <td class="tablesubitem">Quantity: 1</td>
             <td class="price">$ 0.50</td>
@@ -177,24 +236,46 @@
 
             </td>
           </tr>
-        
+
         </table>
 
 
         <p class="tableheading1">Delivers Thursday, March 21</p>
 
         <p class="tableheading2">Order Total: $2.70</p>
-  
 
-      
+
+
       </div>
 
 
-      
+
       <button class="buttons" type="submit">Place your Order</button>
 
     </form>
-  
-  </body>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>
+        <!-- &copy; -->
+        <span class="material-icons">
+          copyright
+        </span>
+        &nbspAll rights reserved by Team LAMP - 2022
+      </p>
+      <!-- <a href='https://www.freepik.com/vectors/twitter-icon'>Twitter icon vector created by Creative_hat - www.freepik.com</a> -->
+      <p>Follows us on
+        <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/site-images/socials/Facebook.png"
+            width="20"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img
+            src="../assets/images/site-images/socials/Instagram.png" width="20"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="../assets/images/site-images/socials/Twitter.png"
+            width="20"></a>
+      </p>
+    </div>
+    <!-- End of Footer Section -->
+  </div>
+  <!-- End of Main Container -->
+</body>
 
 </html>
