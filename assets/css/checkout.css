@@ -83,7 +83,8 @@ td.price {
     width: 100%;
 }
 
-input{
+/* this will effect all input fields.. use a class name..  */
+/* input{
     border: 2px solid #254733;
     color: #31925a;
     height: auto;
@@ -96,7 +97,7 @@ input{
     resize: vertical;
     font-size: 90%;
     box-sizing: border-box;
-}
+} */
 
 .address {
     width: 40%;

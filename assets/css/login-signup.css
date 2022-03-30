@@ -1,10 +1,10 @@
 @import "navigation.css";
 
-input:valid {
+input:valid:focus {
     border: 2px solid black;
 }
 
-input:invalid {
+input:invalid:focus {
     border: 2px dotted red;
 }
 
@@ -29,7 +29,7 @@ p {
 
 .flex-container{
     border: 2px solid #254733;
-    width: fit-content;
+    width: max-content;
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
@@ -48,83 +48,35 @@ p {
   flex-direction: column;
 }
 
-.login-input{
+.login-input, .sign-up-input, .sysPref-input{
     border: 2px solid #254733;
     color: #31925a;
-    height: auto;
-    background-color: white;
     border-radius: 4px;
     padding: 6px;
     margin-bottom: 1.2em ;
     margin-top: 0.3em;
-    width: auto;
-    resize: vertical;
+    width: 100%;
     font-size: 90%;
-    box-sizing: border-box;
 }
 
-.sign-up-input{
-    border: 2px solid #254733;
-    color: #31925a;
-    height: auto;
-    background-color: white;
-    border-radius: 4px;
-    padding: 6px;
-    margin-bottom: 1.2em ;
-    margin-top: 0.3em;
-    width: 77%;
-    resize: vertical;
-    font-size: 90%;
-    box-sizing: border-box;
-}
-
-.sysPref-input{
-    border: 2px solid #254733;
-    color: #31925a;
-    height: auto;
-    background-color: white;
-    border-radius: 4px;
-    padding: 6px;
-    margin-bottom: 1.2em ;
-    margin-top: 0.3em;
-    width: auto;
-    resize: vertical;
-    font-size: 90%;
-    box-sizing: border-box;
-}
-
-.sign-up-input:focus{
+.sign-up-input:focus, .sysPref-input:focus, .login-input:focus{
     border-color: #fff47f;
     box-shadow: inset 0 1px 1px #fff47f,
     0 0 8px black;
     outline: none;
 }
 
-
-.sysPref-input:focus{
-    border-color: #fff47f;
-    box-shadow: inset 0 1px 1px #fff47f,
-    0 0 8px black;
-    outline: none;
-}
-
-.login-input:focus{
-    border-color: #fff47f;
-    box-shadow: inset 0 1px 1px #fff47f,
-    0 0 8px black;
-    outline: none;
-}
-
-.login-signup-buttons{
+.login-signup-buttons, .sysPref-button{
     font-weight: bold;
     text-decoration: none;
-    margin: 20;
     display: inline-block;
     text-align: center;
     font-size: 100%;
     color: white;
     background-color: #254733;
-    width: 84%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     border-radius: 40px;
     padding: 10px 24px;
@@ -139,46 +91,15 @@ p {
     position: relative;
 }
 
-.login-signup-buttons:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
-}
-
-.sysPref-button{
-    font-weight: bold;
-    text-decoration: none;
-    margin: auto;
-    display: inline-block;
-    text-align: center;
-    font-size: 100%;
-    color: white;
-    background-color: #254733;
-    width: auto;
-    border: none;
-    border-radius: 40px;
-    padding: 12px 30px;
-    margin-top: .7em;
-    margin-bottom: .7em;
-    text-transform: uppercase;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
-    box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
-    transform: translateY(-4px);
-    position: relative;
-}
-
-.sysPref-button:hover{
+.login-signup-buttons:hover, .sysPref-button:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
 
 .foot-links{
-    margin-top: 17px;
     margin-bottom: 17px;
     text-align: center;
     color: #007bff;
     text-decoration: none;
-
 }
 

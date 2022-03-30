@@ -90,62 +90,65 @@
     </div>
     <!--  End of Nav Bar -->
 
-  <br>
-  <div class="flex-container">
-
-    <div class="flex-content">
-      <h2 style="color: #254733;">Sign Up</h2>
-
-        <label>First Name:</label><br>
-        <input class="sign-up-input" type="text" placeholder="e.g. John" maxlength="27" autofocus required>
-        
-        <label>Last Name:</label><br>
-        <input class="sign-up-input" type="text" placeholder="e.g. Doe" maxlength="27" required>
-
-        <label>Email Address:</label><br>
-        <input class="sign-up-input" type="email" placeholder="e.g. john@gmail.com" name="email" required>
-        
-        <label>Password:</label><br>
-        <input class="sign-up-input" type="password" id="Password" name="Password" placeholder="Must have at least 8 characters" minlength="8" required>
-        
-        <label>Repeat Password:</label><br>
-        <input class="sign-up-input" type="password" id="Password" name="Password" placeholder="Must have at least 8 characters" minlength="8" required>
-
+    <br>
+    <div class="flex-container">
+      <form method="POST"  class="flex-content">
+        <h2 style="color: #254733;">Sign Up</h2>
+        <div>
+          <label class="form-label">First Name:</label><br>
+          <input class="sign-up-input" type="text" placeholder="e.g. John" maxlength="27" autofocus required>
+        </div>
+        <div>
+          <label>Last Name:</label><br>
+          <input class="sign-up-input" type="text" placeholder="e.g. Doe" maxlength="27" required>
+        </div>
+        <div>
+          <label>Email Address:</label><br>
+          <input class="sign-up-input" type="email" placeholder="e.g. john@gmail.com" name="email" required>
+        </div>
+        <div>
+          <label>Password:</label><br>
+          <input class="sign-up-input" type="password" id="Password" name="Password"
+            placeholder="Must have at least 8 characters" minlength="8" required>
+        </div>
+        <div>
+          <label>Repeat Password:</label><br>
+          <input class="sign-up-input" type="confirmPassword" id="confirmPassword" name="confirmPassword"
+            placeholder="Must have at least 8 characters" minlength="8" required>
+        </div>
         <p>
           <input type="checkbox" required>&nbspI agree to the
           <a class="foot-links" href="#" aria-required="true">Terms & Conditions</a>
         </p>
-
-        <a class="login-signup-buttons" href="#">Sign Up</a>
-
+        <a href="#"><button type="submit" class="login-signup-buttons">Sign Up</button></a>
         <p>
-          Already have an Account? <a class="login-signup-buttons" href="./login.html">Login</a>
+          Already have an Account? <br /><a href="./login.html"><button
+              type="submit" class="login-signup-buttons">Login</button></a>
         </p>
-
+      </form>
     </div>
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>
+        <!-- &copy; -->
+        <span class="material-icons">
+          copyright
+        </span>
+        &nbspAll rights reserved by Team LAMP - 2022
+      </p>
+      <!-- <a href='https://www.freepik.com/vectors/twitter-icon'>Twitter icon vector created by Creative_hat - www.freepik.com</a> -->
+      <p>Follows us on
+        <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/site-images/socials/Facebook.png"
+            width="20"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img
+            src="../assets/images/site-images/socials/Instagram.png" width="20"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="../assets/images/site-images/socials/Twitter.png"
+            width="20"></a>
+      </p>
+    </div>
+    <!-- End of Footer Section -->
   </div>
-<!-- Footer Section -->
-<div class="footer">
-  <p>
-    <!-- &copy; -->
-    <span class="material-icons">
-      copyright
-    </span>
-    &nbspAll rights reserved by Team LAMP - 2022
-  </p>
-  <!-- <a href='https://www.freepik.com/vectors/twitter-icon'>Twitter icon vector created by Creative_hat - www.freepik.com</a> -->
-  <p>Follows us on
-    <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/site-images/socials/Facebook.png"
-        width="20"></a>
-    <a href="https://www.instagram.com/" target="_blank"><img
-        src="../assets/images/site-images/socials/Instagram.png" width="20"></a>
-    <a href="https://www.twitter.com/" target="_blank"><img src="../assets/images/site-images/socials/Twitter.png"
-        width="20"></a>
-  </p>
-</div>
-<!-- End of Footer Section -->
-</div>
-<!-- End of Main Container -->
+  <!-- End of Main Container -->
 </body>
 
 </html>

@@ -1,65 +1,97 @@
 <html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Green Lamp</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/product-page.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x1 6" href="../../assets/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="../../assets/images/favicons/site.webmanifest" />
+</head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Green Lamp</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/product-page.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x1 6" href="../../assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="../../assets/images/favicons/site.webmanifest" />
-  </head>
-
-<body bgcolor="#FDFADF">
-  <header>
-    <table bgcolor="#254733" width="100%" height="50">
-      <td width="5%" align="right">
-        <a href="/"><img src="/assets/images/site-images/Logo.png" height="60"></a>
-      </td>
-      <td width="15%" align="left">
-        <font color="white" size="+3" face="Verdana, Geneva, sans-serif">The Green Lamp </font>
-      </td>
-      <td width="30%" align="center">
-        <select id="category" name="category">
-          <option value="one" align="center">Succulents</option>
-          <option value="two" align="center">Indoor Plants</option>
-          <option value="three" align="center">Herbs</option>
-          <option value="four" align="center">Shrubs</option>
+<body>
+  <!-- Main Container -->
+  <div class="main-container">
+    <!--  Nav Bar -->
+    <div class="header-nav">
+      <div class="logo-div">
+        <a href="../../index.html"><img src="../../assets/images/site-images/Logo.png" height="60"></a>
+        <a href="../../index.html" class="logo-link">
+          <p id="org-name">The Green Lamp</p>
+        </a>
+      </div>
+      <div class="search-div">
+        <select id="category" name="category" class="category-dropdown">
+          <option value="zero">All Products</option>
+          <option value="one">Succulents</option>
+          <option value="two">Indoor Plants</option>
+          <option value="three">Herbs</option>
+          <option value="four">Shrubs</option>
         </select>
-        <input type="text" />
-        <a href="/src/search.html"><input type="submit" value="Search" /></a>
+        <input type="text" class="search-input" placeholder="Search..." />
+        <a href="../../src/search.html"><button class="all-nav-btns"><span class="material-icons nav-icons">
+              search
+            </span></button></a>
+      </div>
+      <div class="nav-link-div">
+        <div class="nav-links">
+          <a href="../../src/login.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                login
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> Login/Signup</h5>
+          </a>
+        </div>
 
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/login.html">
-          <font color="white">Login/Signup</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/faq.html">
-          <font color="white">FAQ</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/about.html">
-          <font color="white">About</font>
-        </a>
-      </td>
-      <td width="5%" align="center">
-        <a href="/src/cart.html">
-          <font color="white">Cart</font>
-        </a>
-      </td>
-    </table>
-  </header>
+        <div class="nav-links">
+          <a href="../../src/about.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons-outlined">
+                info
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> About</h5>
+          </a>
+        </div>
 
-  <!-- Product Info -->
- <!-- Product Info -->
+        <div class="nav-links">
+          <a href="../../src/faq.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                help_outline
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> FAQ</h5>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="../../src/cart.html" class="all-links-text-decoration">
+            <button class="all-nav-btns">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <br />
+            <h5 id="nav-link-name"> Cart</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--  End of Nav Bar -->
+
+    <!-- Product Info -->
+    <!-- Product Info -->
     <div id="product-info-container">
       <h2 id="product-title">Herb 2</h2>
       <div id="product-container">
@@ -69,12 +101,11 @@
             <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via GIPHY
             </a>
           </p>
-          <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY"frameBorder="3"
-            class="giphy-embed" allowFullScreen>
+          <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" frameBorder="3" class="giphy-embed" allowFullScreen>
           </iframe>
         </div>
         <div>
-          <img  class="product-img" height="400" width="400" src="../../assets/images/product-images/herb-2.jpg">
+          <img class="product-img" height="400" width="400" src="../../assets/images/product-images/herb-2.jpg">
         </div>
         <!-- Advertisements -->
         <div>
@@ -82,14 +113,14 @@
             <a href="https://giphy.com/gifs/bykdigital-design-marketing-byk-WVw9CLZUGWSebiyNUY">via GIPHY
             </a>
           </p>
-          <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY"frameBorder="3"
-            class="giphy-embed" allowFullScreen>
+          <iframe src="https://giphy.com/embed/WVw9CLZUGWSebiyNUY" frameBorder="3" class="giphy-embed" allowFullScreen>
           </iframe>
         </div>
       </div>
       <div id="product-info-description-background">
         <div id="product-info-background-button-container">
-          <p id="product-info-description"><b>Description:</b> a plant with leaves, seeds, or flowers used for flavoring, food, medicine, or perfume.</p>
+          <p id="product-info-description"><b>Description:</b> a plant with leaves, seeds, or flowers used for
+            flavoring, food, medicine, or perfume.</p>
           <p id="product-info-price">Price: $9.99</p>
           <div>
             <select id="quantity" name="quantity" class="quantity-dropdown">
@@ -104,13 +135,13 @@
               <option value="nine">9</option>
 
             </select>
-            
-          <button type="submit" id="product-info-button"><span class="material-icons-outlined">
-            add_shopping_cart
-            </span><br/>Add to Cart</button>
+
+            <button type="submit" id="product-info-button"><span class="material-icons-outlined">
+                add_shopping_cart
+              </span><br />Add to Cart</button>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -336,6 +367,28 @@
     </div>
     <!-- End of Ratings & Reviews Section -->
 
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>
+        <!-- &copy; -->
+        <span class="material-icons">
+          copyright
+        </span>
+        &nbspAll rights reserved by Team LAMP - 2022
+      </p>
+      <!-- <a href='https://www.freepik.com/vectors/twitter-icon'>Twitter icon vector created by Creative_hat - www.freepik.com</a> -->
+      <p>Follows us on
+        <a href="https://www.facebook.com/" target="_blank"><img
+            src="../../assets/images/site-images/socials/Facebook.png" width="20"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img
+            src="../../assets/images/site-images/socials/Instagram.png" width="20"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img
+            src="../../assets/images/site-images/socials/Twitter.png" width="20"></a>
+      </p>
+    </div>
+    <!-- End of Footer Section -->
+  </div>
+  <!-- End of Main Container -->
 </body>
 
 </html>
