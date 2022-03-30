@@ -91,134 +91,112 @@
     <!--  End of Nav Bar -->
 
     <br>
+
+
     <div id="cart-suggestions-container">
-      <div class="checktable">
-        <p class="tableheading3">Shopping Cart</p>
-
-        <table id="checkout">
-
-          <tr>
-            <td width="25%"></td>
-            <td></td>
-            <td></td>
-            <td align="right" class="tableheading1">Subtotal</td>
-
-          </tr>
-
-          <tr>
-            <!-- Image Height 180x-->
-            <td><a href="products/herb-2.html"><img class="cartimg"
-                  src="../assets/images/product-images/herb-2.jpg"></a></td>
-            <td class="tableitem">Herb 2</td>
-            <td class="tablesubitem">
-              Quantity:
-              <select>
-                <option value="#" selected="selected">1</option>
-                <option value="#">2</option>
-                <option value="#">3</option>
-                <option value="#">4</option>
-                <option value="#">5</option>
-                <option value="#">6</option>
-                <option value="#">7</option>
-                <option value="#">8</option>
-                <option value="#">9</option>
-              </select>
-            </td>
-            <td class="price">$ 1.00</td>
-          </tr>
-
-
-          <tr>
-
-            <td><a href="products/shrub-2.html"><img class="cartimg"
-                  src="../assets/images/product-images/shrub-2.webp"></a></td>
-            <td class="tableitem">Shrub 2</td>
-
-            <td class="tablesubitem">
-              Quantity:
-              <select>
-                <option value="#" selected="selected">1</option>
-                <option value="#">2</option>
-                <option value="#">3</option>
-                <option value="#">4</option>
-                <option value="#">5</option>
-                <option value="#">6</option>
-                <option value="#">7</option>
-                <option value="#">8</option>
-                <option value="#">9</option>
-              </select>
-            </td>
-
-            <td class="price">$ 0.50</td>
-          </tr>
-
-
-          <tr>
-
-            <td><a href="products/succulent-4.html"><img class="cartimg"
-                  src="../assets/images/product-images/sclnt-4.jpg"></a></td>
-            <td class="tableitem">Haworthia</td>
-            <td class="tablesubitem">
-              Quantity:
-              <select>
-                <option value="#" selected="selected">1</option>
-                <option value="#">2</option>
-                <option value="#">3</option>
-                <option value="#">4</option>
-                <option value="#">5</option>
-                <option value="#">6</option>
-                <option value="#">7</option>
-                <option value="#">8</option>
-                <option value="#">9</option>
-              </select>
-            </td>
-            <td class="price">$ 0.50</td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td colspan="2" align="right" class="tableheading1">Subtotal (4 items): $2.00</font>
-            </td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td colspan="2" align="right">
-              <br>
-              <a href="checkout.html">
-                <button class="buttons">Proceed to Checkout</button>
-              </a>
-            </td>
-          </tr>
-
-        </table>
-
-      </div>
-
-      <div class="suggestions">
-        <p class="tableheading3">You might also like</p>
-
-        <div class="product-container">
-          <a href="../src/products/succulent-3.html">
-            <img class="product-img" width="175" height="175" src="../assets/images/product-images/sclnt-3.jpg">
-          </a>
-          <div class="product-description-container">
-            <p class="product-name">Echeveria</p>
-            <p>$1.75</p>
+      <div id="checktable">
+        <h1>Shopping Cart</h1>
+        <div class="product">
+          <div class="product_image">
+            <a href="products/herb-2.html">
+              <img class="cartimg" src="../assets/images/product-images/herb-2.jpg">
+            </a>
           </div>
+          <div class="product_name">
+            <h2>Herb 2</h2>
+          </div>
+
+          <div class="product_quantity">
+            Quantity: 
+            <select>
+              <option value="#" selected="selected">2</option>
+              <option value="#">1</option>
+              <option value="#">2</option>
+              <option value="#">3</option>
+              <option value="#">4</option>
+              <option value="#">5</option>
+              <option value="#">6</option>
+              <option value="#">7</option>
+              <option value="#">8</option>
+              <option value="#">9</option>
+            </select>
+          </div>
+
+
+          <div class="product_price">
+            $ 19.98
+          </div>
+
         </div>
 
-        <div class="product-container">
-          <a href="../src/products/indoor-plants-4.html">
-            <img class="product-img" width="175" height="175" src="../assets/images/product-images/home-4.jpg">
-          </a>
-          <div class="product-description-container">
-            <p class="product-name">Indoor Plant 4</p>
-            <p>$5.99</p>
+        <div class="product">
+          <div class="product_image">
+            <a href="products/shrub-2.html">
+              <img class="cartimg" src="../assets/images/product-images/shrub-2.webp">
+            </a>
           </div>
+          <div class="product_name">
+            <h2>Shrub 2</h2>
+          </div>
+
+          <div class="product_quantity">
+            Quantity: 
+            <select>
+              <option value="#" selected="selected">1</option>
+              <option value="#">2</option>
+              <option value="#">3</option>
+              <option value="#">4</option>
+              <option value="#">5</option>
+              <option value="#">6</option>
+              <option value="#">7</option>
+              <option value="#">8</option>
+              <option value="#">9</option>
+            </select>
+          </div>
+
+
+          <div class="product_price">
+            $ 9.99
+          </div>
+
         </div>
+
+        <div class="product">
+          <div class="product_image">
+            <a href="products/succulent-4.html">
+              <img class="cartimg" src="../assets/images/product-images/sclnt-4.jpg">
+            </a>
+          </div>
+          <div class="product_name">
+            <h2>Haworthia</h2>
+          </div>
+
+          <div class="product_quantity">
+            Quantity: 
+            <select>
+              <option value="#" selected="selected">1</option>
+              <option value="#">2</option>
+              <option value="#">3</option>
+              <option value="#">4</option>
+              <option value="#">5</option>
+              <option value="#">6</option>
+              <option value="#">7</option>
+              <option value="#">8</option>
+              <option value="#">9</option>
+            </select>
+          </div>
+
+
+          <div class="product_price">
+            $ 2.00
+          </div>
+
+        </div>
+
+        <a href="checkout.html">
+          <button class="buttons">Proceed to Checkout</button>
+        </a>
+
 
       </div>
 

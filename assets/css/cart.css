@@ -25,29 +25,11 @@
     font-size: 1em;
 }
 
-td.tableitem {
-    color:black;
-    font-size: 1.25em;
-    width: 45%;
-}
-
-td.tablesubitem {
-    color:black;
-    font-size: 0.75em;
-    text-align: right;
-}
-
-td.price {
-    text-align: right;
-    color:black;
-    font-size: 1.25em;
-}
-
 
 .buttons{
+    float: right;
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
     text-align: center;
     font-size: 100%;
     color: white;
@@ -71,7 +53,7 @@ td.price {
     cursor: pointer;
 }
 
-.checktable {
+#checktable {
     background-color: white;
     box-sizing: border-box;
     width: 74%;
@@ -83,11 +65,12 @@ td.price {
 }
 
 .cartimg {
-    height: 100%;
-    width: 100%;
+    width: 180px;
+    aspect-ratio: auto 180 / 180;
+    height: 180px;
 }
 
-.suggestions {
+#suggestions {
     /* display: inline-block; */
     background-color: white;
     text-align: center;
@@ -97,6 +80,8 @@ td.price {
     border-radius: 10px;
     border: 2px solid #254733;
     padding: 10px;
+    display: flex;
+    text-align: center;
 }
 
 #cart-suggestions-container {
@@ -105,4 +90,43 @@ td.price {
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 20px;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+}
+
+.product_image {
+    display: flex;
+    float: left;
+}
+
+.product_name {
+    display: flex;
+    text-align: center;
+    float: left;
+    align-items: center;
+    width: 60%;
+}
+
+.product_quantity {
+    display: flex; 
+    text-align: center;
+    float: right;
+    margin-left:auto;
+    margin-right:0;
+    right:0px;
+    align-items: center;
+
+}
+
+.product_price {
+    display: flex; 
+    float: right;
+    text-align: center;
+    margin-left:auto;
+    margin-right:0;
+    right:0px;
+    align-items: center;
 }
