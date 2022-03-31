@@ -20,7 +20,7 @@
     text-align: center;
     font-size: 100%;
     color: white;
-    background-color: #254733;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 40px;
     padding: 10px 24px;
@@ -85,7 +85,7 @@ td.price {
 
 /* this will effect all input fields.. use a class name..  */
 /* input{
-    border: 2px solid #254733;
+    border: 2px solid var(--primary-color);
     color: #31925a;
     height: auto;
     background-color: white;

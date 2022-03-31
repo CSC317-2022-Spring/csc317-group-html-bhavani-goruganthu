@@ -30,7 +30,7 @@
 }
 
 #product-info-background-button-container {
-  background-color: #fbf5b8;
+  background-color: var(--hover-color);
   border: 2px solid rgb(117, 117, 117);
   padding: 10px;
   margin-top: 10px;
@@ -49,31 +49,28 @@
 }
 
 #product-info-description-background {
-  /* margin: px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; */
   margin-left: 10%;
   margin-right: 10%;
 }
 
 #product-info-button {
-  /* width: 200px; */
   margin-left: auto;
   margin-right: auto;
-  /* height: 40px; */
   margin-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 3px solid #3e7555;
-  background-color: rgb(235, 213, 174);
+  padding: 10px;
+  border: 3px solid white;
+  background-color: var(--primary-color);
+  color: white;
   border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#product-info-button:active {
-  border: 3px solid #254733;
-  background-color: rgb(235, 213, 174);
+#product-info-button:hover {
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color-opac)
 }
 
 #product-info-description,
@@ -126,20 +123,20 @@
 
 /* Ratings Card */
 .card {
-  box-shadow: 0px 5px 10px 0px #254733;
+  box-shadow: 0px 5px 10px 0px var(--primary-color);
   border-radius: 10px;
   transition: 0.3s;
   max-width: 300px;
   text-align: left;
   margin-top: 20px;
   padding: 15px;
-  background-color: rgb(251, 251, 251);
+  background-color: white;
 }
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   transform: translateY(-10px);
   transition: ease-in 0.3s;
-  box-shadow: 0px 5px 10px 4px #254733;
+  box-shadow: 0px 5px 10px 4px var(--primary-color);
 }
 .card-top {
   display: flex;
@@ -147,7 +144,7 @@
   align-items: center;
 }
 .card-name {
-  color: #254733;
+  color: var(--primary-color);
 }
 .card-body {
   margin-top: 8px;
