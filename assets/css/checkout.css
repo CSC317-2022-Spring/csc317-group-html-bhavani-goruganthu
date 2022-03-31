@@ -106,15 +106,15 @@ td.price {
 input[type=number] {
     width: 10%;
 }
-
-a {
+/* this will effect all anchor tags.. use a class name..  */
+/* a {
     color: #70c5d4;
     text-decoration: none;
-}
-
+} */
+/* 
 a:hover {
     text-decoration: underline;
-}
+} */
 
 .select-dropdown-bg {
     background-color: white;
