@@ -88,6 +88,7 @@ body {
   color:slategrey;
   border-radius: 0.25rem;
   text-align: center;
+  background-color: white;
 }
 .search-input {
   width: 260px;

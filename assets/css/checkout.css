@@ -153,11 +153,12 @@ input[type=number] {
 a {
     color: #70c5d4;
     text-decoration: none;
-}
+} 
 
 a:hover {
     text-decoration: underline;
 }
+
 
 
 #product-final {
