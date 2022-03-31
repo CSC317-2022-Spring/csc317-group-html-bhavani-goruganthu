@@ -1,7 +1,52 @@
 @import "navigation.css";  /* Use any of the css classes declared in this file by just importing it. */
 @import "index.css";  /* Use any of the css classes declared in this file by just importing it. */
+@import "cart.css";
 
 *{font-family:Arial, Helvetica, sans-serif}
+
+html, body {padding:0; margin:0; height:100%;}
+footer{position: absolute; bottom: 0; left: 0; right: 0;}
+
+h1, h2, h3 {
+    font-style: normal;
+    font-weight: normal;
+}
+
+#checkout-main {
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-header-nav {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+}
+
+.checkout-logo-div {
+    float: left;
+    display: flex;
+    left: 0 px; 
+}
+
+.checkout-title {
+    text-align: center;
+    margin: 10px auto;
+  vertical-align: middle;
+}
+
+.form-box {
+    background-color: white;
+    width: 60%;
+    border-radius: 10px;
+    border: 2px solid #254733;
+    margin-left: 15px;
+    padding: 15px;
+
+    margin-bottom: 1%;
+}
 
 .tableheading3 {
     color: black;
@@ -13,29 +58,26 @@
     font-size: 2em;
 }
 
-.buttons{
+.checkoutbuttons{
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
-    text-align: center;
     font-size: 100%;
     color: white;
     background-color: #254733;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     border-radius: 40px;
     padding: 10px 24px;
     margin-top: .7em;
     margin-bottom: .7em;
     text-transform: uppercase;
-    cursor: pointer;
-    overflow: hidden;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
     box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
-    transform: translateY(-4px);
-    position: relative;
+
 }
 
-.buttons:hover{
+.checkoutbuttons:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
@@ -83,8 +125,8 @@ td.price {
     width: 100%;
 }
 
-/* this will effect all input fields.. use a class name..  */
-/* input{
+
+input{
     border: 2px solid #254733;
     color: #31925a;
     height: auto;
@@ -97,10 +139,11 @@ td.price {
     resize: vertical;
     font-size: 90%;
     box-sizing: border-box;
-} */
+}
+
 
 .address {
-    width: 40%;
+    width: 50%;
 }
 
 input[type=number] {
@@ -114,4 +157,17 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+#product-final {
+    display: flex;
+    flex-direction: column;
+}
+
+.done {
+    float: right;
+    margin-left:auto;
+    margin-right:0;
+    right:0px;
 }

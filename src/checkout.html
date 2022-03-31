@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -18,241 +20,217 @@
   <!-- Main Container -->
   <div class="main-container">
     <!--  Nav Bar -->
-    <div class="header-nav">
-      <div class="logo-div">
+    <div class="checkout-header-nav">
+      <div class="checkout-logo-div">
         <a href="../index.html"><img src="../assets/images/site-images/Logo.png" height="60"></a>
         <a href="../index.html" class="logo-link">
           <p id="org-name">The Green Lamp</p>
         </a>
       </div>
-      <div class="search-div">
-        <select id="category" name="category" class="category-dropdown">
-          <option value="zero">All Products</option>
-          <option value="one">Succulents</option>
-          <option value="two">Indoor Plants</option>
-          <option value="three">Herbs</option>
-          <option value="four">Shrubs</option>
-        </select>
-        <input type="text" class="search-input" placeholder="Search..." />
-        <a href="../src/search.html"><button class="all-nav-btns"><span class="material-icons nav-icons">
-              search
-            </span></button></a>
+
+      <div class="checkout-title">
+        <p id="org-name">Checkout (<a href="cart.html"> 4 items </a>)</p>
       </div>
-      <div class="nav-link-div">
-        <div class="nav-links">
-          <a href="../src/login.html" class="all-links-text-decoration">
-            <button class="all-nav-btns">
-              <span class="material-icons">
-                login
-              </span>
-            </button>
-            <br />
-            <h5 id="nav-link-name"> Login/Signup</h5>
-          </a>
-        </div>
-
-        <div class="nav-links">
-          <a href="../src/about.html" class="all-links-text-decoration">
-            <button class="all-nav-btns">
-              <span class="material-icons-outlined">
-                info
-              </span>
-            </button>
-            <br />
-            <h5 id="nav-link-name"> About</h5>
-          </a>
-        </div>
-
-        <div class="nav-links">
-          <a href="../src/faq.html" class="all-links-text-decoration">
-            <button class="all-nav-btns">
-              <span class="material-icons">
-                help_outline
-              </span>
-            </button>
-            <br />
-            <h5 id="nav-link-name"> FAQ</h5>
-          </a>
-        </div>
-
-        <div class="nav-links">
-          <a href="../src/cart.html" class="all-links-text-decoration">
-            <button class="all-nav-btns">
-              <span class="material-icons">
-                shopping_cart
-              </span>
-            </button>
-            <br />
-            <h5 id="nav-link-name"> Cart</h5>
-          </a>
-        </div>
-      </div>
+    
     </div>
     <!--  End of Nav Bar -->
 
     <br>
 
-    <form action="../index.html">
-      <p class="tableheading3">Shipping Address</p>
+    <div id="checkout-main">
+      <form action="../index.html">
+        
+        <div class="form-box">
+          
+          <h1>Shipping Address</h1>
 
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" name="fname" placeholder="John" required><br>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" placeholder="John" required><br>
 
-      <label for="lname">Last name:</label>
-      <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
 
-      <label for="phone">Phone number:</label>
-      <input type="tel" id="phone" name="phone" size="15" placeholder="123-456-7890"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
-
-
-      <label for="address">Street Address:</label><br>
-
-      <input type="text" class="address" size="50" name="first_line" placeholder="12 Mango Street" required><br>
-      <input type="text" class="address" placeholder="Opt: Apt, Suite #" size="50" name="second_line"><br>
-
-      <br>
-
-      <label for="city">City:</label>
-      <input type="text" id="city" name="city" size="17" placeholder="Chicago" required>
-
-      <label for="state">State:</label>
-      <select>
-        <option value="AL">Alabama</option>
-        <option value="AK">Alaska</option>
-        <option value="AZ">Arizona</option>
-        <option value="AR">Arkansas</option>
-        <option value="CA">California</option>
-        <option value="CO">Colorado</option>
-        <option value="CT">Connecticut</option>
-        <option value="DE">Delaware</option>
-        <option value="DC">District Of Columbia</option>
-        <option value="FL">Florida</option>
-        <option value="GA">Georgia</option>
-        <option value="HI">Hawaii</option>
-        <option value="ID">Idaho</option>
-        <option value="IL">Illinois</option>
-        <option value="IN">Indiana</option>
-        <option value="IA">Iowa</option>
-        <option value="KS">Kansas</option>
-        <option value="KY">Kentucky</option>
-        <option value="LA">Louisiana</option>
-        <option value="ME">Maine</option>
-        <option value="MD">Maryland</option>
-        <option value="MA">Massachusetts</option>
-        <option value="MI">Michigan</option>
-        <option value="MN">Minnesota</option>
-        <option value="MS">Mississippi</option>
-        <option value="MO">Missouri</option>
-        <option value="MT">Montana</option>
-        <option value="NE">Nebraska</option>
-        <option value="NV">Nevada</option>
-        <option value="NH">New Hampshire</option>
-        <option value="NJ">New Jersey</option>
-        <option value="NM">New Mexico</option>
-        <option value="NY">New York</option>
-        <option value="NC">North Carolina</option>
-        <option value="ND">North Dakota</option>
-        <option value="OH">Ohio</option>
-        <option value="OK">Oklahoma</option>
-        <option value="OR">Oregon</option>
-        <option value="PA">Pennsylvania</option>
-        <option value="RI">Rhode Island</option>
-        <option value="SC">South Carolina</option>
-        <option value="SD">South Dakota</option>
-        <option value="TN">Tennessee</option>
-        <option value="TX">Texas</option>
-        <option value="UT">Utah</option>
-        <option value="VT">Vermont</option>
-        <option value="VA">Virginia</option>
-        <option value="WA">Washington</option>
-        <option value="WV">West Virginia</option>
-        <option value="WI">Wisconsin</option>
-        <option value="WY">Wyoming</option>
-      </select>
-
-      <label for="zipcode">Zipcode:</label>
-      <input type="number" pattern="[0-9]{5}" id="zipcode" name="zipcode" maxlength="5" size="5" placeholder="11111"
-        required />
-
-      <p class="tableheading3">Payment</p>
-
-      <label for="cname">Name on Card</label>
-      <input type="text" id="cname" name="cardname" placeholder="John More Doe"><br>
-      <label for="ccnum">Credit card number</label>
-      <input type="text" id="ccnum" pattern="[0-9\s]{13,19}" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
-      <label for="expmonth">Exp Month</label>
-      <input type="number" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04">
-      <label for="expyear">Exp Year</label>
-      <input type="number" id="expyear" name="expyear" maxlength="4" size="5" placeholder="20XX"><br>
-      <label for="cvv">CVV</label>
-      <input type="number" id="cvv" name="cvv" maxlength="4" size="5"><br>
-
-      <br>
-
-      <div class="checktable">
-
-        <p class="tableheading2">Review Order</p>
-
-        <table id="checkout">
-
-          <tr>
-            <td width="200px"></td>
-            <td></td>
-            <td></td>
-            <td align="right" class="tableheading1">Subtotal</font>
-            </td>
-          </tr>
-          <tr>
-            <!-- Image Height 180x-->
-            <td><a href="products/herb-2.html"><img class="cartimg"
-                  src="../assets/images/product-images/herb-2.jpg"></a></td>
-            <td class="tableitem">Herb 2</td>
-            <td class="tablesubitem">Quantity: 2</td>
-            <td class="price">$ 1.00</td>
-          </tr>
-          <tr>
-            <td><a href="products/shrub-2.html"><img class="cartimg"
-                  src="../assets/images/product-images/shrub-2.webp"></a></td>
-
-            <td class="tableitem">Shrub 2</td>
-            <td class="tablesubitem">Quantity: 1</td>
-            <td class="price">$ 0.50</td>
-          </tr>
-          <tr>
-            <td><a href="products/succulent-4.html"><img class="cartimg"
-                  src="../assets/images/product-images/sclnt-4.jpg"></a></td>
-            <td class="tableitem">Hawortia</td>
-            <td class="tablesubitem">Quantity: 1</td>
-            <td class="price">$ 0.50</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td colspan="2" align="right">
-              <p class="tableheading1">Subtotal (4 items): $2.00</p>
-              <p class="tableheading0">Shpping and Handling: $0.50</p>
-              <p class="tableheading0">Tax: $0.20</p>
-
-            </td>
-          </tr>
-
-        </table>
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" size="15" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
 
 
-        <p class="tableheading1">Delivers Thursday, March 21</p>
+          <label for="address">Street Address:</label><br>
 
-        <p class="tableheading2">Order Total: $2.70</p>
+          <input type="text" class="address" size="50" name="first_line" placeholder="12 Mango Street" required><br>
+          <input type="text" class="address" placeholder="Opt: Apt, Suite #" size="50" name="second_line"><br>
+
+          <br>
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" size="17" placeholder="Chicago" required>
+
+          <label for="state">State:</label>
+          <select>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+
+          <label for="zipcode">Zipcode:</label>
+          <input type="number" pattern="[0-9]{5}" id="zipcode" name="zipcode" maxlength="5" size="5" placeholder="11111" required />
+
+        </div>
+      
+        <div class="form-box">
+          <h1>Payment</h1>
+
+          <label for="cname">Name on Card</label>
+          <input type="text" id="cname" name="cardname" placeholder="John More Doe"><br>
+          <label for="ccnum">Credit card number</label>
+          <input type="text" id="ccnum" pattern="[0-9\s]{13,19}" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
+          <label for="expmonth">Exp Month</label>
+          <input type="number" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04">
+          <label for="expyear">Exp Year</label>
+          <input type="number" id="expyear" name="expyear" maxlength="4" size="5" placeholder="20XX"><br>
+          <label for="cvv">CVV</label>
+          <input type="number" id="cvv" name="cvv" maxlength="4" size="5"><br>
+
+        </div>
+
+
+        <div class="form-box">
+          <h1>Shopping Cart</h1>
+          <div class="product">
+            <div class="product_image">
+              <a href="products/herb-2.html">
+                <img class="cartimg" src="../assets/images/product-images/herb-2.jpg">
+              </a>
+            </div>
+
+            <div class="product_name">
+              <h2>Herb 2</h2>
+            </div>
+
+            <div class="product_quantity">
+              Quantity: 2
+            </div>
+
+            <div class="product_price">
+              $ 19.98
+            </div>
+
+          </div>
+
+          <div class="product">
+            <div class="product_image">
+              <a href="products/shrub-2.html">
+                <img class="cartimg" src="../assets/images/product-images/shrub-2.webp">
+              </a>
+            </div>
+            <div class="product_name">
+              <h2>Shrub 2</h2>
+            </div>
+
+            <div class="product_quantity">
+              Quantity: 1
+            </div>
+
+
+            <div class="product_price">
+              $ 9.99
+            </div>
+
+          </div>
+
+          <div class="product">
+            <div class="product_image">
+              <a href="products/succulent-4.html">
+                <img class="cartimg" src="../assets/images/product-images/sclnt-4.jpg">
+              </a>
+            </div>
+            <div class="product_name">
+              <h2>Haworthia</h2>
+            </div>
+
+            <div class="product_quantity">
+              Quantity: 1
+            </div>
+
+
+            <div class="product_price">
+              $ 2.00
+            </div>
+
+          </div>
+
+          <div id="product-final">
+            <h2 class="done">Subtotal: $31.97</h2>
+            <h3 class="done">Tax: $3.20</h2>
+            <h3 class="done">Shipping: $5.99</h2>
+
+          </div>
+
+          <div class="product-final">
+            <h1>Total: $41.16</h1>
+            <h1>Delivery: Saturday April 2</h1>
+
+          </div>
+
+        </div>
+
+        <button class="checkoutbuttons" type="submit">Place your Order</button>
+
+      </form>
+
+    </div>
 
 
 
-      </div>
 
-
-
-      <button class="buttons" type="submit">Place your Order</button>
-
-    </form>
+    </div>
 
     <!-- Footer Section -->
     <div class="footer">
