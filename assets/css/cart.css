@@ -130,3 +130,7 @@
     right:0px;
     align-items: center;
 }
+
+.select-dropdown-bg {
+    background-color: white;
+}

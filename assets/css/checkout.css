@@ -115,3 +115,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.select-dropdown-bg {
+    background-color: white;
+}

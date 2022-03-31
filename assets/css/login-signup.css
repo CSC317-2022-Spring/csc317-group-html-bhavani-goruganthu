@@ -59,6 +59,10 @@ p {
     font-size: 90%;
 }
 
+.sysPref-input {
+    background-color: white;
+}
+
 .sign-up-input:focus, .sysPref-input:focus, .login-input:focus{
     border-color: var(--focus-color);
     box-shadow: inset 0 1px 1px var(--focus-color),
