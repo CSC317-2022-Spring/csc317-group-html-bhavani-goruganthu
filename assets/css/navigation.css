@@ -134,3 +134,31 @@ body {
 .footer p span {
   font-size: medium;
 }
+
+.navbar-iframe {	
+  width: 100%;	
+  position: sticky;	
+  top: 0;	
+  height: 13%;	
+}	
+/* for tablets and mobile widths*/	
+@media (max-width: 1063px) {	
+  .navbar-iframe {	
+    height: 23%;	
+  }	
+}	
+@media (max-width:768px) {	
+  .navbar-iframe {	
+    height: 28%;	
+  }	
+}	
+.footer-iframe {	
+  position: absolute;	
+  left: 0;	
+  bottom: 0;	
+  height: 60px; /* Height of the footer */	
+}
+
+.ads-iframe {
+  height: 35%;
+}
