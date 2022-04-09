@@ -19,7 +19,8 @@
 <body>
   <!-- Main Container -->
   <div class="main-container">
-    <!--  Nav Bar -->
+
+    <!--  Checkout Nav Bar -->
     <div class="checkout-header-nav">
       <div class="checkout-logo-div">
         <a href="../index.html"><img src="../assets/images/site-images/Logo.png" height="60"></a>
@@ -27,21 +28,20 @@
           <p id="org-name">The Green Lamp</p>
         </a>
       </div>
-
       <div class="checkout-title">
-        <p id="org-name">Checkout (<a href="cart.html"> 4 items </a>)</p>
+        <p id="org-name">Checkout (<a href="./cart.html" class="cart-link">4 items</a>)</p>
       </div>
-    
+      <div style="width: 300px;">
+      </div>
     </div>
-    <!--  End of Nav Bar -->
+    <!--  End of Checkout Nav Bar -->
 
     <br>
-
     <div id="checkout-main">
       <form action="../index.html">
-        
+
         <div class="form-box">
-          
+
           <h1>Shipping Address</h1>
 
           <label for="fname">First name:</label>
@@ -51,7 +51,8 @@
           <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
 
           <label for="phone">Phone number:</label>
-          <input type="tel" id="phone" name="phone" size="15" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+          <input type="tel" id="phone" name="phone" size="15" placeholder="123-456-7890"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
 
 
           <label for="address">Street Address:</label><br>
@@ -120,17 +121,19 @@
           </select>
 
           <label for="zipcode">Zipcode:</label>
-          <input type="number" pattern="[0-9]{5}" id="zipcode" name="zipcode" maxlength="5" size="5" placeholder="11111" required />
+          <input type="number" pattern="[0-9]{5}" id="zipcode" name="zipcode" maxlength="5" size="5" placeholder="11111"
+            required />
 
         </div>
-      
+
         <div class="form-box">
           <h1>Payment</h1>
 
           <label for="cname">Name on Card</label>
           <input type="text" id="cname" name="cardname" placeholder="John More Doe"><br>
           <label for="ccnum">Credit card number</label>
-          <input type="text" id="ccnum" pattern="[0-9\s]{13,19}" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
+          <input type="text" id="ccnum" pattern="[0-9\s]{13,19}" name="cardnumber"
+            placeholder="1111-2222-3333-4444"><br>
           <label for="expmonth">Exp Month</label>
           <input type="number" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04">
           <label for="expyear">Exp Year</label>
@@ -209,7 +212,7 @@
           <div id="product-final">
             <h2 class="done">Subtotal: $31.97</h2>
             <h3 class="done">Tax: $3.20</h2>
-            <h3 class="done">Shipping: $5.99</h2>
+              <h3 class="done">Shipping: $5.99</h2>
 
           </div>
 
@@ -227,28 +230,10 @@
 
     </div>
 
-
-
     <!-- Footer Section -->
-    <div class="footer">
-      <p>
-        <!-- &copy; -->
-        <span class="material-icons">
-          copyright
-        </span>
-        &nbspAll rights reserved by Team LAMP - 2022
-      </p>
-      <!-- <a href='https://www.freepik.com/vectors/twitter-icon'>Twitter icon vector created by Creative_hat - www.freepik.com</a> -->
-      <p>Follows us on
-        <a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/site-images/socials/Facebook.png"
-            width="20"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img
-            src="../assets/images/site-images/socials/Instagram.png" width="20"></a>
-        <a href="https://www.twitter.com/" target="_blank"><img src="../assets/images/site-images/socials/Twitter.png"
-            width="20"></a>
-      </p>
-    </div>
+    <iframe class="footer-iframe" src="../footer.html" style="border:none;" width="100%" title="Footer Iframe"></iframe>
     <!-- End of Footer Section -->
+
   </div>
   <!-- End of Main Container -->
 </body>

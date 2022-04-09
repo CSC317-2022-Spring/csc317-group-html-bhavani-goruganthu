@@ -85,7 +85,7 @@ body {
   font-size: 14px;
   display: inline-block;
   line-height: 1.5;
-  color:slategrey;
+  color: slategrey;
   border-radius: 0.25rem;
   text-align: center;
   background-color: white;
@@ -135,28 +135,28 @@ body {
   font-size: medium;
 }
 
-.navbar-iframe {	
-  width: 100%;	
-  position: sticky;	
-  top: 0;	
-  height: 5rem;	
-}	
-/* for tablets and mobile widths*/	
-@media (max-width: 1063px) {	
-  .navbar-iframe {	
-    height: 9rem;	
-  }	
-}	
-@media (max-width:768px) {	
-  .navbar-iframe {	
-    height: 11rem;	
-  }	
-}	
-.footer-iframe {	
-  position: absolute;	
-  left: 0;	
-  bottom: 0;	
-  height: 60px; /* Height of the footer */	
+.navbar-iframe {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 5rem;
+}
+/* for tablets and mobile widths*/
+@media (max-width: 1063px) {
+  .navbar-iframe {
+    height: 9rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-iframe {
+    height: 11rem;
+  }
+}
+.footer-iframe {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px; /* Height of the footer */
 }
 
 .ads-iframe {
