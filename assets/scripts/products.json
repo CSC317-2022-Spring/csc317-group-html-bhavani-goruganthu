@@ -1,0 +1,394 @@
+{
+  "Succulents": [
+    {
+      "id": 11,
+      "name": "Crassula",
+      "description": "In botany, succulent plants, also known as succulents, are plants with parts that are thickened, fleshy, and engorged, usually to retain water in arid climates or soil conditions.",
+      "imageUrl": "./assets/images/product-images/sclnt-1.jpg",
+      "price": 1.25,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Moonglow",
+      "description": "'Moonglow' is an incredible succulent with extra chubby, greyish green leaves that stack tightly to form an upright column around each stem. The leaves are covered with fine hairs, making this unique plant slightly velvety to the touch.",
+      "imageUrl": "./assets/images/product-images/sclnt-2.jpg",
+      "price": 2.99,
+      "rating": 3.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Haworthia",
+      "description": "Haworthia is a large genus of small succulent plants endemic to Southern Africa . Like the aloes, they are members of the subfamily Asphodeloideae and they generally resemble miniature aloes, except in their flowers, which are distinctive in appearance. ",
+      "imageUrl": "./assets/images/product-images/sclnt-3.jpg",
+      "price": 3.96,
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Echeveria",
+      "description": "Echeverias are native to remote, mountainous terrain between 1,000 and 4,000 feet elevation. They range from Mexico to Argentina and grow in rock faces and ledges on near-vertical cliffs. ",
+      "imageUrl": "./assets/images/product-images/sclnt-4.jpg",
+      "price": 1.75,
+      "rating": 1.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    }
+  ],
+  "IndoorPlants": [
+    {
+      "id": 21,
+      "name": "Money Plant",
+      "description": "The Money Plant has rounded flat coin-shaped leaves; hence, it’s common name. Its delicate stems will dance as a breeze blows through a filtered light window. ",
+      "imageUrl": "./assets/images/product-images/home-1.jpg",
+      "price": 5.99,
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Fiddle leaf fig",
+      "description": "The fiddle-leaf fig (Ficus lyrata) is a popular indoor tree featuring very large, heavily veined, and glossy violin-shaped leaves that grow upright on a sleek trunk. ",
+      "imageUrl": "./assets/images/product-images/home-2.jpg",
+      "price": 4.99,
+      "rating": 3.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3.5
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3.5
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Madagascar",
+      "description": "Madagascar is a houseplant that has elegant long, thin leaves with red edges. The lower leaves gradually fall away to reveal a thin trunk.",
+      "imageUrl": "./assets/images/product-images/home-3.jpg",
+      "price": 5.96,
+      "rating": 4,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Dracaena ",
+      "description": "Dracaena is a genus of about 120 species of trees and succulent shrubs. The formerly accepted genera Pleomele and Sansevieria are now included in Dracaena. ",
+      "imageUrl": "./assets/images/product-images/home-4.jpg",
+      "price": 5.99,
+      "rating": 3,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    }
+  ],
+  "Herbs": [
+    {
+      "id": 31,
+      "name": "Thyme",
+      "description": "Thyme is the herb of some members of the genus Thymus of aromatic perennial evergreen herbs in the mint family Lamiaceae. Thymes are relatives of the oregano genus Origanum, with both plants being mostly indigenous to the Mediterranean region.",
+      "imageUrl": "./assets/images/product-images/herb-1.jpg",
+      "price": 6.25,
+      "rating": 4,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Peppermint",
+      "description": "Peppermint is a hybrid mint, a cross between watermint and spearmint. Indigenous to Europe and the Middle East, the plant is now widely spread and cultivated in many regions of the world. It is occasionally found in the wild with its parent species.",
+      "imageUrl": "./assets/images/product-images/herb-2.jpg",
+      "price": 3.99,
+      "rating": 3,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Rosemary",
+      "description": "Salvia rosmarinus, commonly known as rosemary, is a shrub with fragrant, evergreen, needle-like leaves and white, pink, purple, or blue flowers, native to the Mediterranean region. ",
+      "imageUrl": "./assets/images/product-images/herb-3.jpg",
+      "price": 9.99,
+      "rating": 4,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Basil",
+      "description": "Basil, also called great basil, is a culinary herb of the family Lamiaceae. It is a tender plant, and is used in cuisines worldwide. In Western cuisine, the generic term 'basil' refers to the variety also known as sweet basil or Genovese basil. Basil is native to tropical regions from Central Africa to Southeast Asia.",
+      "imageUrl": "./assets/images/product-images/herb-4.jpg",
+      "price": 9.99,
+      "rating": 3,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    }
+  ],
+  "Shrubs": [
+    {
+      "id": 41,
+      "name": "Buttonbush",
+      "description": "Cephalanthus occidentalis is a species of flowering plant in the family Rubiaceae, that is native to eastern and southern North America. Common names include buttonbush, common buttonbush, button-willow, buck brush, and honey-bells. ",
+      "imageUrl": "./assets/images/product-images/shrub-1.jpg",
+      "price": 5.25,
+      "rating": 3.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Elderberry",
+      "description": "Sambucus is a genus of flowering plants in the family Adoxaceae. The various species are commonly called elder or elderberry. The genus was formerly placed in the honeysuckle family, Caprifoliaceae, but was reclassified as Adoxaceae due to genetic and morphological comparisons to plants in the genus Adoxa.",
+      "imageUrl": "./assets/images/product-images/shrub-2.webp",
+      "price": 4.95,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Honeysuckle",
+      "description": "Honeysuckles are arching shrubs or twining vines in the family Caprifoliaceae, native to northern latitudes in North America and Eurasia. Approximately 180 species of honeysuckle have been identified in North America and Eurasia.",
+      "imageUrl": "./assets/images/product-images/shrub-3.jfif",
+      "price": 8.25,
+      "rating": 2.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Ninebark",
+      "description": "Physocarpus, commonly called ninebark, is a genus of flowering plants in the family Rosaceae, native to North America and northeastern Asia.",
+      "imageUrl": "./assets/images/product-images/shrub-4.jpg",
+      "price": 3.25,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 1,
+          "reviewer": "Dwight Schrute",
+          "reviewDate": "May 03 2017",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        },
+        {
+          "id": 2,
+          "reviewer": "Tom Patterson",
+          "reviewDate": "June 03 2019",
+          "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+          "rating": 3
+        }
+      ]
+    }
+  ]
+}
