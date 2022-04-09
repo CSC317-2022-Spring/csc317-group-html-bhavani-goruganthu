@@ -110,7 +110,8 @@ body {
   margin: 13px;
   text-align: center;
 }
-#nav-link-name {
+
+.nav-link-name {
   display: inline;
   text-align: center;
   color: white;
