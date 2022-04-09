@@ -139,17 +139,17 @@ body {
   width: 100%;	
   position: sticky;	
   top: 0;	
-  height: 13%;	
+  height: 5rem;	
 }	
 /* for tablets and mobile widths*/	
 @media (max-width: 1063px) {	
   .navbar-iframe {	
-    height: 23%;	
+    height: 9rem;	
   }	
 }	
 @media (max-width:768px) {	
   .navbar-iframe {	
-    height: 28%;	
+    height: 11rem;	
   }	
 }	
 .footer-iframe {	

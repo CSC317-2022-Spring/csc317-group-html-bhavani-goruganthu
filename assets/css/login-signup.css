@@ -93,6 +93,7 @@ p {
     box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
     transform: translateY(-4px);
     position: relative;
+    z-index: -1;
 }
 
 .login-signup-buttons:hover, .sysPref-button:hover{
