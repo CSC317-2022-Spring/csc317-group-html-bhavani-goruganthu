@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Green Lamp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/product-page.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x1 6" href="../../assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="../../assets/images/favicons/site.webmanifest" />
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!--  Nav Bar -->
+        <iframe class="navbar-iframe" src="../navbar.html" style="border:none;" width="100%"
+            title="Header Iframe"></iframe>
+        <!-- <object data="./navbar.html" class="navbar-iframe" width="100%"></object> -->
+        <!--  End of Nav Bar -->
+
+        <!-- Product Info -->
+        <div id="product-info-container">
+            <h2 id="product-title"><!-- to be filled by JS --></h2>
+            <div id="product-container">
+
+                <!-- Ads Section -->
+                <object data="../ads.html" class="ads-iframe"></object>
+                <!-- End of Ads Section -->
+
+                <div>
+                    <img id="prod-img" class="product-img" height="400" width="400"><!-- to be filled by JS -->
+                </div>
+
+                <!-- Ads Section -->
+                <object data="../ads.html" class="ads-iframe"></object>
+                <!-- End of Ads Section -->
+
+            </div>
+            <div id="product-info-description-background">
+                <div id="product-info-background-button-container">
+                    <p id="product-info-description"><!-- to be filled by JS --></p>
+                    <p id="product-info-price">Price: $<!-- to be filled by JS --></p>
+                    <div>
+                        <label>Quantity:</label>
+                        <select id="quantity" name="quantity" class="quantity-dropdown">
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                            <option value="six">6</option>
+                            <option value="seven">7</option>
+                            <option value="eight">8</option>
+                            <option value="nine">9</option>
+
+                        </select>
+
+                        <button type="submit" id="product-info-button"><span class="material-icons-outlined">
+                                add_shopping_cart
+                            </span>Add to Cart&nbsp</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Ratings & Reviews Section -->
+        <hr />
+        <div class="review-ratings-div">
+            <h2 id="rating-stars">Ratings
+            </h2>
+            <h4 id="rating-count"></h4>
+            <div id="ratings-div" class="ratings-div">
+                <!-- to be filled by JS -->
+            </div>
+            <br />
+            <br />
+        </div>
+        <!-- End of Ratings & Reviews Section -->
+
+        <!-- Footer Section -->
+        <iframe class="footer-iframe" src="../footer.html" style="border:none;" width="100%"
+            title="Footer Iframe"></iframe>
+        <!-- End of Footer Section -->
+    </div>
+    <!-- End of Main Container -->
+</body>
+<script src="../assets/scripts/productPage.js"></script>
+
+</html>

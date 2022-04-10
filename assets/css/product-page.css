@@ -113,13 +113,20 @@
   justify-content: space-around;
   align-items: start;
 }
+.stars-flex{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
 .star-icon-fill {
   background-color: grey;
   color: yellow;
+  margin-right: 3px;
 }
 .star-icon-nofill {
   background-color: grey;
   color: #fff;
+  margin-right: 3px;
 }
 
 /* Ratings Card */
