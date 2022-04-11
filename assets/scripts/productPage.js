@@ -17,6 +17,17 @@ fetch('../assets/scripts/products.json')
   })
   .then((product) => {
     // Populating the Product Details
+    let selector =  document.getElementById("quantity");
+    let selectorValue = Number(selector.value)
+    let productPrice = Number(product[0].price);
+    selector.addEventListener('change', () => {
+      selectorValue = Number(selector.value);
+
+      let newPrice = productPrice * selectorValue
+      document.getElementById(
+        'product-info-price'
+      ).innerHTML = `${'$' + newPrice}`;
+    });
     document.getElementById('product-title').innerText = product[0].name;
     document.getElementById('prod-img').src = '.' + product[0].imageUrl;
     document.getElementById(
@@ -24,7 +35,7 @@ fetch('../assets/scripts/products.json')
     ).innerHTML = `<b>Description:</b> ${product[0].description}`;
     document.getElementById(
       'product-info-price'
-    ).innerHTML += `${product[0].price}`;
+    ).innerHTML += `${product[0].price *= selectorValue}`;
 
     // Populating Ratings & Reviews Section using a function defined below
     updateRating(product[0], 'rating-stars');
