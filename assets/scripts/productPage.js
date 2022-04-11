@@ -26,7 +26,7 @@ fetch('../assets/scripts/products.json')
       let newPrice = productPrice * selectorValue
       document.getElementById(
         'product-info-price'
-      ).innerHTML = `${'$' + newPrice}`;
+      ).innerHTML = `${'$' + newPrice.toFixed(2)}`;
     });
     document.getElementById('product-title').innerText = product[0].name;
     document.getElementById('prod-img').src = '.' + product[0].imageUrl;
