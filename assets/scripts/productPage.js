@@ -11,6 +11,7 @@ fetch('../assets/scripts/products.json')
     filtered = Object.entries(data).filter((key) =>
       key.includes(urlProductType)
     );
+    console.log(filtered)
     product = filtered[0][1].filter((key) => key.id == urlProductId);
     return product;
   })
