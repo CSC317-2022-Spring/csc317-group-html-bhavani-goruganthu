@@ -28,6 +28,41 @@ fetch('../assets/scripts/products.json')
         '$' + newPrice.toFixed(2)
       }`;
     });
+
+
+    // let products = localStorage.getItem("products")
+    // let addToCart = document.getElementById("product-info-button");
+    // let productItem = {
+    //   name: product[0].name,
+    //   imageUrl: product[0].imageUrl,
+    //   price: product[0].price,
+    //   amount: selectorValue
+    // }
+
+    // addToCart.addEventListener('click', () => {
+    //   if(products) {
+    //     console.log(products)
+    //     products = localStorage.getItem("products");
+    //     console.log(products)
+    //     let json = JSON.stringify(products)
+    //     console.log(json)
+    //     let obj = JSON.parse(JSON.stringify(products));
+        
+    //     console.log(typeof obj)
+    //     if(obj[`${product[0].name}`]) {
+    //       let currAmount = obj[`${product[0].name}`].amount;
+    //       obj[`${product[0].name}`].amount = currAmount + selectorValue;
+    //     } else {
+    //       obj[`${product[0].name}`] = productItem
+    //     }
+        
+    //     localStorage.setItem("products", `${obj}`)
+    //   } else {
+    //     // console.log(obj)
+    //     localStorage.setItem("products", `{${product[0].name}:${[JSON.stringify(productItem)]}}`)
+    //   }
+    // })
+
     document.getElementById('product-title').innerText = product[0].name;
     document.getElementById('prod-img').src = '.' + product[0].imageUrl;
     document.getElementById(
