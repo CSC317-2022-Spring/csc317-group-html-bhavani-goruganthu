@@ -13,7 +13,6 @@ window.onload = function () {
          localStorage.setItem("numOfItems", itemQuantity)
       }
       console.log(localStorage.getItem("numOfItems"))
-      console.log(document.getElementById("lmao"))
       event.preventDefault();
    }
    
