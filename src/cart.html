@@ -14,7 +14,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x1 6" href="../assets/images/favicons/favicon-16x16.png" />
   <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
-  <script src="../assets/scripts/clearCart.js"></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
 
     <div class="cart-container">
       <div class="cart-table-div">
-        <h2 class="" style="text-align: center">Shopping Cart <em>(Count : 2)</em></h2>
+        <h2 class="" style="text-align: center">Shopping Cart <em id="cart-count">(Count : 0)</em></h2>
         <table class="cart-table">
           <thead>
             <tr>
@@ -50,78 +49,7 @@
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>
-                <a href="./productPage.html?type=Herbs&id=32">
-                  <img class="cart-product-image" width="150" height="150"
-                    src="../assets/images/product-images/herb-2.jpg">
-                </a>
-              </td>
-              <td>
-                <h5>Peppermint</h5>
-              </td>
-              <td>
-                <h5>$3.99</h5>
-              </td>
-              <td>
-                <div  class="quantity-delete-div">
-                <select class="quantity-dropdown">
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                </select>
-                <span class="material-icons quantity-delete-icon">
-                  delete
-                </span>
-              </div>
-              </td>
-              <td>
-                <h5>$3.99</h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="./productPage.html?type=Herbs&id=33">
-                  <img class="cart-product-image" width="150" height="150"
-                    src="../assets/images/product-images/herb-3.jpg">
-                </a>
-              </td>
-              <td>
-                <h5>Rosemary</h5>
-              </td>
-              <td>
-                <h5>$9.99</h5>
-              </td>
-              <td>
-              <div class="quantity-delete-div">
-                <select class="quantity-dropdown">
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                </select>
-                <span class="material-icons quantity-delete-icon">
-                  delete
-                </span>
-                </div>
-              </td>
-              <td>
-                <h5>$9.99</h5>
-              </td>
-            </tr>
-          </tbody>
+          <tbody id="cart-tbody"></tbody>
         </table>
         <h3 class="cart-subtotal">Subtotal: $13.98</h3> <br />
         <div class="btns-div">
@@ -165,5 +93,5 @@
   </div>
   <!-- End of Main Container -->
 </body>
-
+<script src="../assets/scripts/cart.js"></script>
 </html>
