@@ -1,12 +1,6 @@
 @import 'navigation.css'; /* Use any of the css classes declared in this file by just importing it. */
-@import 'index.css'; /* Use any of the css classes declared in this file by just importing it. */
-@import 'cart.css';
 
-#checkout-main {
-  flex-direction: column;
-  align-items: center;
-}
-
+/* navbar for checkout */
 .checkout-header-nav {
   padding: 10px;
   background-color: var(--primary-color);
@@ -16,145 +10,157 @@
   position: sticky;
   top: 0;
 }
-
 .checkout-logo-div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .checkout-title {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.cart-link {
+  color: #70c5d4;
+  text-decoration: none;
+}
+.cart-link:hover {
+  text-decoration: underline;
+}
+
+/* main content of checkout page */
+.checkout-container {
   display: flex;
-  margin-bottom: -30px;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 1.5rem;
 }
 
-.form-box {
-  background-color: white;
-  width: 60%;
-  border-radius: 10px;
+/* forms sections - left side of the checkout page */
+.shipping-address-div,
+.payment-info-div {
   border: 2px solid var(--primary-color);
-  margin-left: 15px;
-  padding: 15px;
-  margin-bottom: 1%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--hover-color);
+}
+.form-input {
+  border: 2px solid var(--primary-color);
+  color: #31925a;
+  border-radius: 4px;
+  padding: 6px;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
+  width: auto;
+  font-size: 90%;
+}
+.form-input:focus {
+  border-color: var(--focus-color);
+  box-shadow: inset 0 1px 1px var(--focus-color), 0 0 8px black;
+  outline: none;
+}
+.form-dropdown {
+  padding: 6px;
+  font-size: 14px;
+  border: 2px solid var(--primary-color);
+  display: inline-block;
+  line-height: 1.5;
+  color: #31925a;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: white;
+}
+.address-div {
+  margin-left: 10px;
+}
+.inline-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.inline-address-input {
+  margin-right: 10px;
 }
 
-.tableheading3 {
-  color: black;
-  font-size: 2.25em;
+/* table & btns section - right side of the checkout page */
+.checkout-orders-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
 }
 
-.tableheading2 {
-  color: black;
-  font-size: 2em;
+.checkout-table-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto;
+  margin-right: 1rem;
+}
+.checkout-table {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--hover-color);
+  border-collapse: separate;
+  text-align: center;
+  border-radius: 10px;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.checkout-table thead {
+  line-height: 3rem;
+  background-color: var(--primary-color-opac);
+  color: white;
+  border-radius: 10px;
+}
+.checkout-table thead tr th {
+  border: 1px solid var(--primary-color);
+  width: fit-content;
+}
+.checkout-table tbody {
+  border-radius: 10px;
+}
+.checkout-table tbody tr td {
+  width: fit-content;
+  border-bottom: 1px solid var(--primary-color);
+}
+.checkout-product-image {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
 }
 
-.checkoutbuttons {
+.checkout-subtotal {
+  float: right;
+  text-align: right;
+  padding: 1%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  background-color: var(--primary-color-opac);
+}
+
+
+
+.checkout-btn {
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
   font-weight: bold;
   text-decoration: none;
   font-size: 100%;
   color: white;
   background-color: var(--primary-color);
-  margin-left: auto;
-  margin-right: auto;
   border: none;
   border-radius: 40px;
   padding: 10px 24px;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
   text-transform: uppercase;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.checkoutbuttons:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
+  box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
-.tableheading1 {
-  color: black;
-  font-size: 1.25em;
-}
-
-.tableheading0 {
-  color: black;
-  font-size: 1em;
-}
-
-td.tableitem {
-  color: black;
-  font-size: 1.25em;
-  width: 45%;
-}
-
-td.tablesubitem {
-  color: black;
-  font-size: 0.75em;
-  text-align: right;
-}
-
-td.price {
-  text-align: right;
-}
-
-.checktable {
-  background-color: white;
-  box-sizing: border-box;
-  width: 75%;
-}
-
-.cartimg {
-  height: 180px;
-  width: 180px;
-}
-
-#checkout {
-  background-color: white;
-  width: 100%;
-}
-
-input {
-  border: 2px solid var(--primary-color);
-  color: #31925a;
-  height: auto;
-  background-color: white;
-  border-radius: 4px;
-  padding: 6px;
-  margin-bottom: 1.2em;
-  margin-top: 0.3em;
-  width: 20%;
-  resize: vertical;
-  font-size: 90%;
-  box-sizing: border-box;
-}
-
-.address {
-  width: 50%;
-}
-
-input[type='number'] {
-  width: 10%;
-}
-
-.cart-link{
-  color: #70c5d4;
-  text-decoration: none;
-}
-
-.cart-link:hover {
-  text-decoration: underline;
-}
-
-#product-final {
-  display: flex;
-  flex-direction: column;
-}
-
-.done {
-  float: right;
-  margin-left: auto;
-  margin-right: 0;
-  right: 0px;
+.checkout-btn:hover {
+  box-shadow: 0 4px 6px 1px var(--focus-color), 0 4px 6px 1px var(--hover-color);
 }
