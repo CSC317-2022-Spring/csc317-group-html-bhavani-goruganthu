@@ -4,8 +4,22 @@ if (window.parent.location.pathname === '/src/sysPref.html') {
   document.getElementById('login-logout-text').innerText = 'Logout';
 }
 
-document.getElementById('search-icon').addEventListener('click', searchClick);
+// localStorage.clear();
 
+// handle cart count update - get count from localStorage cartProducts
+const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+if (cartProducts.length === 0) {
+  document.getElementById('cart-count').innerText = cartProducts.length;
+} else {
+  let cartLength = 0;
+  Object.values(cartProducts).filter((prod) => {
+    cartLength += parseInt(prod.quantity);
+  });
+  document.getElementById('cart-count').innerText = cartLength;
+}
+
+// handle search button click
+document.getElementById('search-icon').addEventListener('click', searchClick);
 function searchClick() {
   // get the category selected from the dropdown and the search keyword
   let select = document.getElementById('category');
