@@ -1,5 +1,4 @@
 @import 'index.css'; /* Use any of the css classes declared in this file by just importing it. */
-@import 'login-signup.css';
 
 .cart-container {
   display: flex;
@@ -67,6 +66,7 @@
 }
 .quantity-delete-icon {
   color: rgb(214, 16, 16);
+  cursor: pointer;
 }
 
 .quantity-delete-div {
