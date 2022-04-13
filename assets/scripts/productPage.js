@@ -8,10 +8,10 @@ fetch('../assets/scripts/products.json')
     return response.json();
   })
   .then((data) => {
-    filtered = Object.entries(data).filter((key) =>
+    let filtered = Object.entries(data).filter((key) =>
       key.includes(urlProductType)
     );
-    product = filtered[0][1].filter((key) => key.id == urlProductId);
+    let product = filtered[0][1].filter((key) => key.id == urlProductId);
     return product;
   })
   .then((product) => {
