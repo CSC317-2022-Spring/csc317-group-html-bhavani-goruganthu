@@ -11,11 +11,23 @@ fetch('../assets/scripts/products.json')
     let filtered = Object.entries(data).filter((key) =>
       key.includes(urlProductType)
     );
+    console.log(filtered);
     let product = filtered[0][1].filter((key) => key.id == urlProductId);
     return product;
   })
   .then((product) => {
     // Populating the Product Details
+    let selector = document.getElementById('quantity');
+    let selectorValue = Number(selector.value);
+    let productPrice = Number(product[0].price);
+    selector.addEventListener('change', () => {
+      selectorValue = Number(selector.value);
+
+      let newPrice = productPrice * selectorValue;
+      document.getElementById('product-info-price').innerHTML = `${
+        '$' + newPrice.toFixed(2)
+      }`;
+    });
     document.getElementById('product-title').innerText = product[0].name;
     document.getElementById('prod-img').src = '.' + product[0].imageUrl;
     document.getElementById(
@@ -23,7 +35,7 @@ fetch('../assets/scripts/products.json')
     ).innerHTML = `<b>Description:</b> ${product[0].description}`;
     document.getElementById(
       'product-info-price'
-    ).innerHTML += `${product[0].price}`;
+    ).innerHTML += `${(product[0].price *= selectorValue)}`;
 
     // Populating Ratings & Reviews Section using a function defined below
     updateRating(product[0], 'rating-stars');
