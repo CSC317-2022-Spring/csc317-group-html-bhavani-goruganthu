@@ -68,6 +68,14 @@
 .quantity-delete-icon {
   color: rgb(214, 16, 16);
 }
+
+.quantity-delete-div {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+}
+
 .cart-subtotal {
   float: right;
   text-align: right;
@@ -81,8 +89,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-padding-top: 10px;
-padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .cart-btns {
@@ -100,5 +108,5 @@ padding-bottom: 10px;
 }
 
 .cart-btns:hover {
-  box-shadow: 0 4px 6px 1px var(--focus-color), 0 4px 6px 1px  var(--hover-color);
+  box-shadow: 0 4px 6px 1px var(--focus-color), 0 4px 6px 1px var(--hover-color);
 }
