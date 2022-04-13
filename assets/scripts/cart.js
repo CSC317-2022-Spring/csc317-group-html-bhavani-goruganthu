@@ -1,7 +1,10 @@
+//  initialize variable for subtotal
+localStorage.setItem('cartSubTotal', 0);
+
 // get current cart products from localstorage
 const currentCartProducts =
   JSON.parse(localStorage.getItem('cartProducts')) || [];
-
+//   to update cart count
 if (currentCartProducts.length === 0) {
   document.getElementById(
     'cart-count'
@@ -82,6 +85,19 @@ if (currentCartProducts.length > 0) {
           )}</h5>
         </td>
                 </tr>`;
+
+        // set subTotal Price
+        let prodPrice = parseFloat(
+          value.products.price * value.quantity
+        ).toFixed(2);
+        let currSubTotal = (
+          parseFloat(localStorage.getItem('cartSubTotal')) +
+          parseFloat(prodPrice)
+        ).toFixed(2);
+        localStorage.setItem('cartSubTotal', currSubTotal);
+        document.querySelector(
+          '.cart-subtotal'
+        ).innerText = `Subtotal: $${localStorage.getItem('cartSubTotal')}`;
       });
     });
 }
