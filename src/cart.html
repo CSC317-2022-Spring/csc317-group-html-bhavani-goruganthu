@@ -3,189 +3,169 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Green Lamp</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/cart.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x1 6" href="../assets/images/favicons/favicon-16x16.png" />
-  <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
-  <script src="../assets/scripts/clearCart.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Green Lamp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x1 6" href="../assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
+    <script src="../assets/scripts/clearCart.js"></script>
 </head>
 
 <body>
-  <!-- Main Container -->
-  <div class="main-container">
+    <!-- Main Container -->
+    <div class="main-container">
 
-    <!--  Nav Bar -->
-    <iframe class="navbar-iframe" id="navbar-iframe" src="../navbar.html" style="border:none;" width="100%" title="Header Iframe"></iframe>
-    <!-- <object data="./navbar.html" class="navbar-iframe" width="100%"></object> -->
-    <!--  End of Nav Bar -->
+        <!--  Nav Bar -->
+        <iframe class="navbar-iframe" id="navbar-iframe" src="../navbar.html" style="border:none;" width="100%"
+            title="Header Iframe"></iframe>
+        <!-- <object data="./navbar.html" class="navbar-iframe" width="100%"></object> -->
+        <!--  End of Nav Bar -->
 
-    <div id="cart-suggestions-container">
-      <div id="checktable">
-        <h1>Shopping Cart</h1>
-        <div class="product">
-          <div class="product_image">
-            <a href="products/herb-2.html">
-              <img class="cartimg" src="../assets/images/product-images/herb-2.jpg">
-            </a>
-          </div>
-          <div class="product_name">
-            <h2>Herb 2</h2>
-          </div>
+        <div class="cart-container">
+            <div class="cart-table-div">
+                <h2 class="">Shopping Cart <em>(Count : 2)</em></h2>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Product Image
+                            </th>
+                            <th>
+                                Product Name
+                            </th>
+                            <th>
+                                Price / Unit
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="./productPage.html?type=Herbs&id=32">
+                                    <img class="cart-product-image" width="150" height="150"
+                                        src="../assets/images/product-images/herb-2.jpg">
+                                </a>
+                            </td>
+                            <td>
+                                <h5>Peppermint</h5>
+                            </td>
+                            <td>
+                                <h5>$3.99</h5>
+                            </td>
+                            <td>
+                                <select class="quantity-dropdown">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select><br /><br />
+                                <span class="material-icons quantity-delete-icon">
+                                    delete
+                                </span>
+                            </td>
+                            <td>
+                                <h5>$3.99</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./productPage.html?type=Herbs&id=33">
+                                    <img class="cart-product-image" width="150" height="150"
+                                        src="../assets/images/product-images/herb-3.jpg">
+                                </a>
+                            </td>
+                            <td>
+                                <h5>Rosemary</h5>
+                            </td>
+                            <td>
+                                <h5>$9.99</h5>
+                            </td>
+                            <td>
+                                <select class="quantity-dropdown">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select> <br /><br />
+                                <span class="material-icons quantity-delete-icon">
+                                    delete
+                                </span>
+                            </td>
+                            <td>
+                                <h5>$9.99</h5>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="cart-subtotal">Subtotal: $13.98</h3> <br />
+                <div class="btns-div">
+                    
+        <a href="./checkout.html">
+            <button class="cart-btns">Proceed to Checkout</button>
+          </a>  
+          <button id="clear_cart" class=
+          "cart-btns">Clear Cart</button>
+                </div>
 
-          <div class="product_quantity">
-            Quantity:
-            <select class="select-dropdown-bg">
-              <option value="1">1</option>
-              <option value="2" selected>2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-          </div>
+            </div>
 
+            <!-- Suggestions-container -->
+            <div>
+                <h2 class="">Similar Products</h2>
+                <div class="product-container">
+                    <a href="./productPage.html?type=Succulents&id=11">
+                        <img class="product-img" width="300" height="300"
+                            src="../assets/images/product-images/sclnt-1.jpg">
+                    </a>
+                    <div class="product-description-container">
+                        <p class="product-name">Crassula</p>
+                        <p class="product-price"> $1.25</p>
+                    </div>
+                </div>
 
-          <div class="product_price">
-            $ 19.98
-          </div>
+                <div class="product-container">
+                    <a href="./productPage.html?type=Succulents&id=12">
+                        <img class="product-img" width="300" height="300"
+                            src="../assets/images/product-images/sclnt-2.jpg">
+                    </a>
+                    <div class="product-description-container">
+                        <p class="product-name">Moonglow</p>
+                        <p class="product-price"> $2.99</p>
+                    </div>
+                </div>
 
+            </div>
         </div>
 
-        <div class="product">
-          <div class="product_image">
-            <a href="products/shrub-2.html">
-              <img class="cartimg" src="../assets/images/product-images/shrub-2.webp">
-            </a>
-          </div>
-          <div class="product_name">
-            <h2>Shrub 2</h2>
-          </div>
-
-          <div class="product_quantity">
-            Quantity:
-            <select class="select-dropdown-bg">
-              <option value="1" selected>1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-          </div>
-
-
-          <div class="product_price">
-            $ 9.99
-          </div>
-
-        </div>
-
-        <div class="product">
-          <div class="product_image">
-            <a href="products/succulent-4.html">
-              <img class="cartimg" src="../assets/images/product-images/sclnt-4.jpg">
-            </a>
-          </div>
-          <div class="product_name">
-            <h2>Haworthia</h2>
-          </div>
-
-          <div class="product_quantity">
-            Quantity:
-            <select class="select-dropdown-bg">
-              <option value="1" selected>1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-          </div>
-
-
-          <div class="product_price">
-            $ 2.00
-          </div>
-
-        </div>
-
-        <div class="product">
-          <h2 id="done">Subtotal: $31.97</h2>
-        </div>
-
-        <a href="checkout.html">
-          <button class="buttons">Proceed to Checkout</button>
-        </a>
-
-        <button id="clear_cart">Clear Cart</button>
-
-      </div>
-
-      <div id="suggestions">
-
-        <br>
-
-        <h1 class="sugtitle">Suggestions</h1>
-
-        <div class="sugproduct">
-          <div class="sugproductimage">
-            <a href="products/succulent-2.html">
-              <img class="sugproductimage" src="../assets/images/product-images/sclnt-2.jpg">
-            </a>
-          </div>
-
-          <div class="sugbio">
-            <p class="product-name">Moonglow</p>
-            <p class="product-price">$2.99</p>
-
-          </div>
-
-        </div>
-
-        <div class="sugproduct">
-          <div class="sugproductimage">
-            <a href="products/herb-4.html">
-              <img class="sugproductimage" src="../assets/images/product-images/herb-4.jpg">
-            </a>
-          </div>
-
-
-          <div class="sugbio">
-            <p class="product-name">Herb 4</p>
-            <p class="product-price">$9.99</p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
+        <!-- Footer Section -->
+        <iframe class="footer-iframe" src="../footer.html" style="border:none;" width="100%"
+            title="Footer Iframe"></iframe>
+        <!-- End of Footer Section -->
 
     </div>
-
-    <!-- Footer Section -->
-    <iframe class="footer-iframe" src="../footer.html" style="border:none;" width="100%" title="Footer Iframe"></iframe>
-    <!-- End of Footer Section -->
-
-  </div>
-  <!-- End of Main Container -->
+    <!-- End of Main Container -->
 </body>
 
 </html>
