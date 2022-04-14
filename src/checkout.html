@@ -129,14 +129,14 @@
 
         <h2>Payment</h2>
         <div class="payment-info-div">
-          
+
           <img src="../assets/images/site-images/finances/Visa.png" width="40">
           <img src="../assets/images/site-images/finances/Mastercard.png" width="40">
           <img src="../assets/images/site-images/finances/Amex.png" width="40">
           <img src="../assets/images/site-images/finances/Discover.png" width="40">
 
           <br>
-         
+
           <label for="cname">Name on Card</label>
           <input type="text" class="form-input" id="cname" name="cardname" placeholder="John More Doe"><br>
           <label for="ccnum">Credit card number</label>
@@ -176,50 +176,6 @@
               </tr>
             </thead>
             <tbody id="checkout-tbody">
-              <!-- <tr>
-                <td>
-                  <a href="./productPage.html?type=Herbs&id=32">
-                    <img class="checkout-product-image" width="50" height="50"
-                      src="../assets/images/product-images/herb-2.jpg">
-                  </a>
-                </td>
-                <td>
-                  <h5>Peppermint</h5>
-                </td>
-                <td>
-                  <h5>$3.99</h5>
-                </td>
-                <td>
-                  <div>
-                    <h5>1</h5>
-                  </div>
-                </td>
-                <td>
-                  <h5>$3.99</h5>
-                </td>
-              </tr> -->
-              <!-- <tr>
-                <td>
-                  <a href="./productPage.html?type=Herbs&id=33">
-                    <img class="checkout-product-image" width="50" height="50"
-                      src="../assets/images/product-images/herb-3.jpg">
-                  </a>
-                </td>
-                <td>
-                  <h5>Rosemary</h5>
-                </td>
-                <td>
-                  <h5>$9.99</h5>
-                </td>
-                <td>
-                  <div class="quantity-delete-div">
-                    <h5>1</h5>
-                  </div>
-                </td>
-                <td>
-                  <h5>$9.99</h5>
-                </td>
-              </tr> -->
             </tbody>
           </table>
           <h5 id="checkout-subtotal" class="checkout-totals">Subtotal: $13.98</h5>
@@ -228,7 +184,9 @@
           <h3 id="checkout-total" class="checkout-totals" style="border-top: 1px solid white">Total Price: $18.96</h3>
           <abbr style="text-align:center; font-size: small; margin-top: 3px">Note: Expect Delivery By Tomorrow
             9pm</abbr>
-          <button class="checkout-btn">Place Order</button>
+          <a>
+            <button class="checkout-btn" id="place-order-btn">Place Order</button>
+          </a>
         </div>
       </div>
     </div>

@@ -66,4 +66,15 @@ if (currentCartProducts.length === 0) {
   document.getElementById(
     'checkout-total'
   ).innerText = `Total Price: $${calculatedTotalCost}`;
+
+  document
+    .getElementById('place-order-btn')
+    .addEventListener('click', handlePlaceOrder);
+}
+
+function handlePlaceOrder() {
+  document
+    .getElementById('place-order-btn')
+    .parentElement.setAttribute('href', '../index.html');
+  localStorage.clear();
 }
