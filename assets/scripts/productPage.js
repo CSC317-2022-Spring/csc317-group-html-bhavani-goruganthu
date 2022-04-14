@@ -97,8 +97,8 @@ function onClickAddProductToCart() {
   const currentCartProducts =
     JSON.parse(localStorage.getItem('cartProducts')) || [];
   currentCartProducts.push({
-    id: urlProductId,
-    quantity: quantity,
+    id: parseInt(urlProductId),
+    quantity: parseInt(quantity),
     type: urlProductType,
   });
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
