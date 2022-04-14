@@ -28,14 +28,14 @@
       <div class="flex-content">
         <h2 style="color: #254733;">Edit Account or System <br>Preferences</h2>
 
-        <form>
+        <form id="sysPrefForm">
           <h3 style="color: black;">Personal Information</h3>
           <label>First Name:</label><br>
-          <input class="sysPref-input" type="text" placeholder="e.g. John" maxlength="27" autofocus>
+          <input class="sysPref-input" id="fName" type="text" placeholder="e.g. John" maxlength="27" autofocus>
 
 
           <br><label>Last Name:</label><br>
-          <input class="sysPref-input" type="text" placeholder="e.g. Doe" maxlength="27">
+          <input class="sysPref-input" id="lName" type="text" placeholder="e.g. Doe" maxlength="27">
 
           <br><label>Email Address:</label><br>
           <input class="sysPref-input" type="email" id="email" placeholder="e.g. john@gmail.com" name="email" required>
@@ -45,13 +45,13 @@
           <h3 style="color: black;">Location</h3>
 
           <label>Street Address:</label><br>
-          <input class="sysPref-input" type="text" placeholder="123 Apple st" name="Street Address">
+          <input class="sysPref-input" id="sAddress" type="text" placeholder="123 Apple st" name="Street Address">
 
           <br><label>City:</label><br>
-          <input class="sysPref-input" type="text" placeholder="San Francisco">
+          <input class="sysPref-input" id="City" type="text" placeholder="San Francisco">
 
           <br><label>State:</label><br>
-          <select class="sysPref-input">
+          <select id="State" class="sysPref-input">
             <option value=""> Select a State</option>
             <option value="AL"> Alabama</option>
             <option value="AK"> Alaska</option>
@@ -106,21 +106,22 @@
           </select>
 
           <br><label>ZipCode:</label><br>
-          <input class="sysPref-input" type="text" id="ZipCode" placeholder="12345" name="ZipCode" maxlength="5"
+          <input class="sysPref-input" type="text" id="zipCode" placeholder="12345" name="ZipCode" maxlength="5"
             size="5" pattern="[0-9]{5}">
 
           <h3 style="color: black;">Confidential Information</h3>
 
           <label>Change Password:</label><br>
-          <input class="sysPref-input" type="password" id="Password" name="Password"
+          <input class="sysPref-input" type="password" id="changePass" name="Password"
             placeholder="Must have at least 8 characters" minlength="8">
 
           <br><label>Phone number:</label><br>
-          <input class="sysPref-input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789"
+          <input class="sysPref-input" type="tel" id="phoneNum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789"
             size="10" maxlength="12">
 
           <br>
-          <button type="submit" class="sysPref-button">Change Settings</button>
+          <button class="sysPref-button" type="submit" onclick="locallyStoreSysPref()">Change Settings</button>
+          <button class="sysPref-button" onclick="resetChanges()">Reset</button>
         </form>
       </div>
     </div>
@@ -132,5 +133,7 @@
   </div>
   <!-- End of Main Container -->
 </body>
+
+<script src="./../assets/scripts/sysPref.js"></script>
 
 </html>
