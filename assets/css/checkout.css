@@ -132,7 +132,7 @@
   border-radius: 5px;
 }
 
-.checkout-subtotal {
+.checkout-totals{
   float: right;
   text-align: right;
   padding: 1%;

@@ -29,7 +29,7 @@
         </a>
       </div>
       <div class="checkout-title">
-        <p id="org-name">Checkout (<a href="./cart.html" class="cart-link">4 items</a>)</p>
+        <p id="org-name">Checkout (<a href="./cart.html" class="cart-link" id="checkout-count">0 items</a>)</p>
       </div>
       <div style="width: 300px;">
       </div>
@@ -146,7 +146,7 @@
 
       <div class="checkout-orders-btns">
         <div class="checkout-table-div">
-          <h2 class="">Your Order <em>(Count : 2)</em></h2>
+          <h2 class="">Review Your Order</h2>
           <table class="checkout-table">
             <thead>
               <tr>
@@ -167,11 +167,11 @@
                 </th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="checkout-tbody">
+              <!-- <tr>
                 <td>
                   <a href="./productPage.html?type=Herbs&id=32">
-                    <img class="checkout-product-image" width="150" height="150"
+                    <img class="checkout-product-image" width="50" height="50"
                       src="../assets/images/product-images/herb-2.jpg">
                   </a>
                 </td>
@@ -182,18 +182,18 @@
                   <h5>$3.99</h5>
                 </td>
                 <td>
-                  <div class="quantity-delete-div">
+                  <div>
                     <h5>1</h5>
                   </div>
                 </td>
                 <td>
                   <h5>$3.99</h5>
                 </td>
-              </tr>
-              <tr>
+              </tr> -->
+              <!-- <tr>
                 <td>
                   <a href="./productPage.html?type=Herbs&id=33">
-                    <img class="checkout-product-image" width="150" height="150"
+                    <img class="checkout-product-image" width="50" height="50"
                       src="../assets/images/product-images/herb-3.jpg">
                   </a>
                 </td>
@@ -211,15 +211,17 @@
                 <td>
                   <h5>$9.99</h5>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
-          </table>        
-          <h5 class="checkout-subtotal">Subtotal: $13.98</h5>
-        <h5 class="checkout-subtotal">Tax: $1.98</h5>
-        <h5 class="checkout-subtotal">Shipping: $3.00</h5>
-        <h3 class="checkout-subtotal" style="border-top: 1px solid white">Total Price: $18.96</h3>
-        <abbr style="text-align:center; font-size: small; margin-top: 3px">Note: Expect Delivery By Tomorrow 9pm</abbr>
-        <button class="checkout-btn">Place Order</button>
+          </table>
+          <h5 id="checkout-subtotal" class="checkout-totals">Subtotal: $13.98</h5>
+          <h5 id="checkout-tax" class="checkout-totals">Tax: $1.98</h5>
+          <h5 id="checkout-shipping" class="checkout-totals">Shipping: $5.00</h5>
+          <h3 id="checkout-total" class="checkout-totals" style="border-top: 1px solid white">Total Price: $18.96</h3>
+          <abbr style="text-align:center; font-size: small; margin-top: 3px">Note: Expect Delivery By Tomorrow
+            9pm</abbr>
+          <button class="checkout-btn">Place Order</button>
+        </div>
       </div>
     </div>
 
@@ -230,5 +232,6 @@
   </div>
   <!-- End of Main Container -->
 </body>
+<script src="../assets/scripts/checkout.js"></script>
 
 </html>

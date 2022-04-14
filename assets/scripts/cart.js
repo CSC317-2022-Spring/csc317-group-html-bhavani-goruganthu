@@ -41,6 +41,10 @@ if (currentCartProducts.length > 0) {
         });
       });
       console.log(fetchedCartProducts);
+      localStorage.setItem(
+        'fetchedCartProducts',
+        JSON.stringify(fetchedCartProducts)
+      );
       return fetchedCartProducts;
     })
     .then((fetchedCartProducts) => {
