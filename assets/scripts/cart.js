@@ -62,8 +62,10 @@ if (currentCartProducts.length > 0) {
           <h5>$${parseFloat(value.products.price)}</h5>
         </td>
         <td>
-          <div  class="quantity-delete-div">
-          <select id="cart-quantity-dropdown" class="quantity-dropdown">
+          <div class="quantity-delete-div">
+          <select id="cart-quantity-dropdown-${parseInt(
+            value.products.id
+          )}" class="quantity-dropdown">
             <option value="1"${
               value.quantity === 1 ? 'selected' : ''
             }>1</option>
@@ -125,6 +127,16 @@ if (currentCartProducts.length > 0) {
       document.querySelectorAll('.quantity-delete-icon').forEach((element) => {
         element.addEventListener('click', handleClickCartItemDelete);
       });
+
+      // work on changing quantity dropdown value
+      document.querySelectorAll('.quantity-dropdown').forEach((element) => {
+        element.addEventListener('change', handleOnChangeQuantity);
+      });
+
+      // handle clearCart button onclick event
+      document
+        .getElementById('clear_cart')
+        .addEventListener('click', handleClickClearCart);
     });
 }
 
@@ -138,4 +150,63 @@ function handleClickCartItemDelete(e) {
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
   // reload the webpage to load the updated cart details
   window.location.reload();
+}
+
+function handleOnChangeQuantity(e) {
+  // get the id of the product based on the id of the quantity-dropdown
+  let productId = this.id.split('-').at(-1);
+  let currentCartProducts = JSON.parse(localStorage.getItem('cartProducts'));
+
+  // add the products which come before the updated product in the currentCartProducts - to maintain the sequence
+  let productsBefore = [];
+  for (i = 0; i < currentCartProducts.length; i++) {
+    if (parseInt(currentCartProducts[i].id) !== parseInt(productId)) {
+      productsBefore.push(currentCartProducts[i]);
+    } else {
+      break;
+    }
+  }
+  console.log(productsBefore);
+
+  // get the product whose quantity is updated - update the quantity of that product
+  let getProductToUpdate = currentCartProducts.filter(
+    (prod) => parseInt(prod.id) === parseInt(productId)
+  );
+  getProductToUpdate[0].quantity = parseInt(e.target.value);
+
+  // get all the products except the product whose quantity is updated
+  let getAllProductsExceptUpdated = currentCartProducts.filter(
+    (prod) => parseInt(prod.id) !== parseInt(productId)
+  );
+
+  // add all 3 array items to an array to remove duplicates later.. this way sequence of the cart items is maintained
+  let tempCartProducts = [
+    ...productsBefore,
+    ...getProductToUpdate,
+    ...getAllProductsExceptUpdated,
+  ];
+  console.log(tempCartProducts);
+
+  // convert to set and then to array - to eliminate duplicates
+  let jsonObject = tempCartProducts.map(JSON.stringify);
+  let uniqueSet = new Set(jsonObject);
+  let uniqueFilteredProducts = Array.from(uniqueSet).map(JSON.parse);
+  console.log(uniqueFilteredProducts);
+
+  const updatedCartProducts = uniqueFilteredProducts;
+  console.log(updatedCartProducts);
+  localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
+  window.location.reload();
+}
+
+function handleClickClearCart(e) {
+  e.preventDefault();
+  var userAnswer = window.confirm(
+    'All Cart Items will be cleared. Are you sure?'
+  );
+  if (userAnswer) {
+    console.log('removed');
+    localStorage.removeItem('cartProducts');
+    window.location.reload();
+  }
 }
