@@ -49,6 +49,12 @@ body {
   justify-content: center;
 }
 
+#nav-button-change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo-link {
   text-decoration: none;
 }
@@ -115,18 +121,6 @@ body {
   display: inline;
   text-align: center;
   color: white;
-}
-
-.badge {
-  display: block;
-  padding: 0.25em 0.4em;
-  font-size: 85%;
-  font-weight: 700;
-  text-align: right;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  margin-top: -36px;
-  margin-bottom: 10px;
 }
 
 /* Footer */

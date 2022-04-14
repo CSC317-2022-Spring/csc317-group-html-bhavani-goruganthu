@@ -34,7 +34,7 @@ function localStore(e){
             localStorage.setItem("users", JSON.stringify(user_table));
 
             // send user to login page after signing up
-            window.location.pathname = 'src/login.html';
+            window.location.pathname = '/index.html';
         }
     }
 }

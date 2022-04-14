@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x1 6" href="./assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="./assets/images/favicons/site.webmanifest" />
+    <script src="./assets/scripts/cartNumber.js"></script>
 </head>
 
 <body>
@@ -37,10 +38,10 @@
                         search
                     </span></button></a>
         </div>
-        <div class="nav-link-div">
+        <div class="nav-link-div" id="nav-butts">
             <div class="nav-links">
                 <a href="./src/login.html" target="_parent" class="all-links-text-decoration">
-                    <button class="all-nav-btns">
+                    <button class="all-nav-btns" id="login/logout-button">
                         <span id="login-logout-icon" class="material-icons">
                             login
                         </span>
@@ -50,7 +51,11 @@
                 </a>
             </div>
 
-            <div class="nav-links">
+            <div id="nav-button-change">
+                
+            </div>
+
+            <!-- <div class="nav-links">
                 <a href="./src/about.html" target="_parent" class="all-links-text-decoration">
                     <button class="all-nav-btns">
                         <span class="material-icons-outlined">
@@ -80,12 +85,24 @@
                         <span class="material-icons">
                             shopping_cart
                         </span>
-                        <span id="cart-count" class="badge">0</span>
                     </button>
                     <br />
                     <h5 class="nav-link-name"> Cart</h5>
                 </a>
             </div>
+
+            <div class="nav-links">
+                <a href="./src/sysPref.html" target="_parent" class="all-links-text-decoration">
+                    <button class="all-nav-btns">
+                        <span class="material-icons">
+                            settings
+                        </span>
+                    </button>
+                    <br />
+                    <h5 class="nav-link-name"> Settings</h5>
+                </a>
+            </div> -->
+
             <div id="cart-number"></div>
         </div>
     </div>
