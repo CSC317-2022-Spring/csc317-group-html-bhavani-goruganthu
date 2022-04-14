@@ -147,6 +147,13 @@ if (currentCartProducts.length > 0) {
         .getElementById('proceed-checkout-btn')
         .addEventListener('click', handleClickProceedCheckout);
     });
+} else {
+  document.getElementById("cart-table-div-id").innerHTML = "";
+  var emptyText = "Your Shopping Cart is Empty! Add some plants!";
+  var headingEmptyText = '<h2 class="" style="text-align: center">' + emptyText + '</h2>';
+
+  document.getElementById("cart-table-div-id").innerHTML = headingEmptyText;
+
 }
 
 function handleClickCartItemDelete(e) {
