@@ -8,26 +8,61 @@ fetch('../assets/scripts/products.json')
     return response.json();
   })
   .then((data) => {
-    filtered = Object.entries(data).filter((key) =>
+    let filtered = Object.entries(data).filter((key) =>
       key.includes(urlProductType)
     );
-    console.log(filtered)
-    product = filtered[0][1].filter((key) => key.id == urlProductId);
+    console.log(filtered);
+    let product = filtered[0][1].filter((key) => key.id == urlProductId);
     return product;
   })
   .then((product) => {
     // Populating the Product Details
-    let selector =  document.getElementById("quantity");
-    let selectorValue = Number(selector.value)
+    let selector = document.getElementById('quantity');
+    let selectorValue = Number(selector.value);
     let productPrice = Number(product[0].price);
     selector.addEventListener('change', () => {
       selectorValue = Number(selector.value);
 
-      let newPrice = productPrice * selectorValue
-      document.getElementById(
-        'product-info-price'
-      ).innerHTML = `${'$' + newPrice.toFixed(2)}`;
+      let newPrice = productPrice * selectorValue;
+      document.getElementById('product-info-price').innerHTML = `${
+        '$' + newPrice.toFixed(2)
+      }`;
     });
+
+
+    // let products = localStorage.getItem("products")
+    // let addToCart = document.getElementById("product-info-button");
+    // let productItem = {
+    //   name: product[0].name,
+    //   imageUrl: product[0].imageUrl,
+    //   price: product[0].price,
+    //   amount: selectorValue
+    // }
+
+    // addToCart.addEventListener('click', () => {
+    //   if(products) {
+    //     console.log(products)
+    //     products = localStorage.getItem("products");
+    //     console.log(products)
+    //     let json = JSON.stringify(products)
+    //     console.log(json)
+    //     let obj = JSON.parse(JSON.stringify(products));
+        
+    //     console.log(typeof obj)
+    //     if(obj[`${product[0].name}`]) {
+    //       let currAmount = obj[`${product[0].name}`].amount;
+    //       obj[`${product[0].name}`].amount = currAmount + selectorValue;
+    //     } else {
+    //       obj[`${product[0].name}`] = productItem
+    //     }
+        
+    //     localStorage.setItem("products", `${obj}`)
+    //   } else {
+    //     // console.log(obj)
+    //     localStorage.setItem("products", `{${product[0].name}:${[JSON.stringify(productItem)]}}`)
+    //   }
+    // })
+
     document.getElementById('product-title').innerText = product[0].name;
     document.getElementById('prod-img').src = '.' + product[0].imageUrl;
     document.getElementById(
@@ -35,7 +70,7 @@ fetch('../assets/scripts/products.json')
     ).innerHTML = `<b>Description:</b> ${product[0].description}`;
     document.getElementById(
       'product-info-price'
-    ).innerHTML += `${product[0].price *= selectorValue}`;
+    ).innerHTML += `${(product[0].price *= selectorValue)}`;
 
     // Populating Ratings & Reviews Section using a function defined below
     updateRating(product[0], 'rating-stars');

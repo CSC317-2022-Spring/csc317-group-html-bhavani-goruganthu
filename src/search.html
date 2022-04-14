@@ -14,67 +14,29 @@
   <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
 </head>
 
-<body>
+<body onload="checkIframeLoaded()">
   <!-- Main Container -->
   <div class="main-container">
 
     <!--  Nav Bar -->
-    <iframe class="navbar-iframe" src="../navbar.html" style="border:none;" width="100%" title="Header Iframe"></iframe>
+    <iframe class="navbar-iframe" id="navbar-iframe" src="../navbar.html" style="border:none;" width="100%" title="Header Iframe"></iframe>
     <!-- <object data="./navbar.html" class="navbar-iframe" width="100%"></object> -->
     <!--  End of Nav Bar -->
 
     <div class="search-div">
-      <!-- Succulents -->
       <div id="row">
-        <h2 class="plant-category">Succulents</h2>
-        <div class="category-container">
-          <!-- <div width="10%"></div> -->
-          <div class="product-container">
-            <a href="../src/products/succulent-1.html">
-              <img class="product-img" width="300" height="300" src="../assets/images/product-images/sclnt-1.jpg">
-            </a>
-            <div class="product-description-container">
-              <p class="product-name">Crassula</p>
-              <p class="product-price"> $1.25</p>
-            </div>
-          </div>
-          <!-- <div class="product-container" width="10%"></div> -->
-          <div class="product-container">
-            <a href="../src/products/succulent-2.html">
-              <img class="product-img" width="300" height="300" src="../assets/images/product-images/sclnt-2.jpg">
-            </a>
-            <div class="product-description-container">
-              <p class="product-name"> Moonglow</p>
-              <p class="product-price"> $2.99</p>
-            </div>
-          </div>
-          <!-- <div class="product-container" width="10%"></div> -->
-          <div class="product-container">
-            <a href="../src/products/succulent-3.html">
-              <img class="product-img" width="300" height="300" src="../assets/images/product-images/sclnt-3.jpg">
-            </a>
-            <div class="product-description-container">
-              <p class="product-name"> Echeveria</p>
-              <p class="product-price"> $1.75</p>
-            </div>
-          </div>
-          <!-- <div class="product-container" width="10%"></div> -->
-          <div class="product-container">
-            <a href="../src/products/succulent-4.html">
-              <img class="product-img" width="300" height="300" src="../assets/images/product-images/sclnt-4.jpg">
-            </a>
-            <div class="product-description-container">
-              <p class="product-name"> Haworthia</p>
-              <p class="product-price"> $2.00</p>
-            </div>
-          </div>
+        <h2 class="plant-category">Search Results</h2>
+        <div id="products-div" class="category-container">
+              <!-- to be filled by JS -->
         </div>
       </div>
     </div>
     <!-- End of Search Div -->
 
     <!-- Ads Section -->
+    <div style="margin-right: auto; margin-left:auto; width:320px;" >
     <object data="../ads.html" class="ads-iframe" width="100%"></object>
+  </div>
     <!-- End of Ads Section -->
 
     <!-- Footer Section -->
@@ -84,5 +46,5 @@
   </div>
   <!-- End of Main Container -->
 </body>
-
+<script src="../assets/scripts/search.js"></script>
 </html>
