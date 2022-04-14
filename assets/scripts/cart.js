@@ -137,6 +137,11 @@ if (currentCartProducts.length > 0) {
       document
         .getElementById('clear_cart')
         .addEventListener('click', handleClickClearCart);
+
+      // handle Proceed to Checkout Button
+      document
+        .getElementById('proceed-checkout-btn')
+        .addEventListener('click', handleClickProceedCheckout);
     });
 }
 
@@ -208,5 +213,13 @@ function handleClickClearCart(e) {
     console.log('removed');
     localStorage.removeItem('cartProducts');
     window.location.reload();
+  }
+}
+
+function handleClickProceedCheckout(e) {
+  if (currentCartProducts.length > 0) {
+    document
+      .getElementById('proceed-checkout-btn')
+      .parentElement.setAttribute('href', './checkout.html');
   }
 }
