@@ -4,7 +4,7 @@ let urlProductType = urlParams.get('type');
 let urlProductId = urlParams.get('id');
 
 // fetch product details & display
-fetch('../assets/scripts/products.json')
+fetch('../assets/data/products.json')
   .then((response) => {
     return response.json();
   })

@@ -1,7 +1,7 @@
 // Fetch products data from json file and display the products on the home page
 // Inserting to the DOM along with the classnames.
 // Any change in the json file - updates the home page automatically
-fetch('../assets/scripts/products.json')
+fetch('../assets/data/products.json')
   .then((response) => {
     return response.json();
   })

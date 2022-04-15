@@ -20,7 +20,7 @@ if (currentCartProducts.length === 0) {
 if (currentCartProducts.length > 0) {
   // fetch products from json file by id & category
   console.log(currentCartProducts);
-  fetch('../assets/scripts/products.json')
+  fetch('../assets/data/products.json')
     .then((response) => {
       return response.json();
     })
@@ -148,12 +148,12 @@ if (currentCartProducts.length > 0) {
         .addEventListener('click', handleClickProceedCheckout);
     });
 } else {
-  document.getElementById("cart-table-div-id").innerHTML = "";
-  var emptyText = "Your Shopping Cart is Empty! Add some plants!";
-  var headingEmptyText = '<h2 class="" style="text-align: center">' + emptyText + '</h2>';
+  document.getElementById('cart-table-div-id').innerHTML = '';
+  var emptyText = 'Your Shopping Cart is Empty! Add some plants!';
+  var headingEmptyText =
+    '<h2 class="" style="text-align: center">' + emptyText + '</h2>';
 
-  document.getElementById("cart-table-div-id").innerHTML = headingEmptyText;
-
+  document.getElementById('cart-table-div-id').innerHTML = headingEmptyText;
 }
 
 function handleClickCartItemDelete(e) {
