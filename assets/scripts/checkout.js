@@ -84,5 +84,7 @@ function handlePlaceOrder() {
   document
     .getElementById('place-order-btn')
     .parentElement.setAttribute('href', '../index.html');
-  localStorage.clear();
+  localStorage.removeItem('cartProducts');
+  localStorage.removeItem('cartSubTotal');
+  localStorage.removeItem('fetchedCartProducts');
 }

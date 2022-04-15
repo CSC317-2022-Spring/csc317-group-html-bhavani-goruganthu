@@ -11,10 +11,9 @@ function localStore(e) {
   e.preventDefault();
 
   // email & passwd
-  let email, psswd1;
-  email = document.getElementById('email').value;
-  psswd1 = document.getElementById('psswd1').value;
-  psswd2 = document.getElementById('psswd2').value;
+  let email = document.getElementById('email').value;
+  let psswd1 = document.getElementById('psswd1').value;
+  let psswd2 = document.getElementById('psswd2').value;
 
   if (psswd1 != psswd2) {
     alert('Passwords Do Not Match.');

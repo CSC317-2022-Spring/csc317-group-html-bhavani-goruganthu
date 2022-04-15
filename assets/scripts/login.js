@@ -1,41 +1,26 @@
-// localStorage.clear();
-
 const user_table = JSON.parse(localStorage.getItem('users')) || [];
 
 document.getElementById('SignIn').addEventListener('click', LoginValidation);
-
 function LoginValidation(e) {
   e.preventDefault();
-
   // fetch email & password ".getEleID" by form.
-  let email, psswd1, flag;
+  let email, psswd1;
   email = document.getElementById('email').value;
   psswd1 = document.getElementById('psswd1').value;
 
   // check if value is empty => have an alert(please login using user name & pass)
-
   if (email == '' || psswd1 == '') {
     alert('Please Enter an Email & Password.');
   } else {
-    // if not empty => check if user table
-    for (let i = 0; i < user_table.length; i++) {
-      if (user_table[i].email == email && user_table[i].password == psswd1) {
-        // send user to home page and change login icon if validated.
-        window.location.pathname = '/index.html';
-
-        // TODO: change login icon to logout
-        localStorage.setItem('isLoggedIn', 'true');
-        break;
-      } else {
-        console.log(psswd1);
-        console.log(user_table[i].email);
-        console.log(user_table[i].password);
-        // setting flag so that user gets alerted once.
-        flag = 1;
-      }
-    }
-    if (flag == 1) {
-      alert('Incorrect Credentials.');
+    let filteredUser = user_table.filter(
+      (user) => user.email == email && user.password == psswd1
+    );
+    if (filteredUser.length === 0) {
+      alert('Incorrect credentials');
+    } else {
+      // send user to home page and change login icon if validated.
+      window.location.pathname = '/index.html';
+      localStorage.setItem('isLoggedIn', 'true');
     }
   }
 }
