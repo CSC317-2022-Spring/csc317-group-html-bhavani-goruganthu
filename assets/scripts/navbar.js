@@ -10,6 +10,19 @@ if (cartProducts.length === 0) {
   document.getElementById('cart-count').innerText = cartLength;
 }
 
+// handle key press of Enter in the Search Input Field
+document
+  .querySelector('.search-input')
+  .addEventListener('keypress', handleSearchEnterKey);
+function handleSearchEnterKey(e) {
+  if (e.key === 'Enter') {
+    console.log(e.key);
+    searchClick();
+    window.parent.location.href = document.getElementById('search-icon').href;
+  }
+}
+
+// handle click of the search-icon
 document.getElementById('search-icon').addEventListener('click', searchClick);
 function searchClick() {
   // get the category selected from the dropdown and the search keyword
