@@ -1,5 +1,6 @@
 const user_table = JSON.parse(localStorage.getItem('users')) || [];
 
+// Check if user exists
 document.getElementById('SignIn').addEventListener('click', LoginValidation);
 function LoginValidation(e) {
   e.preventDefault();
