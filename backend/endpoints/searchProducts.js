@@ -14,4 +14,18 @@ router.get('/searchByCategory', (req, res) => {
   });
 });
 
+// route to search by keyword entered in the text field - category is 'All Products' in this case
+router.get('/searchByKeyword', (req, res) => {
+  const searchKeyword = req.query.keyword;
+  let query =
+    `SELECT * FROM products WHERE productDescription LIKE '%` +
+    searchKeyword +
+    `%' OR productName LIKE '%` +
+    searchKeyword +
+    `%'`;
+  database.query(query, (err, result) => {
+    res.send(result);
+  });
+});
+
 module.exports = router;
