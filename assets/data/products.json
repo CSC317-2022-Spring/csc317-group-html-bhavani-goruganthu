@@ -27,7 +27,7 @@
     {
       "id": 12,
       "name": "Moonglow",
-      "description": "'Moonglow' is an incredible succulent with extra chubby, greyish green leaves that stack tightly to form an upright column around each stem. The leaves are covered with fine hairs, making this unique plant slightly velvety to the touch.",
+      "description": "Moonglow is an incredible succulent with extra chubby, greyish green leaves that stack tightly to form an upright column around each stem. The leaves are covered with fine hairs, making this unique plant slightly velvety to the touch.",
       "imageUrl": "./assets/images/product-images/sclnt-2.jpg",
       "price": 2.99,
       "rating": 3.5,
@@ -271,7 +271,7 @@
     {
       "id": 34,
       "name": "Basil",
-      "description": "Basil, also called great basil, is a culinary herb of the family Lamiaceae. It is a tender plant, and is used in cuisines worldwide. In Western cuisine, the generic term 'basil' refers to the variety also known as sweet basil or Genovese basil. Basil is native to tropical regions from Central Africa to Southeast Asia.",
+      "description": "Basil, also called great basil, is a culinary herb of the family Lamiaceae. It is a tender plant, and is used in cuisines worldwide. In Western cuisine, the generic term basil refers to the variety also known as sweet basil or Genovese basil. Basil is native to tropical regions from Central Africa to Southeast Asia.",
       "imageUrl": "./assets/images/product-images/herb-4.jpg",
       "price": 9.99,
       "rating": 3,
