@@ -28,4 +28,22 @@ router.get('/searchByKeyword', (req, res) => {
   });
 });
 
+// route to search by both Catgeory & Keyword given by the user
+router.get('/searchByCatgeoryNKeyword', (req, res) => {
+  const searchCategory = req.query.category;
+  const searchKeyword = req.query.keyword;
+  let query =
+    `SELECT * FROM products WHERE productCategory = '` +
+    searchCategory +
+    `' AND ` +
+    `(productDescription LIKE '%` +
+    searchKeyword +
+    `%' OR productName LIKE '%` +
+    searchKeyword +
+    `%')`;
+  database.query(query, (err, result) => {
+    res.send(result);
+  });
+});
+
 module.exports = router;
