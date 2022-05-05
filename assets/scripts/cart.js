@@ -1,6 +1,3 @@
-//  initialize variable for subtotal
-localStorage.setItem('cartSubTotal', 0);
-
 // get current cart products from localstorage
 const currentCartProducts =
   JSON.parse(localStorage.getItem('cartProducts')) || [];
@@ -17,136 +14,102 @@ if (currentCartProducts.length === 0) {
   document.getElementById('cart-count').innerText = `(Count: ${cartLength})`;
 }
 
+// to fetch cart products from db
 if (currentCartProducts.length > 0) {
-  // fetch products from json file by id & category
-  console.log(currentCartProducts);
-  fetch('../assets/data/products.json')
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      let fetchedCartProducts = [];
-      Object.values(currentCartProducts).filter((prod) => {
-        let filteredByCategory = Object.entries(data).filter(
-          (key) => key.includes(prod.type) // get the products filtered by category
-        );
-        // the products that belong to the category are in filteredCategory[0][1]
-        const filteredProductsByName = filteredByCategory[0][1].filter(
-          (e) => parseInt(e.id) === parseInt(prod.id)
-        );
-        fetchedCartProducts.push({
-          type: prod.type,
-          products: filteredProductsByName[0],
-          quantity: parseInt(prod.quantity),
-        });
-      });
-      console.log(fetchedCartProducts);
-      localStorage.setItem(
-        'fetchedCartProducts',
-        JSON.stringify(fetchedCartProducts)
-      );
-      return fetchedCartProducts;
-    })
-    .then((fetchedCartProducts) => {
-      // dynamically fill the cart page
-      fetchedCartProducts.forEach((value) => {
-        document.getElementById('cart-tbody').innerHTML += `<tr>
+  let prices = [];
+  Object.values(currentCartProducts).forEach((prod) => {
+    fetch(
+      `http://localhost:4000/api/products/getProductByID?productID=${prod.id}`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((fetchedCartProducts) => {
+        // dynamically fill the cart page
+        fetchedCartProducts.forEach((value) => {
+          document.getElementById('cart-tbody').innerHTML += `<tr>
         <td>
-          <a href="./productPage.html?type=${value.type}&id=${parseInt(
-          value.products.id
-        )}">
+          <a href="./productPage.html?type=${
+            value.productCategory
+          }&id=${parseInt(value.productID)}">
             <img class="cart-product-image" width="150" height="150"
-              src=".${value.products.imageUrl}">
+              src=".${value.productImageUrl}">
           </a>
         </td>
         <td>
-          <h5>${value.products.name}</h5>
+          <h5>${value.productName}</h5>
         </td>
         <td>
-          <h5>$${parseFloat(value.products.price)}</h5>
+          <h5>$${parseFloat(value.productPrice)}</h5>
         </td>
         <td>
           <div class="quantity-delete-div">
           <select id="cart-quantity-dropdown-${parseInt(
-            value.products.id
+            value.productID
           )}" class="quantity-dropdown">
-            <option value="1"${
-              value.quantity === 1 ? 'selected' : ''
-            }>1</option>
-            <option value="2"${
-              value.quantity === 2 ? 'selected' : ''
-            }>2</option>
-            <option value="3"${
-              value.quantity === 3 ? 'selected' : ''
-            }>3</option>
-            <option value="4"${
-              value.quantity === 4 ? 'selected' : ''
-            }>4</option>
-            <option value="5"${
-              value.quantity === 5 ? 'selected' : ''
-            }>5</option>
-            <option value="6"${
-              value.quantity === 6 ? 'selected' : ''
-            }>6</option>
-            <option value="7"${
-              value.quantity === 7 ? 'selected' : ''
-            }>7</option>
-            <option value="8"${
-              value.quantity === 8 ? 'selected' : ''
-            }>8</option>
-            <option value="9"${
-              value.quantity === 9 ? 'selected' : ''
-            }>9</option>
+            <option value="1"${prod.quantity === 1 ? 'selected' : ''}>1</option>
+            <option value="2"${prod.quantity === 2 ? 'selected' : ''}>2</option>
+            <option value="3"${prod.quantity === 3 ? 'selected' : ''}>3</option>
+            <option value="4"${prod.quantity === 4 ? 'selected' : ''}>4</option>
+            <option value="5"${prod.quantity === 5 ? 'selected' : ''}>5</option>
+            <option value="6"${prod.quantity === 6 ? 'selected' : ''}>6</option>
+            <option value="7"${prod.quantity === 7 ? 'selected' : ''}>7</option>
+            <option value="8"${prod.quantity === 8 ? 'selected' : ''}>8</option>
+            <option value="9"${prod.quantity === 9 ? 'selected' : ''}>9</option>
           </select>
           <span class="material-icons quantity-delete-icon" id='cart-item-delete-icon-${parseInt(
-            value.products.id
+            value.productID
           )}'>
             delete
           </span>
         </div>
         </td>
         <td>
-          <h5>$${parseFloat(value.products.price * value.quantity).toFixed(
-            2
-          )}</h5>
+          <h5>$${parseFloat(value.productPrice * prod.quantity).toFixed(2)}</h5>
         </td>
                 </tr>`;
-
-        // set subTotal Price
-        let prodPrice = parseFloat(
-          value.products.price * value.quantity
-        ).toFixed(2);
-        let currSubTotal = (
-          parseFloat(localStorage.getItem('cartSubTotal')) +
-          parseFloat(prodPrice)
-        ).toFixed(2);
-        localStorage.setItem('cartSubTotal', currSubTotal);
+          prices.push(
+            parseFloat(value.productPrice * prod.quantity).toFixed(2)
+          );
+        });
+        return prices;
+      })
+      .then((prices) => {
+        // calculate sub total
+        let currSubTotal = 0.0;
+        prices.forEach((price) => {
+          currSubTotal = (parseFloat(currSubTotal) + parseFloat(price)).toFixed(
+            2
+          );
+        });
         document.querySelector(
           '.cart-subtotal'
-        ).innerText = `Subtotal: $${localStorage.getItem('cartSubTotal')}`;
-      });
-    })
-    .then(() => {
-      // work on deleting cart items
-      document.querySelectorAll('.quantity-delete-icon').forEach((element) => {
-        element.addEventListener('click', handleClickCartItemDelete);
-      });
+        ).innerText = `Subtotal: $${currSubTotal}`;
 
-      // work on changing quantity dropdown value
-      document.querySelectorAll('.quantity-dropdown').forEach((element) => {
-        element.addEventListener('change', handleOnChangeQuantity);
-      });
+        // work on deleting cart items
+        document
+          .querySelectorAll('.quantity-delete-icon')
+          .forEach((element) => {
+            element.addEventListener('click', handleClickCartItemDelete);
+          });
 
-      // handle clearCart button onclick event
-      document
-        .getElementById('clear_cart')
-        .addEventListener('click', handleClickClearCart);
+        // work on changing quantity dropdown value
+        document.querySelectorAll('.quantity-dropdown').forEach((element) => {
+          element.addEventListener('change', handleOnChangeQuantity);
+        });
 
-      // handle Proceed to Checkout Button
-      document
-        .getElementById('proceed-checkout-btn')
-        .addEventListener('click', handleClickProceedCheckout);
-    });
+        // handle clearCart button onclick event
+        document
+          .getElementById('clear_cart')
+          .addEventListener('click', handleClickClearCart);
+
+        // handle Proceed to Checkout Button
+        document
+          .getElementById('proceed-checkout-btn')
+          .addEventListener('click', handleClickProceedCheckout);
+      })
+      .catch((err) => console.error(err));
+  });
 } else {
   document.getElementById('cart-table-div-id').innerHTML = '';
   var emptyText = 'Your Shopping Cart is Empty! Add some plants!';
@@ -157,12 +120,12 @@ if (currentCartProducts.length > 0) {
 }
 
 function handleClickCartItemDelete(e) {
+  // get the element's id which has the product ID
   let productId = this.id.split('-').at(-1);
   let currentCartProducts = JSON.parse(localStorage.getItem('cartProducts'));
   currentCartProducts = currentCartProducts.filter(
     (item) => parseInt(item.id) !== parseInt(productId)
   );
-  console.log(currentCartProducts);
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
   // reload the webpage to load the updated cart details
   window.location.reload();
@@ -182,8 +145,6 @@ function handleOnChangeQuantity(e) {
       break;
     }
   }
-  console.log(productsBefore);
-
   // get the product whose quantity is updated - update the quantity of that product
   let getProductToUpdate = currentCartProducts.filter(
     (prod) => parseInt(prod.id) === parseInt(productId)
@@ -201,16 +162,13 @@ function handleOnChangeQuantity(e) {
     ...getProductToUpdate,
     ...getAllProductsExceptUpdated,
   ];
-  console.log(tempCartProducts);
 
   // convert to set and then to array - to eliminate duplicates
   let jsonObject = tempCartProducts.map(JSON.stringify);
   let uniqueSet = new Set(jsonObject);
   let uniqueFilteredProducts = Array.from(uniqueSet).map(JSON.parse);
-  console.log(uniqueFilteredProducts);
 
   const updatedCartProducts = uniqueFilteredProducts;
-  console.log(updatedCartProducts);
   localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
   window.location.reload();
 }
@@ -221,7 +179,6 @@ function handleClickClearCart(e) {
     'All Cart Items will be cleared. Are you sure?'
   );
   if (userAnswer) {
-    console.log('removed');
     localStorage.removeItem('cartProducts');
     window.location.reload();
   }
