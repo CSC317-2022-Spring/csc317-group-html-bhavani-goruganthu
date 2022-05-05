@@ -4,7 +4,7 @@ const database = require('../db'); // connect to the database
 const router = express.Router();
 router.use(express.json());
 
-// route to search by category selected in the dropdown - keyword is empty is this case
+// route to get all Products
 router.get('/searchGetAllProducts', (req, res) => {
   let query = `SELECT * FROM products`;
   database.query(query, (err, result) => {
