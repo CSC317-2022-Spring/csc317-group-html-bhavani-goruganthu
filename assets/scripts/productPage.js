@@ -112,9 +112,22 @@ function onClickAddProductToCart() {
     if (cartProductExists.length !== 0) {
       currentCartProducts.forEach((prod) => {
         if (prod.id == urlProductId) {
-          prod.quantity = parseInt(
+          let updatedQuantity = parseInt(
             parseInt(prod.quantity) + parseInt(quantity)
           );
+          // update the quantity only if it is less than 9
+          if (updatedQuantity <= 9) {
+            prod.quantity = updatedQuantity;
+          }
+          // else throw an alert and navigate user to the cart
+          else {
+            alert(
+              'Sorry, Maximum quantity of a product is 9.\nPlease check your Cart'
+            );
+            // send user to the cart page.. both of these will work
+            // window.location.href = `/src/cart.html`;
+            window.location.assign(`/src/cart.html`); // preferred
+          }
         }
       });
     }
