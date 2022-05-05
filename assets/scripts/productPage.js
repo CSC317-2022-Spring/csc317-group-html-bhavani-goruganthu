@@ -4,38 +4,34 @@ let urlProductType = urlParams.get('type');
 let urlProductId = urlParams.get('id');
 
 // fetch product details & display
-fetch('../assets/data/products.json')
+fetch(
+  `http://localhost:4000/api/products/getProductByID?productID=${urlProductId}`
+)
   .then((response) => {
     return response.json();
   })
   .then((data) => {
-    let filtered = Object.entries(data).filter((key) =>
-      key.includes(urlProductType)
-    );
-    let product = filtered[0][1].filter((key) => key.id == urlProductId);
-    return product;
-  })
-  .then((product) => {
+    const reviews = JSON.parse(data[0].productReviews);
     // Populating the Product Details
-    document.getElementById('product-title').innerText = product[0].name;
-    document.getElementById('prod-img').src = '.' + product[0].imageUrl;
+    document.getElementById('product-title').innerText = data[0].productName;
+    document.getElementById('prod-img').src = '.' + data[0].productImageUrl;
     document.getElementById(
       'product-info-description'
-    ).innerHTML = `<b>Description:</b> ${product[0].description}`;
+    ).innerHTML = `<b>Description:</b> ${data[0].productDescription}`;
     document.getElementById(
       'product-info-price'
-    ).innerHTML += `${product[0].price}`;
+    ).innerHTML += `${data[0].productPrice}`;
 
     // Populating Ratings & Reviews Section using a function defined below
-    updateRating(product[0], 'rating-stars');
+    updateRating(data[0], 'rating-stars');
 
     // Ratings Count
     document.getElementById(
       'rating-count'
-    ).innerText = `${product[0].rating} based on ${product[0].reviews.length} reviews`;
+    ).innerText = `${data[0].productRating} based on ${reviews.length} reviews`;
 
     // Ratings Cards
-    product[0].reviews.forEach((review) => {
+    reviews.forEach((review) => {
       document.getElementById(
         'ratings-div'
       ).innerHTML += `<!-- Card div --><div class="card">
@@ -54,7 +50,8 @@ fetch('../assets/data/products.json')
       // Populating Ratings & Reviews Section using a function defined below
       updateRating(review, `stars-div-${review.id}`);
     });
-  });
+  })
+  .catch((err) => console.error(err));
 
 // Populating Ratings & Reviews Section
 function updateRating(ratingDetail, divId) {
@@ -102,7 +99,6 @@ function onClickAddProductToCart() {
     type: urlProductType,
   });
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
-  console.log(JSON.parse(localStorage.getItem('cartProducts')));
 
   // reload the navbar to update cart count
   var navbarIframe = document.getElementById('navbar-iframe');
