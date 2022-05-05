@@ -90,14 +90,44 @@ addToCartBtn.addEventListener('click', onClickAddProductToCart);
 function onClickAddProductToCart() {
   let quantityDropdown = document.getElementById('quantity');
   let quantity = quantityDropdown.options[quantityDropdown.selectedIndex].value;
-  console.log(quantity);
   const currentCartProducts =
     JSON.parse(localStorage.getItem('cartProducts')) || [];
-  currentCartProducts.push({
-    id: parseInt(urlProductId),
-    quantity: parseInt(quantity),
-    type: urlProductType,
-  });
+  // Before adding any cart product
+  // check if the cart is empty
+  if (currentCartProducts.length === 0) {
+    // add the current cart product directly
+    currentCartProducts.push({
+      id: parseInt(urlProductId),
+      quantity: parseInt(quantity),
+      type: urlProductType,
+    });
+  }
+  // if the cart is not empty
+  else {
+    // check if the product that you are trying to add already exists in the cart
+    let cartProductExists = currentCartProducts.filter(
+      (prod) => prod.id == urlProductId
+    );
+    //  if yes, then increase its quantity
+    if (cartProductExists.length !== 0) {
+      currentCartProducts.forEach((prod) => {
+        if (prod.id == urlProductId) {
+          prod.quantity = parseInt(
+            parseInt(prod.quantity) + parseInt(quantity)
+          );
+        }
+      });
+    }
+    // if no, add the cart product directly to the cart
+    else {
+      currentCartProducts.push({
+        id: parseInt(urlProductId),
+        quantity: parseInt(quantity),
+        type: urlProductType,
+      });
+    }
+  }
+
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
 
   // reload the navbar to update cart count
