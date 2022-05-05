@@ -15,63 +15,82 @@ if (isLoggedIn === 'true') {
     });
     document.getElementById('checkout-count').innerText = `${cartLength} items`;
 
-    // get filtered cart products from localstorage
-    const fetchedCartProducts = JSON.parse(
-      localStorage.getItem('fetchedCartProducts')
-    );
-    console.log(fetchedCartProducts);
-    // dynamically fill the checkout page
-    fetchedCartProducts.forEach((value) => {
-      document.getElementById('checkout-tbody').innerHTML += `<tr>
+    let prices = [];
+    Object.values(currentCartProducts).forEach((prod) => {
+      fetch(
+        `http://localhost:4000/api/products/getProductByID?productID=${prod.id}`
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((fetchedCartProducts) => {
+          // dynamically fill the checkout page
+          fetchedCartProducts.forEach((value) => {
+            document.getElementById('checkout-tbody').innerHTML += `<tr>
             <td>
-              <a href="./productPage.html?type=${value.type}&id=${parseInt(
-        value.products.id
-      )}">
+              <a href="./productPage.html?type=${
+                value.productCategory
+              }&id=${parseInt(value.productID)}">
                 <img class="checkout-product-image" width="50" height="50"
-                  src=".${value.products.imageUrl}">
+                  src=".${value.productImageUrl}">
               </a>
             </td>
             <td>
-              <h5>${value.products.name}</h5>
+              <h5>${value.productName}</h5>
             </td>
             <td>
-              <h5>$${parseFloat(value.products.price)}</h5>
+              <h5>$${parseFloat(value.productPrice)}</h5>
             </td>
             <td>
               <div>
-                <h5>${value.quantity}</h5>
+                <h5>${prod.quantity}</h5>
               </div>
             </td>
             <td>
-              <h5>$${parseFloat(value.products.price * value.quantity).toFixed(
+              <h5>$${parseFloat(value.productPrice * prod.quantity).toFixed(
                 2
               )}</h5>
             </td>
           </tr>`;
+            prices.push(
+              parseFloat(value.productPrice * prod.quantity).toFixed(2)
+            );
+          });
+          return prices;
+        })
+        .then((prices) => {
+          // calculate sub total
+          let currSubTotal = 0.0;
+          prices.forEach((price) => {
+            currSubTotal = (
+              parseFloat(currSubTotal) + parseFloat(price)
+            ).toFixed(2);
+          });
+          document.getElementById(
+            'checkout-subtotal'
+          ).innerText = `Subtotal: $${currSubTotal}`;
+
+          let checkoutTax = ((parseFloat(currSubTotal) * 18) / 100).toFixed(2);
+          document.getElementById(
+            'checkout-tax'
+          ).innerText = `Tax: $${checkoutTax}`;
+
+          let checkoutShipping = 5.0;
+
+          let calculatedTotalCost = parseFloat(
+            parseFloat(currSubTotal) +
+              parseFloat(checkoutTax) +
+              parseFloat(checkoutShipping)
+          ).toFixed(2);
+          document.getElementById(
+            'checkout-total'
+          ).innerText = `Total Price: $${calculatedTotalCost}`;
+
+          document
+            .getElementById('place-order-btn')
+            .addEventListener('click', handlePlaceOrder);
+        });
     });
-
-    let cartSubTotal = localStorage.getItem('cartSubTotal');
-    document.getElementById(
-      'checkout-subtotal'
-    ).innerText = `Subtotal: $${cartSubTotal}`;
-
-    let checkoutTax = ((parseFloat(cartSubTotal) * 18) / 100).toFixed(2);
-    document.getElementById('checkout-tax').innerText = `Tax: $${checkoutTax}`;
-
-    let checkoutShipping = 5.0;
-
-    let calculatedTotalCost = parseFloat(
-      parseFloat(cartSubTotal) +
-        parseFloat(checkoutTax) +
-        parseFloat(checkoutShipping)
-    ).toFixed(2);
-    document.getElementById(
-      'checkout-total'
-    ).innerText = `Total Price: $${calculatedTotalCost}`;
-
-    document
-      .getElementById('place-order-btn')
-      .addEventListener('click', handlePlaceOrder);
   }
 } else {
   document.querySelector(
@@ -85,6 +104,4 @@ function handlePlaceOrder() {
     .getElementById('place-order-btn')
     .parentElement.setAttribute('href', '../index.html');
   localStorage.removeItem('cartProducts');
-  localStorage.removeItem('cartSubTotal');
-  localStorage.removeItem('fetchedCartProducts');
 }
