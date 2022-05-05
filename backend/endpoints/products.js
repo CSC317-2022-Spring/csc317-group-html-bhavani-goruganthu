@@ -13,4 +13,14 @@ router.get('/getAllCategories', (req, res) => {
   });
 });
 
+// route to get products based on ID
+router.get('/getProductByID', (req, res) => {
+  const productID = req.query.productID;
+  let query = `SELECT * FROM products WHERE productID = ` + productID + `;`;
+  database.query(query, (err, result) => {
+    if (err) console.log(err);
+    else res.send(result);
+  });
+});
+
 module.exports = router;
