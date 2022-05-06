@@ -15,7 +15,7 @@ fs.readFile('../assets/data/products.json', 'utf8', function (err, data) {
       const prodRating = catPlants.rating;
       const prodReviews = JSON.stringify(catPlants.reviews);
       const query =
-        `INSERT INTO products (productID, productCategory, productName, productDescription, productImageUrl, productPrice, productRating, productReviews) VALUES ('` +
+        `INSERT INTO Products (product_id, productCategory, productName, productDescription, productImageUrl, productPrice, productRating, productReviews) VALUES ('` +
         prodID +
         `','` +
         prodCategory +

@@ -31,7 +31,7 @@ if (currentCartProducts.length > 0) {
         <td>
           <a href="./productPage.html?type=${
             value.productCategory
-          }&id=${parseInt(value.productID)}">
+          }&id=${parseInt(value.product_id)}">
             <img class="cart-product-image" width="150" height="150"
               src=".${value.productImageUrl}">
           </a>
@@ -45,7 +45,7 @@ if (currentCartProducts.length > 0) {
         <td>
           <div class="quantity-delete-div">
           <select id="cart-quantity-dropdown-${parseInt(
-            value.productID
+            value.product_id
           )}" class="quantity-dropdown">
             <option value="1"${prod.quantity === 1 ? 'selected' : ''}>1</option>
             <option value="2"${prod.quantity === 2 ? 'selected' : ''}>2</option>
@@ -58,7 +58,7 @@ if (currentCartProducts.length > 0) {
             <option value="9"${prod.quantity === 9 ? 'selected' : ''}>9</option>
           </select>
           <span class="material-icons quantity-delete-icon" id='cart-item-delete-icon-${parseInt(
-            value.productID
+            value.product_id
           )}'>
             delete
           </span>
@@ -121,10 +121,10 @@ if (currentCartProducts.length > 0) {
 
 function handleClickCartItemDelete(e) {
   // get the element's id which has the product ID
-  let productId = this.id.split('-').at(-1);
+  let product_id = this.id.split('-').at(-1);
   let currentCartProducts = JSON.parse(localStorage.getItem('cartProducts'));
   currentCartProducts = currentCartProducts.filter(
-    (item) => parseInt(item.id) !== parseInt(productId)
+    (item) => parseInt(item.id) !== parseInt(product_id)
   );
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
   // reload the webpage to load the updated cart details
@@ -133,13 +133,13 @@ function handleClickCartItemDelete(e) {
 
 function handleOnChangeQuantity(e) {
   // get the id of the product based on the id of the quantity-dropdown
-  let productId = this.id.split('-').at(-1);
+  let product_id = this.id.split('-').at(-1);
   let currentCartProducts = JSON.parse(localStorage.getItem('cartProducts'));
 
   // add the products which come before the updated product in the currentCartProducts - to maintain the sequence
   let productsBefore = [];
   for (i = 0; i < currentCartProducts.length; i++) {
-    if (parseInt(currentCartProducts[i].id) !== parseInt(productId)) {
+    if (parseInt(currentCartProducts[i].id) !== parseInt(product_id)) {
       productsBefore.push(currentCartProducts[i]);
     } else {
       break;
@@ -147,13 +147,13 @@ function handleOnChangeQuantity(e) {
   }
   // get the product whose quantity is updated - update the quantity of that product
   let getProductToUpdate = currentCartProducts.filter(
-    (prod) => parseInt(prod.id) === parseInt(productId)
+    (prod) => parseInt(prod.id) === parseInt(product_id)
   );
   getProductToUpdate[0].quantity = parseInt(e.target.value);
 
   // get all the products except the product whose quantity is updated
   let getAllProductsExceptUpdated = currentCartProducts.filter(
-    (prod) => parseInt(prod.id) !== parseInt(productId)
+    (prod) => parseInt(prod.id) !== parseInt(product_id)
   );
 
   // add all 3 array items to an array to remove duplicates later.. this way sequence of the cart items is maintained

@@ -38,7 +38,7 @@
           <input class="sysPref-input" id="lName" type="text" placeholder="e.g. Doe" maxlength="27">
 
           <br><label>Email Address:</label><br>
-          <input class="sysPref-input" type="email" id="email" placeholder="e.g. john@gmail.com" name="email" required>
+          <input class="sysPref-input" type="email" id="email" placeholder="e.g. john@gmail.com" name="email" disabled>
 
 
 
@@ -120,7 +120,7 @@
             size="10" maxlength="12">
 
           <br>
-          <button class="sysPref-button" type="submit" onclick="locallyStoreSysPref()">Change Settings</button>
+          <button id="SaveChanges" class="sysPref-button" type="submit">Change Settings</button>
           <button class="sysPref-button" onclick="resetChanges()">Reset</button>
         </form>
       </div>

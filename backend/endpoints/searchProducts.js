@@ -6,7 +6,7 @@ router.use(express.json());
 
 // route to get all Products
 router.get('/searchGetAllProducts', (req, res) => {
-  let query = `SELECT * FROM products`;
+  let query = `SELECT * FROM Products`;
   database.query(query, (err, result) => {
     if (err) console.log(err);
     else res.send(result);
@@ -17,7 +17,7 @@ router.get('/searchGetAllProducts', (req, res) => {
 router.get('/searchByCategory', (req, res) => {
   const searchCategory = req.query.category;
   let query =
-    `SELECT * FROM products WHERE productCategory = '` + searchCategory + `'`;
+    `SELECT * FROM Products WHERE productCategory = '` + searchCategory + `'`;
   database.query(query, (err, result) => {
     if (err) console.log(err);
     else res.send(result);
@@ -28,7 +28,7 @@ router.get('/searchByCategory', (req, res) => {
 router.get('/searchByKeyword', (req, res) => {
   const searchKeyword = req.query.keyword;
   let query =
-    `SELECT * FROM products WHERE productDescription LIKE '%` +
+    `SELECT * FROM Products WHERE productDescription LIKE '%` +
     searchKeyword +
     `%' OR productName LIKE '%` +
     searchKeyword +
@@ -44,7 +44,7 @@ router.get('/searchByCategoryNKeyword', (req, res) => {
   const searchCategory = req.query.category;
   const searchKeyword = req.query.keyword;
   let query =
-    `SELECT * FROM products WHERE productCategory = '` +
+    `SELECT * FROM Products WHERE productCategory = '` +
     searchCategory +
     `' AND ` +
     `(productDescription LIKE '%` +

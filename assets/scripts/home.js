@@ -40,15 +40,15 @@ function displayProductCategory(category) {
 
 // Inserting products to the DOM along with the classnames
 function displayFetchedProducts(fetchedProducts, category) {
-  fetchedProducts.forEach((product) => {
+  fetchedProducts.forEach((Product) => {
     document.getElementById(`${category}-div`).innerHTML += ` 
     <div class="product-container">
-    <a href="./src/productPage.html?type=${product.productCategory}&id=${product.productID}">
-      <img class="product-img" width="300" height="300" src="${product.productImageUrl}">
+    <a href="./src/productPage.html?type=${Product.productCategory}&id=${Product.product_id}">
+      <img class="product-img" width="300" height="300" src="${Product.productImageUrl}">
     </a>
     <div class="product-description-container">
-      <p class="product-name">${product.productName}</p>
-      <p class="product-price"> $${product.productPrice}</p>
+      <p class="product-name">${Product.productName}</p>
+      <p class="product-price"> $${Product.productPrice}</p>
     </div>
   </div>`;
   });

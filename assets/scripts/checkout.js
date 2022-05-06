@@ -30,7 +30,7 @@ if (isLoggedIn === 'true') {
             <td>
               <a href="./productPage.html?type=${
                 value.productCategory
-              }&id=${parseInt(value.productID)}">
+              }&id=${parseInt(value.product_id)}">
                 <img class="checkout-product-image" width="50" height="50"
                   src=".${value.productImageUrl}">
               </a>
