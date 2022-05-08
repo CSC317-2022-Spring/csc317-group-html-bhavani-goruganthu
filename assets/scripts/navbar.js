@@ -1,3 +1,27 @@
+// fetch categories from backend and display in the select dropdown
+fetch('http://localhost:4000/api/products/getAllCategories')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    const categories = [];
+    Object.values(data).forEach((data) =>
+      categories.push(data.productCategory)
+    );
+    return categories;
+  })
+  .then((categories) => {
+    let dropdown = document.getElementById('category');
+    // calculate the length of the categories and add 1 for "All Products"
+    dropdown.options.length = categories.length + 1;
+    // insert "All Products as the first option"
+    dropdown.options[0] = new Option('All Products', 0);
+    // insert the rest of the categories in the dropdown
+    categories.forEach((category, i) => {
+      dropdown.options[i + 1] = new Option(category, i + 1);
+    });
+  });
+
 // handle cart count update - get count from localStorage cartProducts
 const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
 if (cartProducts.length === 0) {
