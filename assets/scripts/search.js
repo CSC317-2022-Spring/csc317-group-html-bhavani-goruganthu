@@ -69,16 +69,16 @@ function fetchProducts(apiRoute) {
 }
 
 function displaySearchResults(fetchedProducts) {
-  fetchedProducts.forEach((Product) => {
+  fetchedProducts.forEach((product) => {
     document.getElementById(
       'products-div'
     ).innerHTML += `<div class="product-container">
-                    <a href="./productPage.html?type=${Product.productCategory}&id=${Product.product_id}">
-                      <img class="product-img" width="300" height="300" src=".${Product.productImageUrl}">
+                    <a href="./productPage.html?type=${product.productCategory}&id=${product.product_id}">
+                      <img class="product-img" width="300" height="300" src=".${product.productImageUrl}">
                     </a>
                     <div class="product-description-container">
-                      <p class="product-name">${Product.productName}</p>
-                      <p class="product-price"> $${Product.productPrice}</p>
+                      <p class="product-name">${product.productName}</p>
+                      <p class="product-price"> $${product.productPrice}</p>
                     </div>
                   </div>`;
   });

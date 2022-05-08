@@ -121,10 +121,10 @@ if (currentCartProducts.length > 0) {
 
 function handleClickCartItemDelete(e) {
   // get the element's id which has the product ID
-  let product_id = this.id.split('-').at(-1);
+  let productId = this.id.split('-').at(-1);
   let currentCartProducts = JSON.parse(localStorage.getItem('cartProducts'));
   currentCartProducts = currentCartProducts.filter(
-    (item) => parseInt(item.id) !== parseInt(product_id)
+    (item) => parseInt(item.id) !== parseInt(productId)
   );
   localStorage.setItem('cartProducts', JSON.stringify(currentCartProducts));
   // reload the webpage to load the updated cart details
@@ -133,13 +133,13 @@ function handleClickCartItemDelete(e) {
 
 function handleOnChangeQuantity(e) {
   // get the id of the product based on the id of the quantity-dropdown
-  let product_id = this.id.split('-').at(-1);
+  let productId = this.id.split('-').at(-1);
   let currentCartProducts = JSON.parse(localStorage.getItem('cartProducts'));
 
   // add the products which come before the updated product in the currentCartProducts - to maintain the sequence
   let productsBefore = [];
   for (i = 0; i < currentCartProducts.length; i++) {
-    if (parseInt(currentCartProducts[i].id) !== parseInt(product_id)) {
+    if (parseInt(currentCartProducts[i].id) !== parseInt(productId)) {
       productsBefore.push(currentCartProducts[i]);
     } else {
       break;
@@ -147,13 +147,13 @@ function handleOnChangeQuantity(e) {
   }
   // get the product whose quantity is updated - update the quantity of that product
   let getProductToUpdate = currentCartProducts.filter(
-    (prod) => parseInt(prod.id) === parseInt(product_id)
+    (prod) => parseInt(prod.id) === parseInt(productId)
   );
   getProductToUpdate[0].quantity = parseInt(e.target.value);
 
   // get all the products except the product whose quantity is updated
   let getAllProductsExceptUpdated = currentCartProducts.filter(
-    (prod) => parseInt(prod.id) !== parseInt(product_id)
+    (prod) => parseInt(prod.id) !== parseInt(productId)
   );
 
   // add all 3 array items to an array to remove duplicates later.. this way sequence of the cart items is maintained
