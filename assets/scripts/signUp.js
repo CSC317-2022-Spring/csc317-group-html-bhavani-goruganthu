@@ -1,7 +1,3 @@
-// array of users
-// const user_table = JSON.parse(localStorage.getItem('users')) || [];
-fetch('http://localhost:4000/api/user/insertUser')
-
 document.getElementById('SignUp').addEventListener('click', localStore);
 
 function resetChanges() {
@@ -11,52 +7,43 @@ function resetChanges() {
 function localStore(e) {
   e.preventDefault();
 
-  // email & passwd
-  // let email = document.getElementById('email').value;
-  // let psswd1 = document.getElementById('psswd1').value;
-  // let psswd2 = document.getElementById('psswd2').value;
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('psswd1').value;
+  let passwordRep = document.getElementById('psswd2').value;
+  let first_name = document.getElementById('fName').value;
+  let last_name = document.getElementById('lName').value;
 
-  fetch('http://localhost:4000/api/user/insertUser')
-  .then((response) => {
-    console.log(data);
-    return response.json();
+  data = {
+    email: email,
+    psswd1: password,
+    psswd2: passwordRep,
+    fName: first_name,
+    lName: last_name
+  }
+
+  fetch('http://localhost:4000/api/user/insertUser',{
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-type": "application/json"
+      
+    },
   })
-  .then((data) => {
-    console.log(data);    
-    // 1. IDK WHY IT DOES NOT WORK -> Data is not defined??
+  .then(response => response.json())
+  .then(data => {
+    if(data.psswd1 == data.psswd2){
+      // Find a way to look for duplicate data in DB
+      // if(!duplicate data){
+        // window.location.pathname = '/src/login.html';
 
-    // if(data.length == 0){
-    //   // if user does not exist
-      
-    // }else if(data.length == 1){
-    //   // if user exists
-      
-    // }
+      // }else{
+      //   alert('User already exists.');
+      // }
+    }else{
+      alert('Passwords Do Not Match.');
+    }
   })
   .catch((err) => {
     console.log(err);
   });
-  // if (psswd1 != psswd2) {
-  //   alert('Passwords Do Not Match.');
-  // } else {
-  //   // check if user has alread signed up.
-  //   if (
-  //     user_table.some((v) => {
-  //       return v.email == email;
-  //     })
-  //   ) {
-  //     alert('duplicate data');
-  //   } else {
-  //     // pushing data into array of users.
-  //     user_table.push({
-  //       email: email,
-  //       password: psswd1,
-  //     });
-
-  //     localStorage.setItem('users', JSON.stringify(user_table));
-
-  //     // send user to login page after signing up
-  //     window.location.pathname = '/src/login.html';
-  //   }
-  // }
 }

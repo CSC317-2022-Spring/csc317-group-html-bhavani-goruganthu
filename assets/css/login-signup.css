@@ -20,6 +20,13 @@ h3 {
     line-height: 1.5em;
 }
 
+h4 {
+    font-weight: bold;
+    text-align: left;
+    /* color: var(--primary-color); */
+    line-height: 1.5em;
+}
+
 p {
     text-align: center;
     line-height: 1.5em;
