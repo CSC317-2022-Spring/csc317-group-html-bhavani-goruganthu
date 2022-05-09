@@ -20,12 +20,38 @@ function LoginValidation(e) {
       }
     })
     .then((msg) => {
-      // User exists
+      // User login successful
       alert(msg);
-      // set localstorage item to true
-      localStorage.setItem('isLoggedIn', 'true');
-      // redirect user to home page
-      window.location.pathname = '/index.html';
+      // add user data to cookie using auth route
+      fetch('http://localhost:4000/userAuth/setUser', {
+        // Adding method type
+        method: 'POST',
+        credentials: 'include',
+        // Adding headers to the request
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+        // Adding body or contents to send
+        body: JSON.stringify({
+          userEmail: email,
+        }),
+      })
+        .then(async (response) => {
+          if (!response.ok) {
+            // get the text from the response object
+            const text = await response.text();
+            throw new Error(text);
+          } else {
+            return response.text();
+          }
+        })
+        .then((msg) => {
+          // redirect user to home page
+          window.location.pathname = '/index.html';
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     })
     .catch((err) => {
       // throw caught error as an alert
