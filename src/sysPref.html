@@ -28,17 +28,17 @@
       <div class="flex-content">
         <h2 style="color: #254733;">Edit Account or System <br>Preferences</h2>
 
-        <form id="sysPrefForm">
+        <form id="sysPrefForm" method="PUT">
           <h3 style="color: black;">Personal Information</h3>
           <label>First Name:</label><br>
-          <input class="sysPref-input" id="fName" type="text" placeholder="e.g. John" maxlength="27" autofocus>
+          <input class="sysPref-input" id="fName" type="text" placeholder="e.g. John" maxlength="27" autofocus required>
 
 
           <br><label>Last Name:</label><br>
-          <input class="sysPref-input" id="lName" type="text" placeholder="e.g. Doe" maxlength="27">
+          <input class="sysPref-input" id="lName" type="text" placeholder="e.g. Doe" maxlength="27" required>
 
           <br><label>Email Address:</label><br>
-          <input class="sysPref-input" type="email" id="email" placeholder="e.g. john@gmail.com" name="email" disabled>
+          <input class="sysPref-input sysPref-email" type="email" id="email" placeholder="e.g. john@gmail.com" name="email" disabled required>
 
 
 
@@ -52,7 +52,7 @@
 
           <br><label>State:</label><br>
           <select id="State" class="sysPref-input">
-            <option value=""> Select a State</option>
+            <option value='null'> Select a State</option>
             <option value="AL"> Alabama</option>
             <option value="AK"> Alaska</option>
             <option value="AZ"> Arizona</option>
@@ -120,8 +120,8 @@
             size="10" maxlength="12">
 
           <br>
-          <button id="SaveChanges" class="sysPref-button" type="submit">Change Settings</button>
-          <button class="sysPref-button" onclick="resetChanges()">Reset</button>
+          <button id="SaveChanges" class="sysPref-button" type="submit">Update Settings</button>
+          <!-- <button class="sysPref-button" onclick="resetChanges()">Reset</button> -->
         </form>
       </div>
     </div>
