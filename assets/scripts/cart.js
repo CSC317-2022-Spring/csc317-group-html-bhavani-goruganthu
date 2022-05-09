@@ -184,6 +184,7 @@ function handleClickClearCart(e) {
   }
 }
 
+// navigate to checkout based on click
 function handleClickProceedCheckout(e) {
   if (currentCartProducts.length > 0) {
     document

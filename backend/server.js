@@ -14,10 +14,10 @@ app.use(cookieParser());
 app.use(express.json());
 
 // routes
-app.use('/userAuth', auth);
-app.use('/api/search', searchProducts);
-app.use('/api/products', products);
-app.use('/api/users', users);
+app.use('/userAuth', auth); // setUser, getUser, logout - using cookies
+app.use('/api/search', searchProducts); // searchGetAllProducts, searchByCategory, searchByKeyword, searchByCategoryNKeyword
+app.use('/api/products', products); //getAllCategories, getProductByID,
+app.use('/api/users', users); // insertUser, verifyUserLogin, fetchUserDetails, updateSysPrefInfo
 app.listen(process.env.PORT, () =>
   console.log(`Backend server on port ${process.env.PORT}!`)
 );

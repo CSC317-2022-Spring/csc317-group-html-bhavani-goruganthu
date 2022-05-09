@@ -16,7 +16,7 @@ function fetchUserDetails() {
   fetch('http://localhost:4000/userAuth/getUser', {
     // Adding method type
     method: 'GET',
-    credentials: 'include',
+    credentials: 'include', // use this to include cookies in your response
   })
     .then((response) => {
       if (!response.ok) {

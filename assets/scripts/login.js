@@ -26,7 +26,7 @@ function LoginValidation(e) {
       fetch('http://localhost:4000/userAuth/setUser', {
         // Adding method type
         method: 'POST',
-        credentials: 'include',
+        credentials: 'include', // use this to include cookies in your request
         // Adding headers to the request
         headers: {
           'Content-type': 'application/json; charset=UTF-8',

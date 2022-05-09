@@ -134,7 +134,6 @@ router.put('/updateSysPrefInfo', (req, res) => {
     tempQuery6 +
     tempQuery7 +
     tempQuery8;
-  console.log(query);
   database.query(query, (err, result) => {
     if (err) {
       console.log(err);

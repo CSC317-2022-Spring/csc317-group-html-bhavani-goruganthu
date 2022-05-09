@@ -4,10 +4,11 @@ router.use(express.json());
 
 //Route for adding cookie
 router.post('/setUser', (req, res) => {
+  // use key, value pair to store loggedInUserData
   res.cookie('loggedInUserData', req.body, {
     secure: true,
     httpOnly: true,
-    sameSite: 'none',
+    sameSite: 'none', // using this to get/set cookie from iframes - navbar
   });
   res.status(200).send('User data added to cookie');
 });
@@ -18,17 +19,17 @@ router.get('/getUser', (req, res) => {
   if (JSON.stringify(req.cookies) === '{}') {
     res.status(404).send('User Not Logged In');
   } else {
-    // send the email if cookie exists
+    // send the userData if cookie exists
     res.status(200).send(req.cookies.loggedInUserData);
   }
 });
 
 //Route for destroying cookie
 router.get('/logout', (req, res) => {
-  //it will clear the loggedInUser cookie
+  //it will clear the loggedInUserData cookie
   res.clearCookie('loggedInUserData', {
-    path: '/',
-    domain: 'localhost',
+    path: '/', // default
+    domain: 'localhost', // apparently, cookie is cleared when you only specify the domain
     secure: true,
     httpOnly: true,
     sameSite: 'none',

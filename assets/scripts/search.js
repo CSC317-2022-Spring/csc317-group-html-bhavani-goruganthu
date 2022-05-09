@@ -60,7 +60,6 @@ function fetchProducts(apiRoute) {
       return res.json();
     })
     .then((fetchedProducts) => {
-      console.log(fetchedProducts);
       displaySearchResults(fetchedProducts);
     })
     .catch((err) => {

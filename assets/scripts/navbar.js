@@ -40,7 +40,6 @@ document
   .addEventListener('keypress', handleSearchEnterKey);
 function handleSearchEnterKey(e) {
   if (e.key === 'Enter') {
-    console.log(e.key);
     searchClick();
     window.parent.location.href = document.getElementById('search-icon').href;
   }
@@ -78,7 +77,7 @@ function handleLogInClick() {
 fetch('http://localhost:4000/userAuth/getUser', {
   // Adding method type
   method: 'GET',
-  credentials: 'include',
+  credentials: 'include', // use this to include cookies in your response
 })
   .then((response) => {
     if (!response.ok) {
@@ -90,7 +89,6 @@ fetch('http://localhost:4000/userAuth/getUser', {
     }
   })
   .then((data) => {
-    console.log(data);
     updateNavIconsAfterLogin();
   })
   .catch((err) => {
@@ -138,7 +136,7 @@ function updateNavIconsAfterLogin() {
         fetch('http://localhost:4000/userAuth/logout', {
           // Adding method type
           method: 'GET',
-          credentials: 'include',
+          credentials: 'include', // use this to get cookies in your response & delete them
         })
           .then((response) => {
             if (!response.ok) {
@@ -150,7 +148,6 @@ function updateNavIconsAfterLogin() {
             }
           })
           .then((data) => {
-            console.log(data);
             parent.window.location.pathname = '/index.html';
           })
           .catch((err) => {

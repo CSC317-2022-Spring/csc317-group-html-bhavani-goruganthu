@@ -1,3 +1,4 @@
+// run node inserProducts.js to insert products from ../assets/data/products.json into the db
 const database = require('./db'); // connect to the db
 var fs = require('fs');
 fs.readFile('../assets/data/products.json', 'utf8', function (err, data) {
