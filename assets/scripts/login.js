@@ -10,20 +10,25 @@ function LoginValidation(e) {
   fetch(
     `http://localhost:4000/api/users/fetchUser?email=${email}&password=${psswd1}`
   )
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      if (data.length == 0) {
-        // if user does not exist
-        alert('Incorrect credentials');
-      } else if (data.length === 1) {
-        // if user exists
-        window.location.pathname = '/index.html';
-        localStorage.setItem('isLoggedIn', 'true');
+    .then(async (response) => {
+      if (!response.ok) {
+        // get the text from the response object
+        const text = await response.text();
+        throw new Error(text);
+      } else {
+        return response.text();
       }
     })
+    .then((msg) => {
+      // User exists
+      alert(msg);
+      // set localstorage item to true
+      localStorage.setItem('isLoggedIn', 'true');
+      // redirect user to home page
+      window.location.pathname = '/index.html';
+    })
     .catch((err) => {
-      console.log(err);
+      // throw caught error as an alert
+      alert(err);
     });
 }
