@@ -8,7 +8,7 @@ function LoginValidation(e) {
   let email = document.getElementById('email').value;
   let psswd1 = document.getElementById('psswd1').value;
   fetch(
-    `http://localhost:4000/api/users/fetchUser?email=${email}&password=${psswd1}`
+    `http://localhost:4000/api/users/verifyUserLogin?email=${email}&password=${psswd1}`
   )
     .then(async (response) => {
       if (!response.ok) {
