@@ -151,8 +151,7 @@ function updateNavIconsAfterLogin() {
           })
           .then((data) => {
             console.log(data);
-            window.location.pathname = '/index.html';
-            window.location.reload();
+            parent.window.location.pathname = '/index.html';
           })
           .catch((err) => {
             // throw caught error as an alert
