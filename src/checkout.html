@@ -35,10 +35,8 @@
       </div>
     </div>
     <!--  End of Checkout Nav Bar -->
-
-    <div class="checkout-container">
-      <form class="">
-
+    <form id="checkoutForm" method="POST"  class="checkout-container">
+      <div>
         <h2>Shipping Address</h2>
         <div class="shipping-address-div">
           <label for="fname">First name:</label>
@@ -65,7 +63,8 @@
             </div>
             <div class="inline-address-input">
               <label for="state">State:</label>
-              <select class="form-dropdown">
+              <select class="form-dropdown" required>
+                <option value=''> Select a State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -129,7 +128,6 @@
 
         <h2>Payment</h2>
         <div class="payment-info-div">
-
           <img src="../assets/images/site-images/finances/Visa.png" width="40">
           <img src="../assets/images/site-images/finances/Mastercard.png" width="40">
           <img src="../assets/images/site-images/finances/Amex.png" width="40">
@@ -138,20 +136,19 @@
           <br>
 
           <label for="cname">Name on Card</label>
-          <input type="text" class="form-input" id="cname" name="cardname" placeholder="John More Doe"><br>
+          <input type="text" class="form-input" id="cname" name="cardname" placeholder="John More Doe" required><br>
           <label for="ccnum">Credit card number</label>
-          <input type="text" class="form-input" id="ccnum" pattern="[0-9\s]{13,19}" name="cardnumber"
-            placeholder="1111-2222-3333-4444"><br>
+          <input type="text" class="form-input" id="ccnum" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" name="cardnumber"
+            placeholder="1111-2222-3333-4444" required><br>
           <label for="expmonth">Exp Month</label>
-          <input type="number" class="form-input" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04">
+          <input type="number" class="form-input" id="expmonth" name="expmonth" maxlength="2" size="3" placeholder="04" required>
           <label for="expyear">Exp Year</label>
           <input type="number" class="form-input" id="expyear" name="expyear" maxlength="4" size="5"
-            placeholder="20XX"><br>
+            placeholder="20XX" required><br>
           <label for="cvv">CVV</label>
-          <input type="number" class="form-input" id="cvv" name="cvv" maxlength="4" size="5"><br>
+          <input type="number" class="form-input" id="cvv" name="cvv" maxlength="4" size="5" required><br>
         </div>
-      </form>
-
+      </div>
       <div class="checkout-orders-btns">
         <div class="checkout-table-div">
           <h2 class="">Review Your Order</h2>
@@ -190,7 +187,7 @@
           </a>
         </div>
       </div>
-    </div>
+      </form>
 
     <!-- Footer Section -->
     <iframe class="footer-iframe" src="../footer.html" style="border:none;" width="100%" title="Footer Iframe"></iframe>
