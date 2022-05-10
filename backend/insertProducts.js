@@ -13,10 +13,8 @@ fs.readFile('../assets/data/products.json', 'utf8', function (err, data) {
       const prodDescription = catPlants.description;
       const prodImageURL = catPlants.imageUrl;
       const prodPrice = catPlants.price;
-      const prodRating = catPlants.rating;
-      const prodReviews = JSON.stringify(catPlants.reviews);
       const query =
-        `INSERT INTO Products (product_id, productCategory, productName, productDescription, productImageUrl, productPrice, productRating, productReviews) VALUES ('` +
+        `INSERT INTO Products (product_id, productCategory, productName, productDescription, productImageUrl, productPrice) VALUES ('` +
         prodID +
         `','` +
         prodCategory +
@@ -28,10 +26,6 @@ fs.readFile('../assets/data/products.json', 'utf8', function (err, data) {
         prodImageURL +
         `','` +
         prodPrice +
-        `','` +
-        prodRating +
-        `','` +
-        prodReviews +
         `')`;
       // Send product query to db
       database.query(query, (err, result) => {

@@ -217,7 +217,8 @@ function postUserOrder(
     .then((msg) => {
       // success alert
       alert(msg);
-      // localStorage.removeItem('cartProducts');
+      localStorage.removeItem('cartProducts');
+      window.location.pathname = '/src/userOrders.html';
     })
     .catch((err) => {
       // throw the error as an alert
