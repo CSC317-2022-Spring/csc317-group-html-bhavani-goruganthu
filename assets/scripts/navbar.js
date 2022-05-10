@@ -120,7 +120,19 @@ function updateNavIconsAfterLogin() {
       <h5 class="nav-link-name"> Settings</h5>
   </a>
 </div>`;
+  let orderElement = `<div class="nav-links">
+<a href="./src/userOrders.html" target="_parent" class="all-links-text-decoration">
+    <button class="all-nav-btns">
+        <span class="material-icons-outlined">
+            list_alt
+        </span>
+    </button>
+    <br />
+    <h5 class="nav-link-name"> Orders</h5>
+</a>
+</div>`;
   document.getElementById('nav-btns-div').innerHTML += settingsElement;
+  document.getElementById('nav-btns-div').innerHTML += orderElement;
 
   document
     .getElementById('login-logout-btn-div')
