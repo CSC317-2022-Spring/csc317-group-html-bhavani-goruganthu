@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Green Lamp</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/user-orders.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x1 6" href="../assets/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
+</head>
+
+<body>
+  <!-- Main Container -->
+  <div class="main-container">
+    <!--  Nav Bar -->
+    <iframe class="navbar-iframe" id="navbar-iframe" src="../navbar.html" style="border:none;" width="100%" title="Header Iframe"></iframe>
+    <!-- <object data="./navbar.html" class="navbar-iframe" width="100%"></object> -->
+    <!--  End of Nav Bar -->
+    <h2 style="text-align:center;">Orders</h2>
+    <div class="orders-div">
+        <table class="orders-table">
+            <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Items</th>
+            <th>Total Price</th>
+            <!-- <th></th> -->
+            <!-- <td id="${order.order_id}" class="order-row"><span style="font-size: 30px" class="material-icons-outlined chevron-icon orders-chevron" id="order-chevron"
+                >expand_more</span></td> -->
+          </tr>
+        </thead>
+        <tbody id="orders-tbody">
+        </tbody>
+        </table>
+      </div>
+
+    
+    <!-- Footer Section -->
+    <iframe class="footer-iframe" src="../footer.html" style="border:none;" width="100%" title="Footer Iframe"></iframe>
+    <!-- End of Footer Section -->
+
+  </div>
+  <!-- End of Main Container -->
+</body>
+
+<script src="./../assets/scripts/userOrders.js"></script>
+
+</html>

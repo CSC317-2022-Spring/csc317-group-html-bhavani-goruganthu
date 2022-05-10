@@ -1,0 +1,50 @@
+@import 'navigation.css'; /* Use any of the css classes declared in this file by just importing it. */
+
+.orders-table-div {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.orders-table {
+    margin-left: auto;
+  margin-right: auto;
+    width: 80%;
+    background-color: var(--hover-color);
+    border-collapse: separate;
+    text-align: center;
+    border-radius: 10px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+  .orders-table thead {
+    line-height: 3rem;
+    background-color: var(--primary-color-opac);
+    color: white;
+    border-radius: 10px;
+  }
+  .orders-table thead tr th {
+    border: 1px solid var(--primary-color);
+    width: fit-content;
+  }
+  .orders-table tbody {
+    border-radius: 10px;
+  }
+  .orders-table tbody tr td {
+    height: fit-content;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+.orders-chevron {
+    cursor: pointer;
+}
+
+.order-row {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;    
+}
