@@ -36,6 +36,7 @@
   }
   .orders-table tbody tr td {
     height: fit-content;
+    border-right: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
   }
 
@@ -44,7 +45,13 @@
 }
 
 .order-row {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;    
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+}
+
+.orders-product {
+margin-left: 10px;
+margin-right: 10px;
 }

@@ -38,7 +38,7 @@ fetch('http://localhost:4000/userAuth/getUser', {
   })
   .catch((err) => {
     // throw caught error as an alert
-    alert(err);
+    // alert(err);
     window.location.pathname = '/src/login.html';
   });
 
@@ -65,7 +65,7 @@ function fetchOrderProducts(order) {
       .then((fetchedCartProducts) => {
         const value = fetchedCartProducts[0];
         document.getElementById(`${order.order_id}`).innerHTML += `
-        <div>
+        <div class="orders-product">
         <a href="./productPage.html?type=${value.productCategory}&id=${parseInt(
           value.product_id
         )}">

@@ -109,7 +109,7 @@ fetch('http://localhost:4000/userAuth/getUser', {
   })
   .catch((err) => {
     // throw caught error as an alert
-    alert(err);
+    // alert(err);
     document.querySelector(
       '.checkout-container'
     ).innerHTML = `<h2>Please login to Checkout</h2>`;
